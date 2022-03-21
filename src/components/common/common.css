@@ -1,0 +1,259 @@
+:root {
+  /* Colors Default Theme */
+  --color-primary-default: #003087;
+  --color-secondary-default: #c54031;
+  --color-secondary-light-defaut: #fbd2ce;
+  --color-black: #000000;
+  --color-light-blue: #e1ecff;
+  --color-light-blue2: #f6f6fe;
+  --color-border-default: #d5d9e0;
+  --color-background-default: #fafafa;
+
+  /* Colors Light Theme */
+  --color-light-grey: #f6f6f6;
+  --color-white: #ffffff;
+  --color-whiteLight: rgba(255, 255, 255, 0.8);
+
+  /* Colors Dark Theme */
+  --color-primary-dark: #1669fe;
+  --color-secondary-dark: #ff5c49;
+  --color-secondary-light-dark: #4b1813;
+  --color-dark1: #001336;
+  --color-dark2: #000e28;
+  --color-border-dark: #32374a;
+  --color-background-dark: #000a1b;
+}
+
+/* Header */
+.headerBox {
+  background-color: var(--color-secondary-light-defaut);
+  height: 64px;
+  position: fixed;
+  z-index: 1;
+}
+.headerLeft {
+  width: 390px;
+  height: 100%;
+  margin-left: 20px;
+}
+.headerRight {
+  width: calc(100% - 390px);
+  height: 100%;
+  margin-right: 16px;
+}
+.headerMyAccount {
+  margin-left: 6px;
+}
+.headerMyAccount .fontSize10-m {
+  margin-top: 3px;
+}
+@media (max-width: 767px) {
+  .headerBox {
+    height: 88px;
+  }
+  .headerLeft {
+    width: 50%;
+    margin: 0;
+    flex-direction: column;
+    align-items: flex-start !important;
+    padding: 12px 0 16px 16px;
+  }
+  .headerRight {
+    width: 50%;
+    flex-direction: column-reverse;
+    justify-content: space-between !important;
+    align-items: flex-end !important;
+    margin: 0;
+    padding: 14px 16px 12px 0;
+  }
+  .headerMyAccount {
+    display: none;
+  }
+}
+
+/* Main View */
+.mainView {
+  padding-top: 64px;
+}
+/* Side Bar */
+.sideBar {
+  width: 240px;
+  height: 100%;
+  background-color: var(--color-light-blue);
+  padding: 16px 8px;
+  position: relative;
+}
+.sidebarButton {
+  width: 28px;
+  height: 28px;
+  border: none;
+  background-color: var(--color-primary-default);
+  border-radius: 50%;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  position: absolute;
+  top: 45%;
+  right: -14px;
+}
+
+.sideBar .accordion .accordion-item{
+  margin-bottom: 8px;
+  border: none;
+  border-radius: 4px;
+}
+.sideBar .accordion .accordion-item .accordion-button{
+  background-color: var(--color-light-blue);
+  padding: 8px;
+}
+.sideBar .accordion .accordion-item .accordion-button:not(.collapsed){
+  background-color: var(--color-whiteLight);
+}
+.sideBar .accordion .accordion-item .accordion-body{
+  padding: 0;
+}
+
+.sideBar .accordion .accordion-item .accordion-body ul{
+  padding: 0;
+  margin: 0;
+}
+.sideBar .accordion .accordion-item .accordion-body ul li{
+  list-style: none;
+}
+.sideBar .accordion .subMenu li a{
+  display: flex;
+  align-items: center;
+  padding: 8px;
+}
+.sideBar .accordion .subMenu li a:hover{
+  background-color: var(--color-secondary-light-defaut);
+}
+.sideBar .accordion .subMenu li a .subMenuRight{
+  font-size: 13px;
+  color: var(--color-black);
+  line-height: 18px;
+  margin-left: 8px;
+}
+
+/* Main Window */
+.mainWindow {
+  width: calc(100% - 240px);
+  background-color: var(--color-background-default);
+  padding: 0 16px;
+}
+
+/* Footer */
+.footerBox {
+  height: 40px;
+}
+
+/* SideBar */
+.sideBar {
+  position: sticky;
+  top: 64px;
+  left: 0;
+  height: 100%;
+  width: 240px;
+  background-color: var(--color-light-blue);
+  z-index: 100;
+  transition: all 0.5s ease;
+}
+.sideBar.close {
+  width: 56px;
+}
+.sideBar .navLinks {
+  height: 100%;
+  padding: 16px 8px;
+  overflow: auto;
+}
+.sideBar.close .navLinks {
+  overflow: visible;
+}
+.sideBar .navLinks::-webkit-scrollbar {
+  display: none;
+}
+.sideBar .navLinks li {
+  position: relative;
+  list-style: none;
+  transition: all 0.4s ease;
+}
+.sideBar .navLinks li:hover {
+  background-color: var(--color-whiteLight);
+  border-radius: 4px;
+}
+.sideBar .navLinks li .dropdownLink {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.sideBar.close .navLinks li .dropdownLink {
+  display: block;
+}
+.sideBar .navLinks li .sidebarIconBox {
+  height: 40px;
+  min-width: 40px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.sideBar .navLinks li.showMenu .dropdownArrowIcon {
+  transform: rotate(-180deg);
+}
+.sideBar.close .navLinks .dropdownArrowIcon {
+  display: none;
+}
+.sideBar .navLinks li a {
+  display: flex;
+  align-items: center;
+}
+.sideBar .navLinks li a .linkName {
+  font-size: 14px;
+  color: var(--color-black);
+  transition: all 0.4s ease;
+}
+.sideBar.close .navLinks li a .linkName {
+  opacity: 0;
+  pointer-events: none;
+}
+.sideBar .navLinks li .subMenu {
+  background: var(--color-whiteLight);
+  margin-top: -10px;
+  display: none;
+  border-radius: 4px;
+}
+.sideBar .navLinks li.showMenu .subMenu {
+  display: block;
+}
+.sideBar .navLinks li .subMenu a {
+  font-size: 13px;
+  color: var(--color-black);
+  white-space: nowrap;
+  opacity: 0.6;
+  transition: all 0.3s ease;
+}
+.sideBar .navLinks li .subMenu a:hover {
+  opacity: 1;
+}
+.sideBar.close .navLinks li .subMenu {
+  position: absolute;
+  left: 100%;
+  top: -10px;
+  margin-top: 0;
+  border-radius: 4px;
+  opacity: 0;
+  display: block;
+  pointer-events: none;
+  transition: 0s;
+}
+.sideBar.close .navLinks li:hover .subMenu {
+  top: 0;
+  opacity: 1;
+  pointer-events: auto;
+  transition: all 0.4s ease;
+}
+.sideBar .navLinks li .subMenu .linkName {
+  display: none;
+}
+.sideBar.close .navLinks li .subMenu .linkName {
+  font-size: 13px;
+  opacity: 1;
+  display: block;
+}

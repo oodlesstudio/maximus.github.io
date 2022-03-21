@@ -1,0 +1,218 @@
+:root {
+  /* Colors Default Theme */
+  --color-primary-default: #003087;
+  --color-secondary-default: #c54031;
+  --color-secondary-light-defaut: #fbd2ce;
+  --color-black: #000000;
+  --color-light-blue: #e1ecff;
+  --color-light-blue2: #f6f6fe;
+  --color-border-default: #d5d9e0;
+  --color-background-default: #fafafa;
+
+  /* Colors Light Theme */
+  --color-light-grey: #f6f6f6;
+  --color-white: #ffffff;
+
+  /* Colors Dark Theme */
+  --color-primary-dark: #1669fe;
+  --color-secondary-dark: #ff5c49;
+  --color-secondary-light-dark: #4b1813;
+  --color-dark1: #001336;
+  --color-dark2: #000e28;
+  --color-border-dark: #32374a;
+  --color-background-dark: #000a1b;
+}
+
+/* Config Left */
+.configMainContent .configLeft {
+  width: 61.13%;
+  padding-bottom: 17px;
+}
+.configLeftHead,
+.configRightHead {
+  height: 43px;
+}
+.fileConfigHead {
+  letter-spacing: 0.03em;
+}
+.configTopBlueBox {
+  padding: 0 16px;
+  height: 218px;
+}
+.configLeftFilters {
+  padding: 12px 0;
+}
+.allFiltersBtn {
+  width: 98px;
+  height: 28px;
+  border: 1px solid var(--color-primary-default);
+}
+.configLeft .btnsBtm {
+  margin: 16px 0 24px;
+}
+
+/* Table Border Box */
+.tableBorderBox .tableContentBox {
+  height: 560px;
+}
+.tableBorderBox .table {
+  --bs-table-striped-bg: var(--color-table-bg);
+  --bs-table-striped-color: var(--color-black);
+  --bs-table-hover-bg: var(--color-light-blue);
+  --bs-table-hover-color: var(--color-black);
+  color: var(--color-black);
+  width: 805px;
+}
+.tableBorderBox .table thead {
+  position: sticky;
+  top: 0;
+}
+.tableBorderBox .table thead tr th {
+  font-weight: var(--font-weight-500);
+  font-size: var(--font-size14);
+  background-color: var(--color-secondary-light-defaut);
+  height: 41px;
+  padding: 0;
+  padding-left: 14px;
+  vertical-align: middle;
+}
+.tableBorderBox .table thead tr th:first-child,
+.tableBorderBox .table tbody tr td:first-child {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.tableBorderBox .table thead tr th:last-child,
+.tableBorderBox .table tbody tr td:last-child {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.tableBorderBox .table tbody tr td {
+  font-size: var(--font-size14);
+  height: 64px;
+  padding: 0;
+  padding-left: 14px;
+}
+.tableBorderBox .table tbody tr {
+  border-bottom: 1px solid var(--color-table-border);
+}
+.tableBorderBox .table tbody tr:last-child {
+  border-bottom: none;
+}
+/* Table Scroll Bar */
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+::-webkit-scrollbar:vertical {
+  width: 3px;
+}
+::-webkit-scrollbar:horizontal {
+  height: 3px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-scrollbar);
+  border-radius: 50px;
+}
+::-webkit-scrollbar-track {
+  border-radius: 50px;
+  background-color: var(--color-background-default);
+}
+
+/* Select Box */
+.configSelectBoxTop {
+  margin-top: 20px;
+}
+.clientNameSelect {
+  width: 217px;
+}
+.clientNameSelect label {
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  color: var(--color-black);
+  margin-bottom: 8px;
+}
+.clientNameSelect label span {
+  color: var(--color-secondary-default);
+}
+.clientNameSelect .css-1s2u09g-control {
+  background-color: var(--color-white);
+  border-color: var(--color-border-default);
+}
+.clientNameSelect .css-319lph-ValueContainer {
+  padding: 0 0 0 14px;
+}
+.clientNameSelect .css-14el2xx-placeholder {
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  color: var(--color-black);
+  margin: 0;
+}
+.clientNameSelect .css-6j8wv5-Input {
+  padding: 0;
+  margin: 0;
+}
+.clientNameSelect .css-1okebmr-indicatorSeparator {
+  display: none;
+}
+.clientNameSelect .css-tj5bde-Svg {
+  fill: var(--color-primary-default);
+}
+.configFormatEntities {
+  width: 131px;
+}
+
+/* Config Right */
+.configMainContent .configRight {
+  width: 37.67%;
+  padding-bottom: 17px;
+}
+/* Config Right Top */
+.configTopBlueBoxRight {
+  padding: 26px 20px;
+  height: 218px;
+}
+.configDotLeftContent {
+  width: 94px;
+  letter-spacing: 0.02em;
+}
+.configDotCenterContent {
+  width: 4px;
+  margin: 0 8px;
+  letter-spacing: 0.02em;
+}
+.configDotRightContent {
+  width: calc(100% - 114px);
+}
+.configDotRightContent .clientNameSelect {
+  width: 100%;
+}
+
+/* Config Right Bottom */
+.tableBorderBox .configTableRight {
+  width: 100%;
+}
+.tableBorderBox .configTableRight thead tr th:first-child {
+  padding-left: 16px;
+}
+.tableBorderBox .configTableRight tbody tr td:first-child {
+  padding-left: 16px;
+}
+.tableBorderBox .configTableRight thead tr th:last-child {
+  padding-right: 8px;
+}
+.tableBorderBox .configTableRight tbody tr td:last-child {
+  padding-right: 8px;
+}
+.tableBorderBox .configTableRight input[type="number"] {
+  border: 1px solid var(--color-border-default);
+  border-radius: 4px;
+  width: 136.63px;
+  height: 30px;
+  padding-left: 12px;
+  font-family: "Inter";
+  font-size: 12px;
+  letter-spacing: 0.02em;
+  color: var(--color-black);
+}
+.tableBorderBox .configTableRight .terminalInputTwo {
+  width: 116.63px !important;
+}
