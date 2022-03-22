@@ -10,7 +10,7 @@ const Header = () => {
       {/* Header Left */}
       <div className="headerLeft d-flex justify-content-between align-items-center">
         <a
-          href="#"
+          href="/"
           data-bs-toggle="tooltip"
           data-bs-placement="bottom"
           title="Tooltip on bottom"
