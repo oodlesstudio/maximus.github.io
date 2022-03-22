@@ -78,10 +78,11 @@
 /* Side Bar */
 .sideBar {
   width: 240px;
-  height: 100%;
+  height: calc(100vh - 104px);
   background-color: var(--color-light-blue);
   padding: 16px 8px;
   position: relative;
+  overflow: scroll;
 }
 .sidebarButton {
   width: 28px;
@@ -94,39 +95,41 @@
   top: 45%;
   right: -14px;
 }
-
-.sideBar .accordion .accordion-item{
+.sideBar .accordion .accordion-item {
   margin-bottom: 8px;
   border: none;
   border-radius: 4px;
 }
-.sideBar .accordion .accordion-item .accordion-button{
+.sideBar .accordion .accordion-item .accordion-button {
   background-color: var(--color-light-blue);
   padding: 8px;
 }
-.sideBar .accordion .accordion-item .accordion-button:not(.collapsed){
+.sideBar .accordion .accordion-item .accordion-button:hover {
+  background-color: var(--color-whiteLight);
+  border-radius: 4px;
+}
+.sideBar .accordion .accordion-item .accordion-button:not(.collapsed) {
   background-color: var(--color-whiteLight);
 }
-.sideBar .accordion .accordion-item .accordion-body{
+.sideBar .accordion .accordion-item .accordion-body {
   padding: 0;
 }
-
-.sideBar .accordion .accordion-item .accordion-body ul{
+.sideBar .accordion .accordion-item .accordion-body ul {
   padding: 0;
   margin: 0;
 }
-.sideBar .accordion .accordion-item .accordion-body ul li{
+.sideBar .accordion .accordion-item .accordion-body ul li {
   list-style: none;
 }
-.sideBar .accordion .subMenu li a{
+.sideBar .accordion ul li a {
   display: flex;
   align-items: center;
   padding: 8px;
 }
-.sideBar .accordion .subMenu li a:hover{
+.sideBar .accordion ul li a:hover {
   background-color: var(--color-secondary-light-defaut);
 }
-.sideBar .accordion .subMenu li a .subMenuRight{
+.sideBar .accordion .subMenu li a .subMenuRight {
   font-size: 13px;
   color: var(--color-black);
   line-height: 18px;
@@ -136,6 +139,8 @@
 /* Main Window */
 .mainWindow {
   width: calc(100% - 240px);
+  height: calc(100vh - 104px);
+  overflow: scroll;
   background-color: var(--color-background-default);
   padding: 0 16px;
 }
@@ -143,117 +148,4 @@
 /* Footer */
 .footerBox {
   height: 40px;
-}
-
-/* SideBar */
-.sideBar {
-  position: sticky;
-  top: 64px;
-  left: 0;
-  height: 100%;
-  width: 240px;
-  background-color: var(--color-light-blue);
-  z-index: 100;
-  transition: all 0.5s ease;
-}
-.sideBar.close {
-  width: 56px;
-}
-.sideBar .navLinks {
-  height: 100%;
-  padding: 16px 8px;
-  overflow: auto;
-}
-.sideBar.close .navLinks {
-  overflow: visible;
-}
-.sideBar .navLinks::-webkit-scrollbar {
-  display: none;
-}
-.sideBar .navLinks li {
-  position: relative;
-  list-style: none;
-  transition: all 0.4s ease;
-}
-.sideBar .navLinks li:hover {
-  background-color: var(--color-whiteLight);
-  border-radius: 4px;
-}
-.sideBar .navLinks li .dropdownLink {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.sideBar.close .navLinks li .dropdownLink {
-  display: block;
-}
-.sideBar .navLinks li .sidebarIconBox {
-  height: 40px;
-  min-width: 40px;
-  text-align: center;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-.sideBar .navLinks li.showMenu .dropdownArrowIcon {
-  transform: rotate(-180deg);
-}
-.sideBar.close .navLinks .dropdownArrowIcon {
-  display: none;
-}
-.sideBar .navLinks li a {
-  display: flex;
-  align-items: center;
-}
-.sideBar .navLinks li a .linkName {
-  font-size: 14px;
-  color: var(--color-black);
-  transition: all 0.4s ease;
-}
-.sideBar.close .navLinks li a .linkName {
-  opacity: 0;
-  pointer-events: none;
-}
-.sideBar .navLinks li .subMenu {
-  background: var(--color-whiteLight);
-  margin-top: -10px;
-  display: none;
-  border-radius: 4px;
-}
-.sideBar .navLinks li.showMenu .subMenu {
-  display: block;
-}
-.sideBar .navLinks li .subMenu a {
-  font-size: 13px;
-  color: var(--color-black);
-  white-space: nowrap;
-  opacity: 0.6;
-  transition: all 0.3s ease;
-}
-.sideBar .navLinks li .subMenu a:hover {
-  opacity: 1;
-}
-.sideBar.close .navLinks li .subMenu {
-  position: absolute;
-  left: 100%;
-  top: -10px;
-  margin-top: 0;
-  border-radius: 4px;
-  opacity: 0;
-  display: block;
-  pointer-events: none;
-  transition: 0s;
-}
-.sideBar.close .navLinks li:hover .subMenu {
-  top: 0;
-  opacity: 1;
-  pointer-events: auto;
-  transition: all 0.4s ease;
-}
-.sideBar .navLinks li .subMenu .linkName {
-  display: none;
-}
-.sideBar.close .navLinks li .subMenu .linkName {
-  font-size: 13px;
-  opacity: 1;
-  display: block;
 }

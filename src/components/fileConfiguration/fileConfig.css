@@ -50,6 +50,10 @@
 .configLeft .btnsBtm {
   margin: 16px 0 24px;
 }
+.configBottomHeadingBox{
+  height: 60px;
+  padding-top: 24px;
+}
 
 /* Table Border Box */
 .tableBorderBox .tableContentBox {
@@ -99,7 +103,7 @@
   border-bottom: none;
 }
 /* Table Scroll Bar */
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   -webkit-appearance: none;
 }
 ::-webkit-scrollbar:vertical {
@@ -115,7 +119,7 @@
 ::-webkit-scrollbar-track {
   border-radius: 50px;
   background-color: var(--color-background-default);
-}
+} */
 
 /* Select Box */
 .configSelectBoxTop {

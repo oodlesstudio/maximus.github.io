@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 // Images
 import Logo from "../../images/common/logo.svg";
@@ -9,14 +10,14 @@ const Header = () => {
     <div className="headerBox w-100 d-flex align-items-center">
       {/* Header Left */}
       <div className="headerLeft d-flex justify-content-between align-items-center">
-        <a
-          href="#"
+        <Link
+          to="/"
           data-bs-toggle="tooltip"
           data-bs-placement="bottom"
           title="Tooltip on bottom"
         >
           <img src={Logo} alt="Logo" />
-        </a>
+        </Link>
         <p className="fontSize14">
           Session Time: <span className="fontSize14-sb">59:12</span>
         </p>

@@ -14,7 +14,7 @@ const ConfigRight = () => {
   const [selectedOption, setSelectedOption] = useState(null);
 
   return (
-    <div className="configRight d-flex flex-column justify-content-between">
+    <div className="configRight">
       {/* Config Left Top */}
       <div className="configLeftTop">
         <div className="configRightHead"></div>
@@ -60,6 +60,9 @@ const ConfigRight = () => {
           </div>
         </div>
       </div>
+
+      <div className="configBottomHeadingBox">
+        </div>
 
       {/* Config Left Bottom */}
       <div className="configLeftBottom">

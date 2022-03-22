@@ -178,13 +178,15 @@ const ConfigLeft = () => {
 
       {/* Config Left Bottom */}
       <div className="configLeftBottom">
-        <h6 className="fontWeight-600 colorBlack mt-4 mb-3">
-          Configured Format
-        </h6>
+        <div className="configBottomHeadingBox">
+          <h6 className="fontWeight-600 colorBlack">
+            Configured Format
+          </h6>
+        </div>
 
         <div className="tableBorderBox">
           <div className="d-flex justify-content-between align-items-center mt-3 mb-2">
-          <div className="clientNameSelect configFormatEntities">
+            <div className="clientNameSelect configFormatEntities">
               <Select
                 defaultValue={selectedOption}
                 onChange={setSelectedOption}
