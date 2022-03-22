@@ -1,22 +1,26 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
 // Components
-import SideBar from "./SideBar"
-import MainWindow from "./MainWindow"
+import SideBar from "./SideBar";
+import SidebarSmall from "./SidebarSmall";
+import MainWindow from "./MainWindow";
 
 const MainView = () => {
-const [navStatus, setNavStatus] =useState(false)
+  const [navStatus, setNavStatus] = useState(false);
 
-  function buttonCollapse(){
-    setNavStatus(!navStatus)
+  function buttonCollapse() {
+    setNavStatus(!navStatus);
   }
   return (
-    <div className='mainView w-100 d-flex'>
-      {navStatus?(<SideBar buttonCollapse={buttonCollapse} />):(<SideBar buttonCollapse={buttonCollapse} />)}
-        
-        <MainWindow />
-        
-    </div>
-  )
-}
+    <div className="mainView d-flex">
+      {navStatus ? (
+        <SideBar buttonCollapse={buttonCollapse} />
+      ) : (
+        <SidebarSmall buttonCollapse={buttonCollapse} />
+      )}
 
-export default MainView
+      <MainWindow />
+    </div>
+  );
+};
+
+export default MainView;

@@ -25,7 +25,7 @@ const ConfigLeft = () => {
           </h5>
         </div>
 
-        <div className="lightBlueBox configTopBlueBox">
+        <div className="lightBlueBox configTopBlueBox position-relative">
           <div className="d-flex justify-content-between align-items-center configLeftFilters">
             <h6 className="fontWeight-600 colorBlack">Filters</h6>
             <button
@@ -129,11 +129,10 @@ const ConfigLeft = () => {
             </button>
           </div>
           <div className="hrGreyLine"></div>
-          <div className="d-flex justify-content-between configSelectBoxTop">
-            <div className="clientNameSelect">
-              <label htmlFor="clientName">
-                Client Name<span>*</span>
-              </label>
+
+          <div className="configSelectBoxTop row">
+            <div className="clientNameSelect col">
+              <label htmlFor="clientName">Client Name</label>
               <Select
                 defaultValue={selectedOption}
                 onChange={setSelectedOption}
@@ -141,10 +140,8 @@ const ConfigLeft = () => {
                 id="clientName"
               />
             </div>
-            <div className="clientNameSelect ms-3">
-              <label htmlFor="logType">
-                Log Type<span>*</span>
-              </label>
+            <div className="clientNameSelect col">
+              <label htmlFor="logType">Log Type</label>
               <Select
                 defaultValue={selectedOption}
                 onChange={setSelectedOption}
@@ -152,10 +149,53 @@ const ConfigLeft = () => {
                 id="logType"
               />
             </div>
-            <div className="clientNameSelect ms-3">
-              <label htmlFor="channelType">
-                Channel Type<span>*</span>
-              </label>
+            <div className="clientNameSelect col">
+              <label htmlFor="channelType">Channel Type</label>
+              <Select
+                defaultValue={selectedOption}
+                onChange={setSelectedOption}
+                options={options}
+                id="channelType"
+              />
+            </div>
+            <div className="clientNameSelect col">
+              <label htmlFor="clientName">Mode Type</label>
+              <Select
+                defaultValue={selectedOption}
+                onChange={setSelectedOption}
+                options={options}
+                id="clientName"
+              />
+            </div>
+            <div className="clientNameSelect col">
+              <label htmlFor="logType">File Type</label>
+              <Select
+                defaultValue={selectedOption}
+                onChange={setSelectedOption}
+                options={options}
+                id="logType"
+              />
+            </div>
+            <div className="clientNameSelect col">
+              <label htmlFor="channelType">File Extention</label>
+              <Select
+                defaultValue={selectedOption}
+                onChange={setSelectedOption}
+                options={options}
+                id="channelType"
+              />
+            </div>
+            <div className="clientNameSelect col">
+              <label htmlFor="channelType">Vendor</label>
+              <Select
+                defaultValue={selectedOption}
+                onChange={setSelectedOption}
+                options={options}
+                id="channelType"
+              />
+            </div>
+            <div className="clientNameSelect col">
+              <label htmlFor="channelType">File Prefix</label>
               <Select
                 defaultValue={selectedOption}
                 onChange={setSelectedOption}
@@ -177,11 +217,9 @@ const ConfigLeft = () => {
       </div>
 
       {/* Config Left Bottom */}
-      <div className="configLeftBottom">
+      <div className="configLeftBottom pb-3">
         <div className="configBottomHeadingBox">
-          <h6 className="fontWeight-600 colorBlack">
-            Configured Format
-          </h6>
+          <h6 className="fontWeight-600 colorBlack">Configured Format</h6>
         </div>
 
         <div className="tableBorderBox">
@@ -219,7 +257,7 @@ const ConfigLeft = () => {
 
           {/* Table */}
           <div className="table-responsive tableContentBox">
-            <table class="table table-striped table-hover table-borderless align-middle">
+            <table className="table table-striped table-hover table-borderless align-middle">
               <thead>
                 <tr>
                   <th scope="col" style={{ width: "17.89%" }}>
@@ -362,6 +400,88 @@ const ConfigLeft = () => {
                 </tr>
               </tbody>
             </table>
+          </div>
+
+          <div className="paginationBox d-flex align-items-center justify-content-between my-4">
+            <div className="paginationLeft fontSize12">
+              Showing 1 to 10 of 49 entries
+            </div>
+
+            <div className="paginationRight">
+              <nav aria-label="Page navigation example">
+                <ul className="pagination">
+                  <li className="page-item">
+                    <a className="page-link previousPagination" href="/" aria-label="Previous">
+                      <span>
+                        <svg
+                          width="16"
+                          height="16"
+                          viewBox="0 0 16 16"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M10 2.6665L4.66667 7.99984L10 13.3332"
+                            stroke="#003087"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </span>
+                      <span>First</span>
+                    </a>
+                  </li>
+                  <li className="page-item">
+                    <a className="page-link paginationBottom" href="/">
+                      1
+                    </a>
+                  </li>
+                  <li className="page-item">
+                    <a className="page-link paginationBottom" href="/">
+                      2
+                    </a>
+                  </li>
+                  <li className="page-item active">
+                    <a className="page-link paginationBottom" href="/">
+                      3
+                    </a>
+                  </li>
+                  <li className="page-item">
+                    <a className="page-link paginationBottom" href="/">
+                      4
+                    </a>
+                  </li>
+                  <li className="page-item">
+                    <a className="page-link paginationBottom" href="/">
+                      5
+                    </a>
+                  </li>
+                  <li className="page-item">
+                    <a className="page-link nextPagination" href="/" aria-label="Next">
+                      <span>Last</span>
+                      <span>
+                        <svg
+                          width="16"
+                          height="16"
+                          viewBox="0 0 16 16"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M6 13.3335L11.3333 8.00016L6 2.66683"
+                            stroke="#003087"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </span>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
           </div>
         </div>
       </div>

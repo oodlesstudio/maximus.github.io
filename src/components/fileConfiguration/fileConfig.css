@@ -26,7 +26,6 @@
 /* Config Left */
 .configMainContent .configLeft {
   width: 61.13%;
-  padding-bottom: 17px;
 }
 .configLeftHead,
 .configRightHead {
@@ -54,7 +53,6 @@
   height: 60px;
   padding-top: 24px;
 }
-
 /* Table Border Box */
 .tableBorderBox .tableContentBox {
   height: 560px;
@@ -126,7 +124,7 @@
   margin-top: 20px;
 }
 .clientNameSelect {
-  width: 217px;
+  width: 30.4%;
 }
 .clientNameSelect label {
   font-size: 14px;
@@ -189,7 +187,6 @@
 .configDotRightContent .clientNameSelect {
   width: 100%;
 }
-
 /* Config Right Bottom */
 .tableBorderBox .configTableRight {
   width: 100%;
@@ -219,4 +216,58 @@
 }
 .tableBorderBox .configTableRight .terminalInputTwo {
   width: 116.63px !important;
+}
+
+/* Pagination */
+.pagination{
+  margin-bottom: 0;
+}
+.pagination .paginationBottom{
+  border: none;
+  font-size: 12px;
+  padding: 0;
+  letter-spacing: 0.02em;
+  color: var(--color-black);
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  margin-right: 6px;
+}
+.pagination .active .paginationBottom,
+.pagination .paginationBottom:hover{
+  background-color: var(--color-primary-default); 
+  font-weight: 500;
+  color: var(--color-white);
+}
+.previousPagination,
+.nextPagination{
+  border: none;
+  font-weight: 500;
+  font-size: 12px;
+  padding: 0;
+  letter-spacing: 0.02em;
+  color: var(--color-primary-default);
+  display: flex;
+  align-items: center;
+  height: 24px;
+  text-decoration: underline;
+}
+.previousPagination{
+  margin-right: 4px;
+}
+.previousPagination span:last-child{
+  margin-left: 2px;
+}
+.nextPagination{
+  margin-left: 4px;
+}
+.nextPagination span:first-child{
+  margin-right: 2px;
+}
+.previousPagination:hover,
+.nextPagination:hover{
+  background-color: transparent;
 }
