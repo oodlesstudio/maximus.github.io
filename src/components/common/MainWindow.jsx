@@ -10,7 +10,7 @@ const MainWindow = () => {
   });
 
   return (
-    <div className={company.sidebarOpen?'mainWindow configMainContent d-flex justify-content-between sidebarClosed':'mainWindow configMainContent d-flex justify-content-between sidebarOpened'}>
+    <div className={company.sidebarOpen?'mainWindow configMainContent d-flex justify-content-between sidebarOpened':'mainWindow configMainContent d-flex justify-content-between sidebarClosed'}>
       <ConfigLeft />
       <ConfigRight />
     </div>

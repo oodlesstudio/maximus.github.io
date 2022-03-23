@@ -1,4 +1,8 @@
-const initialState = [];
+const initialState = [{
+    "sidebarReducer": {
+        "sidebarOpen": true
+    }
+}];
 
 const sidebarReducer = (state = initialState, action) => {
   switch (action.type) {
