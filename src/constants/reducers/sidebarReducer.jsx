@@ -1,6 +1,6 @@
 const initialState = [];
 
-export default (state=initialState, action) => {
+const sidebarReducer = (state = initialState, action) => {
   switch (action.type) {
     case "sideBar":
       return {
@@ -10,3 +10,5 @@ export default (state=initialState, action) => {
       return state;
   }
 };
+
+export default sidebarReducer;

@@ -1,11 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 // Components
 import SidebarMain from "./SidebarMain";
 import MainWindow from "./MainWindow";
 
 const MainView = () => {
-  const [sidebarStatus, setSidebarStatus] = useState(true);
-
   return (
     <div className="mainView w-100 d-flex">
       <SidebarMain />
