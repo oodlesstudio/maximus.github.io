@@ -205,6 +205,12 @@
   background-color: var(--color-background-default);
   padding: 0 16px;
 }
+.sidebarOpened{
+  width: calc(100% - 240px);
+}
+.sidebarClosed{
+  width: calc(100% - 56px);
+}
 
 /* Footer */
 .footerBox {
