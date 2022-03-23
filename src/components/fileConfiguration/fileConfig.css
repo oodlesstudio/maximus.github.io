@@ -8,10 +8,14 @@
   --color-light-blue2: #f6f6fe;
   --color-border-default: #d5d9e0;
   --color-background-default: #fafafa;
+  --color-table-bg: #f5f9ff;
+  --color-table-border: #e3e3e3;
+  --color-scrollbar: #455278;
 
   /* Colors Light Theme */
   --color-light-grey: #f6f6f6;
   --color-white: #ffffff;
+  --color-whiteLight: rgba(255, 255, 255, 0.8);
 
   /* Colors Dark Theme */
   --color-primary-dark: #1669fe;
@@ -36,7 +40,7 @@
 }
 .configTopBlueBox {
   padding: 0 16px;
-  height: 218px;
+  min-height: 218px;
 }
 .configLeftFilters {
   padding: 12px 0;
@@ -52,6 +56,67 @@
 .configBottomHeadingBox{
   height: 60px;
   padding-top: 24px;
+}
+@media (max-width: 992px) {
+  .configMainContent .configLeft {
+    width: 100%;
+  }
+}
+/* Config Blue Box Absolute */
+.absoluteFiltersBox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  display: none;
+}
+.absoluteFiltersBox .configSelectBoxTop{
+  margin-top: 11px;
+}
+.absoluteFiltersBox .clientNameSelect{
+  margin-bottom: 16px;
+}
+.absoluteFiltersBox .col,
+.configTopBlueBox .col{
+  flex: inherit;
+  padding: 0 8px;
+  width: 33.33%;
+}
+.absoluteFiltersBox .filtersInputNumber{
+  height: 38px;
+  border: 1px solid var(--color-border-default);
+  border-radius: 4px;
+  padding-left: 16px;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  color: var(--color-black);
+  width: 100%;
+}
+.absoluteFiltersBox .btnsBtm{
+  margin-top: 8px;
+}
+.absoluteFiltersBox .allFiltersBtn{
+  background-color: transparent;
+  border: none;
+  width: inherit;
+  height: inherit;
+}
+@media (max-width: 767px) {
+  .absoluteFiltersBox .col,
+  .configTopBlueBox .col{
+    flex: inherit;
+    padding: 0 8px;
+    width: 100%;
+    margin-bottom: 16px;
+  }
+  .configLeft .btnsBtm .btnPrimary,
+  .configLeft .btnsBtm .btnPrimaryOutline {
+    width: 150px;
+  }
+  .configLeft .btnsBtm {
+    margin-top: 8px;
+  }
 }
 /* Table Border Box */
 .tableBorderBox .tableContentBox {
@@ -167,6 +232,11 @@
   width: 37.67%;
   padding-bottom: 17px;
 }
+@media (max-width: 992px) {
+  .configMainContent .configRight {
+    width: 100%;
+  }
+}
 /* Config Right Top */
 .configTopBlueBoxRight {
   padding: 26px 20px;
@@ -270,4 +340,8 @@
 .previousPagination:hover,
 .nextPagination:hover{
   background-color: transparent;
+}
+
+@media (max-width: 767px) {
+
 }

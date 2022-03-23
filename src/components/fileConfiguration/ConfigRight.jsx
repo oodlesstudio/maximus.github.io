@@ -140,7 +140,7 @@ const ConfigRight = () => {
             <table className="table table-striped table-hover table-borderless align-middle configTableRight">
               <thead>
                 <tr>
-                  <th scope="col" style={{ width: "29.16%" }}>
+                  <th scope="col" style={{ width: "30%" }}>
                     Field Name
                   </th>
                   <th scope="col">Start Position</th>

@@ -22,7 +22,7 @@ a {
   text-decoration: none;
 }
 
-:focus{
+:focus {
   box-shadow: none !important;
 }
 
@@ -43,6 +43,7 @@ a {
   /* Colors Light Theme */
   --color-light-grey: #f6f6f6;
   --color-white: #ffffff;
+  --color-whiteLight: rgba(255, 255, 255, 0.8);
 
   /* Colors Dark Theme */
   --color-primary-dark: #1669fe;
@@ -57,11 +58,34 @@ a {
   --font-size10: 0.625rem;
   --font-size12: 0.75rem;
   --font-size14: 0.875rem;
+  --font-size16: 1rem;
   --font-size20: 1.25rem;
 
   /* Font Weights */
   --font-weight-500: 500;
   --font-weight-600: 600;
+}
+[data-theme='light'] {
+  /* Colors Light Theme */
+  --color-primary-default: #003087;
+  --color-secondary-default: #c54031;
+  --color-secondary-light-defaut: #fbd2ce;
+  --color-black: #000000;
+  --color-light-blue: #f6f6f6;
+  --color-light-blue2: #fafafa;
+  --color-border-default: #d5d9e0;
+  --color-background-default: #fafafa;
+}
+[data-theme='dark'] {
+  /* Colors Dark Theme */
+  --color-primary-default: #1669fe;
+  --color-secondary-default: #ff5c49;
+  --color-secondary-light-defaut: #4b1813;
+  --color-black: #ffffff;
+  --color-light-blue: #001336;
+  --color-light-blue2: #000e28;
+  --color-border-default: #32374a;
+  --color-background-default: #000a1b;
 }
 
 /* Font Sizes */
@@ -89,6 +113,17 @@ a {
 }
 .fontSize14-sb {
   font-weight: var(--font-weight-600);
+}
+
+.fontSize16-sm {
+  font-weight: var(--font-weight-600);
+  font-size: var(--font-size16);
+  color: var(--color-black);
+  line-height: 1.21;
+}
+
+.letterSpacing-2{
+  letter-spacing: 0.02em;
 }
 
 /* Font Weights */
@@ -171,6 +206,12 @@ a {
   top: 11px;
   left: 12px;
 }
+@media (max-width: 767px) {
+  .has-search .form-control {
+    width: 105px;
+    margin-left: 8px;
+  }
+}
 
 /* Hide Arrow Input Numbers */
 /* Chrome, Safari, Edge, Opera */
@@ -180,6 +221,6 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 /* Firefox */
-input[type=number] {
+input[type="number"] {
   -moz-appearance: textfield;
 }

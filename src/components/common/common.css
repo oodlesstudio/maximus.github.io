@@ -8,6 +8,11 @@
   --color-light-blue2: #f6f6fe;
   --color-border-default: #d5d9e0;
   --color-background-default: #fafafa;
+  --color-table-bg: #f5f9ff;
+  --color-table-border: #e3e3e3;
+  --color-scrollbar: #455278;
+  --color-headerTooltip: #4f4f4f;
+  --color-popoverborder: #f3f2fc;
 
   /* Colors Light Theme */
   --color-light-grey: #f6f6f6;
@@ -47,6 +52,169 @@
 .headerMyAccount .fontSize10-m {
   margin-top: 3px;
 }
+.headerHamburger {
+  border: none;
+  background-color: transparent;
+  margin-right: 16px;
+  display: none;
+}
+/* Tooltip */
+.tooltip-inner {
+  background-color: var(--color-headerTooltip);
+  border: 0.5px solid var(--color-white);
+  font-weight: 500;
+  font-size: 12px;
+}
+.bs-tooltip-bottom .tooltip-arrow::before {
+  border-bottom-color: var(--color-headerTooltip);
+}
+/* SettingsPopover */
+.headerSettingsPopover {
+  border: none;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.16);
+  border-radius: 4px;
+  padding: 8px 0;
+  width: 217px;
+}
+.headerSettingsPopover .popover-body {
+  padding: 0;
+}
+.headerSettingsPopover ul {
+  padding: 0;
+  margin: 0;
+}
+.headerSettingsPopover ul li {
+  list-style: none;
+  padding: 0 16px;
+}
+.headerSettingsPopover ul li button {
+  border: none;
+  background-color: transparent;
+  letter-spacing: 0.02em;
+  width: 100%;
+  height: 40px;
+  border-bottom: 1px solid var(--color-popoverborder);
+  text-align: left;
+}
+.headerSettingsPopover ul li:hover {
+  background-color: var(--color-secondary-light-defaut);
+  transition: all 0.3s ease-in-out;
+}
+.headerSettingsPopover .popover-arrow::before {
+  border: none;
+}
+/* Default Theme Modal */
+.defaultThemeModal .modal-content {
+  border-radius: 8px;
+  border: none;
+  background-color: var(--color-background-default);
+  width: 441px;
+}
+.defaultThemeModal .modal-header {
+  height: 40px;
+  padding: 0 20px 0 24px;
+  background-color: var(--color-secondary-light-defaut);
+  border: none;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+.defaultThemeModal .modal-header .btn-close {
+  background: transparent url(../../images/common/modalClose.svg) center/1.5em
+    auto no-repeat;
+  opacity: 1;
+}
+.defaultThemeModal .modal-body {
+  padding: 32px 0;
+  display: flex;
+  justify-content: center;
+}
+.defaultThemeModal .modal-body p {
+  line-height: 1.5;
+  width: 277px;
+}
+.defaultThemeModal .modal-footer {
+  border: none;
+  padding: 0;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+.defaultThemeModal .modal-footer .btnPrimary,
+.defaultThemeModal .modal-footer .btnPrimaryOutline {
+  margin: 0;
+}
+.defaultThemeModal .modal-footer .btnPrimary {
+  margin-left: 16px;
+  width: 172px;
+}
+.defaultThemeModal .modal-footer .btnPrimary:hover,
+.defaultThemeModal .modal-footer .btnPrimary:focus {
+  background-color: var(--color-primary-default);
+}
+.defaultThemeModal .modal-footer .btnPrimaryOutline:hover,
+.defaultThemeModal .modal-footer .btnPrimaryOutline:focus {
+  background-color: transparent;
+  color: var(--color-primary-default);
+}
+/* Site Configuration Modal */
+.siteConfigurationModal .modal-body {
+  padding: 24px 0;
+}
+.siteConfigurationModal .clientNameSelect {
+  width: 361px;
+}
+.siteConfigurationModal .modal-footer .btnPrimary {
+  margin-left: 0;
+  width: 361px;
+}
+/* Error/Save Filters  Modals */
+.saveFiltersModal .modal-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-white);
+  padding-top: 0;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+.saveFiltersModal .modal-body img {
+  width: 127.04px;
+}
+.saveFiltersModal .modal-body p {
+  line-height: 1.21;
+  width: 100%;
+}
+
+.errorFiltersModal .modal-body {
+  padding-top: 11px;
+  padding-bottom: 31px;
+}
+.errorFiltersModal .modal-body img {
+  width: 84.58px;
+}
+.errorFiltersModal .modal-body p {
+  width: 300px;
+}
+
+@media (max-width: 992px) {
+  .headerBox{
+    justify-content: space-between;
+  }
+  .headerLeft {
+    width: 328px;
+    margin-left: 16px;
+  }
+  .headerRight {
+    width: auto;
+    margin-right: 24px;
+  }
+  .headerMyAccount {
+    display: none;
+  }
+  .headerHamburger {
+    display: block;
+  }
+}
 @media (max-width: 767px) {
   .headerBox {
     height: 88px;
@@ -66,14 +234,17 @@
     margin: 0;
     padding: 14px 16px 12px 0;
   }
-  .headerMyAccount {
-    display: none;
-  }
 }
 
 /* Main View */
 .mainView {
   padding-top: 64px;
+}
+
+@media (max-width: 767px) {
+  .mainView{
+    padding-top: 88px;
+  }
 }
 /* Side Bar */
 .sideBar {
@@ -92,7 +263,7 @@
   position: absolute;
   top: 32%;
   right: -14px;
-  z-index: 2;
+  z-index: 10;
 }
 .sideBar .accordion .accordion-item {
   margin-bottom: 8px;
@@ -197,6 +368,14 @@
   color: var(--color-black);
   margin-left: 8px;
 }
+.sidebarPopover .popover-arrow::before {
+  border: none;
+}
+@media (max-width: 992px) {
+  .sideBar {
+    display: none;
+  }
+}
 
 /* Main Window */
 .mainWindow {
@@ -205,11 +384,17 @@
   background-color: var(--color-background-default);
   padding: 0 16px;
 }
-.sidebarOpened{
+.sidebarOpened {
   width: calc(100% - 240px);
 }
-.sidebarClosed{
+.sidebarClosed {
   width: calc(100% - 56px);
+}
+@media (max-width: 992px) {
+  .mainWindow {
+    flex-direction: column;
+    width: 100%;
+  }
 }
 
 /* Footer */
