@@ -21,6 +21,8 @@ const ConfigLeft = () => {
   const [resetFilters, setResetFilters] = useState(false);
   const [saveFilters, setSaveFilters] = useState(false);
 
+  const [showFilters, setShowFilters] = useState(false)
+
   return (
     <div className="configLeft">
       {/* Config Left Top */}
@@ -38,6 +40,7 @@ const ConfigLeft = () => {
               <button
                 type="button"
                 className="allFiltersBtn btn p-0 d-flex justify-content-center align-items-center"
+                onClick={() => setShowFilters(true)}
               >
                 <span>
                   <svg
@@ -115,10 +118,11 @@ const ConfigLeft = () => {
             </div>
           </div>
 
+          { showFilters?
           <div className="lightBlueBox configTopBlueBox absoluteFiltersBox">
             <div className="d-flex justify-content-between align-items-center configLeftFilters">
               <h6 className="fontWeight-600 colorBlack">Filters</h6>
-              <button type="button" className="allFiltersBtn">
+              <button type="button" className="allFiltersBtn" onClick={() =>setShowFilters(false)}>
                 <span>
                   <svg
                     width="16"
@@ -260,6 +264,7 @@ const ConfigLeft = () => {
               </button>
             </div>
           </div>
+          :null}
         </div>
 
         {/* Reset Filters */}
