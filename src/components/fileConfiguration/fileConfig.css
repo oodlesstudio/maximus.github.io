@@ -65,6 +65,11 @@
   width: 100%;
   background-color: var(--border-box-bg);
 }
+.absoluteFiltersBox .filtersInputNumber::placeholder{
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  color: var(--color-black);
+}
 .absoluteFiltersBox .btnsBtm{
   margin-top: 8px;
 }
@@ -206,6 +211,12 @@
 .configFormatEntities {
   width: 131px;
 }
+.reactSelectBox__option{
+  background-color: white;
+}
+.reactSelectBox__option:hover{
+  background-color: var(--selectbox-hover);
+}
 
 /* Config Right */
 .configMainContent .configRight {
@@ -265,6 +276,12 @@
   color: var(--color-black);
   background-color: var(--border-box-bg);
 }
+.tableBorderBox .configTableRight input[type="number"]::placeholder {
+  font-family: "Inter";
+  font-size: 12px;
+  letter-spacing: 0.02em;
+  color: var(--color-black);
+}
 .tableBorderBox .configTableRight .terminalInputTwo {
   width: 116.63px !important;
 }
@@ -323,8 +340,4 @@
 .previousPagination:hover,
 .nextPagination:hover{
   background-color: transparent;
-}
-
-@media (max-width: 767px) {
-
 }

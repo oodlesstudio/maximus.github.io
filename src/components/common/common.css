@@ -63,6 +63,7 @@
   border-radius: 4px;
   padding: 8px 0;
   width: 217px;
+  background-color: var(--background-white);
 }
 .headerSettingsPopover .popover-body {
   padding: 0;
@@ -93,6 +94,10 @@
 .headerSettingsPopover .popover-arrow::before {
   border: none;
 }
+.bs-popover-bottom>.popover-arrow::after{
+  border-bottom-color: var(--background-white);
+}
+
 /* Default Theme Modal */
 .defaultThemeModal .modal-content {
   border-radius: 8px;
@@ -103,7 +108,7 @@
 .defaultThemeModal .modal-header {
   height: 40px;
   padding: 0 20px 0 24px;
-  background-color: var(--color-secondary-light-defaut);
+  background-color: var(--modal-header);
   border: none;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
@@ -162,13 +167,14 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: var(--color-white);
-  padding-top: 0;
+  background-color: var(--border-box-bg);
+  padding: 24px 0 40px;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
 }
 .saveFiltersModal .modal-body img {
-  width: 127.04px;
+  width: 64px;
+  margin-bottom: 8px;
 }
 .saveFiltersModal .modal-body p {
   line-height: 1.21;
@@ -176,11 +182,11 @@
 }
 
 .errorFiltersModal .modal-body {
-  padding-top: 11px;
-  padding-bottom: 31px;
+  padding: 24px 0 40px;
 }
 .errorFiltersModal .modal-body img {
-  width: 84.58px;
+  width: 64px;
+  margin-bottom: 8px;
 }
 .errorFiltersModal .modal-body p {
   width: 300px;
@@ -339,6 +345,10 @@
   border: none;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.16);
   border-radius: 4px;
+  background-color: var(--sidebar-color);
+}
+.bs-popover-end>.popover-arrow::after{
+  border-right-color: var(--sidebar-color);
 }
 .sidebarPopover .popover-body {
   padding: 0;

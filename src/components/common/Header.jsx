@@ -7,7 +7,7 @@ import {
   Popover,
   Button,
   Modal,
-  Offcanvas
+  Offcanvas,
 } from "react-bootstrap";
 
 // Components
@@ -48,7 +48,11 @@ const Header = () => {
           <li>
             <button
               className="fontSize14"
-              onClick={() => setSiteConfiguration(!siteConfiguration)}
+              // onClick={() => setSiteConfiguration(!siteConfiguration)}
+              onClick={() => {
+                setSiteConfiguration(!siteConfiguration);
+                this.hidePopover();
+              }}
             >
               Site Configuration
             </button>
@@ -169,7 +173,7 @@ const Header = () => {
             trigger="click"
             placement="bottom"
             overlay={popover}
-            rootClose
+            rootClose={true}
           >
             <button type="button" className="me-3">
               <span>
@@ -301,7 +305,13 @@ const Header = () => {
             </Modal.Body>
             <Modal.Footer>
               <Button variant="secondary btnPrimaryOutline">Cancel</Button>
-              <Button variant="primary btnPrimary" onClick={changeThemeDefault}>
+              <Button
+                variant="primary btnPrimary"
+                onClick={() => {
+                  changeThemeDefault();
+                  setOpenDefaultModal(!openDefaultModal);
+                }}
+              >
                 Apply Theme
               </Button>
             </Modal.Footer>
@@ -333,7 +343,13 @@ const Header = () => {
               >
                 Cancel
               </Button>
-              <Button variant="primary btnPrimary" onClick={changeThemeLight}>
+              <Button
+                variant="primary btnPrimary"
+                onClick={() => {
+                  changeThemeLight();
+                  setOpenLightModal(!openLightModal);
+                }}
+              >
                 Apply Theme
               </Button>
             </Modal.Footer>
@@ -365,7 +381,13 @@ const Header = () => {
               >
                 Cancel
               </Button>
-              <Button variant="primary btnPrimary" onClick={changeThemeDark}>
+              <Button
+                variant="primary btnPrimary"
+                onClick={() => {
+                  changeThemeDark();
+                  setOpenDarkModal(!openDarkModal);
+                }}
+              >
                 Apply Theme
               </Button>
             </Modal.Footer>

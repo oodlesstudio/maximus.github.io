@@ -43,8 +43,8 @@ a {
   --color-scrollbar: #455278;
   --color-headerTooltip: #4f4f4f;
   --color-popoverborder: #f3f2fc;
-  --color-notificationsRed: #FF0000;
-  --background-white: #FFFFFF;
+  --color-notificationsRed: #ff0000;
+  --background-white: #ffffff;
 
   /* Colors Light Theme */
   --color-light-grey: #f6f6f6;
@@ -86,12 +86,15 @@ a {
   --color-scrollbar: #455278;
   --header-background: #fbd2ce;
   --icon-color: #003087;
-  --background-white: #FFFFFF;
+  --background-white: #ffffff;
   --breadcrumb-icon: #000000;
-  --sidebar-color: #E1ECFF;
+  --sidebar-color: #e1ecff;
   --sidebar-accordion-bg: rgba(255, 255, 255, 0.8);
-  --footer-bg: #FFFFFF;
-  --border-box-bg: #FFFFFF;
+  --footer-bg: #ffffff;
+  --border-box-bg: #ffffff;
+  --selectbox-hover: #e1ecff;
+  --modal-header: #fbd2ce;
+  --color-popoverborder: #f3f2fc;
 }
 [data-theme="light"] {
   /* Colors Light Theme */
@@ -105,12 +108,15 @@ a {
   --color-background-default: #fafafa;
   --header-background: #ffffff;
   --icon-color: #003087;
-  --background-white: #FFFFFF;
+  --background-white: #ffffff;
   --breadcrumb-icon: #000000;
-  --sidebar-color: #FFFFFF;
-  --sidebar-accordion-bg: #FAFAFA;
-  --footer-bg: #F6F6F6;
-  --border-box-bg: #FFFFFF;
+  --sidebar-color: #ffffff;
+  --sidebar-accordion-bg: #fafafa;
+  --footer-bg: #f6f6f6;
+  --border-box-bg: #ffffff;
+  --selectbox-hover: #e1ecff;
+  --modal-header: #F6F6F6;
+  --color-popoverborder: #f3f2fc;
 }
 [data-theme="dark"] {
   /* Colors Dark Theme */
@@ -122,16 +128,19 @@ a {
   --color-light-blue2: #000e28;
   --color-border-default: #32374a;
   --color-background-default: #000a1b;
-  --color-table-bg: #000A1B;
-  --color-table-border: #32374A;
+  --color-table-bg: #000a1b;
+  --color-table-border: #32374a;
   --header-background: #001336;
   --icon-color: #003087;
   --background-white: #001336;
-  --breadcrumb-icon: #FFFFFF;
-  --sidebar-color: #000A1B;
+  --breadcrumb-icon: #ffffff;
+  --sidebar-color: #000a1b;
   --sidebar-accordion-bg: #001336;
   --footer-bg: #000713;
-  --border-box-bg: #000A1B;
+  --border-box-bg: #000a1b;
+  --selectbox-hover: #001336;
+  --modal-header: #001336;
+  --color-popoverborder: #32374a;
 }
 
 /* Font Sizes */
@@ -227,6 +236,9 @@ button {
   border: none;
   color: var(--color-white);
 }
+.btnPrimaryOutline:hover {
+  border: 1px solid var(--color-primary-default);
+}
 
 /* Icon Button Box */
 .iconButtonBox {
@@ -279,6 +291,6 @@ input[type="number"] {
 .iconColor {
   fill: var(--icon-color);
 }
-.breadcrumbIcon{
+.breadcrumbIcon {
   stroke: var(--breadcrumb-icon);
 }

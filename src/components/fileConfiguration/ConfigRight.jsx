@@ -1,18 +1,33 @@
 import React, { useState } from "react";
 import Select from "react-select";
 import { Link } from "react-router-dom";
+import { Tooltip, OverlayTrigger } from "react-bootstrap";
 
 // Images
 import Pdf from "../../images/common/pdf.svg";
 import Excel from "../../images/common/excel.svg";
 
 const options = [
-  { value: "chocolate", label: "Chocolate" },
-  { value: "strawberry", label: "Strawberry" },
-  { value: "vanilla", label: "Vanilla" },
+  { value: "10 Entries", label: "10 Entries" },
+  { value: "25 Entries", label: "25 Entries" },
+  { value: "50 Entries", label: "50 Entries" },
+  { value: "100 Entries", label: "100 Entries" },
 ];
 const ConfigRight = () => {
   const [selectedOption, setSelectedOption] = useState(null);
+
+  // Tooltip
+  const renderTooltip = (props) => (
+    <Tooltip id="button-tooltip" {...props}>
+      Export to pdf
+    </Tooltip>
+  );
+
+  const renderTooltipExcel = (props) => (
+    <Tooltip id="button-tooltip" {...props}>
+      Export to excel
+    </Tooltip>
+  );
 
   return (
     <div className="configRight">
@@ -105,6 +120,8 @@ const ConfigRight = () => {
                   onChange={setSelectedOption}
                   options={options}
                   id="clientName"
+                  placeholder="Sri Vasavamba Cooperative Urb..."
+                  classNamePrefix="reactSelectBox"
                 />
               </div>
             </div>
@@ -124,16 +141,30 @@ const ConfigRight = () => {
                 onChange={setSelectedOption}
                 options={options}
                 isSearchable={false}
+                classNamePrefix="reactSelectBox"
+                placeholder="10 Entries"
               />
             </div>
 
             <div>
-              <button type="button" className="iconButtonBox ms-2">
-                <img src={Pdf} alt="Pdf" />
-              </button>
-              <button type="button" className="iconButtonBox ms-2">
-                <img src={Excel} alt="Excel" />
-              </button>
+              <OverlayTrigger
+                placement="top"
+                delay={{ show: 250, hide: 400 }}
+                overlay={renderTooltip}
+              >
+                <button type="button" className="iconButtonBox ms-2">
+                  <img src={Pdf} alt="Pdf" />
+                </button>
+              </OverlayTrigger>
+              <OverlayTrigger
+                placement="top"
+                delay={{ show: 250, hide: 400 }}
+                overlay={renderTooltipExcel}
+              >
+                <button type="button" className="iconButtonBox ms-2">
+                  <img src={Excel} alt="Excel" />
+                </button>
+              </OverlayTrigger>
             </div>
           </div>
 
@@ -153,7 +184,7 @@ const ConfigRight = () => {
                 <tr>
                   <td>Terminal ID </td>
                   <td>
-                    <input type="number" name="" id="" />
+                    <input type="number" name="" id="" placeholder="154" />
                   </td>
                   <td>
                     <input
@@ -161,13 +192,14 @@ const ConfigRight = () => {
                       name=""
                       id=""
                       className="terminalInputTwo"
+                      placeholder="8"
                     />
                   </td>
                 </tr>
                 <tr>
                   <td>Terminal ID </td>
                   <td>
-                    <input type="number" name="" id="" />
+                    <input type="number" name="" id="" placeholder="154" />
                   </td>
                   <td>
                     <input
@@ -175,13 +207,14 @@ const ConfigRight = () => {
                       name=""
                       id=""
                       className="terminalInputTwo"
+                      placeholder="8"
                     />
                   </td>
                 </tr>
                 <tr>
                   <td>Terminal ID </td>
                   <td>
-                    <input type="number" name="" id="" />
+                    <input type="number" name="" id="" placeholder="154" />
                   </td>
                   <td>
                     <input
@@ -189,13 +222,14 @@ const ConfigRight = () => {
                       name=""
                       id=""
                       className="terminalInputTwo"
+                      placeholder="8"
                     />
                   </td>
                 </tr>
                 <tr>
                   <td>Terminal ID </td>
                   <td>
-                    <input type="number" name="" id="" />
+                    <input type="number" name="" id="" placeholder="154" />
                   </td>
                   <td>
                     <input
@@ -203,13 +237,14 @@ const ConfigRight = () => {
                       name=""
                       id=""
                       className="terminalInputTwo"
+                      placeholder="8"
                     />
                   </td>
                 </tr>
                 <tr>
                   <td>Terminal ID </td>
                   <td>
-                    <input type="number" name="" id="" />
+                    <input type="number" name="" id="" placeholder="154" />
                   </td>
                   <td>
                     <input
@@ -217,13 +252,14 @@ const ConfigRight = () => {
                       name=""
                       id=""
                       className="terminalInputTwo"
+                      placeholder="8"
                     />
                   </td>
                 </tr>
                 <tr>
                   <td>Terminal ID </td>
                   <td>
-                    <input type="number" name="" id="" />
+                    <input type="number" name="" id="" placeholder="154" />
                   </td>
                   <td>
                     <input
@@ -231,13 +267,14 @@ const ConfigRight = () => {
                       name=""
                       id=""
                       className="terminalInputTwo"
+                      placeholder="8"
                     />
                   </td>
                 </tr>
                 <tr>
                   <td>Terminal ID </td>
                   <td>
-                    <input type="number" name="" id="" />
+                    <input type="number" name="" id="" placeholder="154" />
                   </td>
                   <td>
                     <input
@@ -245,13 +282,14 @@ const ConfigRight = () => {
                       name=""
                       id=""
                       className="terminalInputTwo"
+                      placeholder="8"
                     />
                   </td>
                 </tr>
                 <tr>
                   <td>Terminal ID </td>
                   <td>
-                    <input type="number" name="" id="" />
+                    <input type="number" name="" id="" placeholder="154" />
                   </td>
                   <td>
                     <input
@@ -259,13 +297,14 @@ const ConfigRight = () => {
                       name=""
                       id=""
                       className="terminalInputTwo"
+                      placeholder="8"
                     />
                   </td>
                 </tr>
                 <tr>
                   <td>Terminal ID </td>
                   <td>
-                    <input type="number" name="" id="" />
+                    <input type="number" name="" id="" placeholder="154" />
                   </td>
                   <td>
                     <input
@@ -273,13 +312,14 @@ const ConfigRight = () => {
                       name=""
                       id=""
                       className="terminalInputTwo"
+                      placeholder="8"
                     />
                   </td>
                 </tr>
                 <tr>
                   <td>Terminal ID </td>
                   <td>
-                    <input type="number" name="" id="" />
+                    <input type="number" name="" id="" placeholder="154" />
                   </td>
                   <td>
                     <input
@@ -287,13 +327,14 @@ const ConfigRight = () => {
                       name=""
                       id=""
                       className="terminalInputTwo"
+                      placeholder="8"
                     />
                   </td>
                 </tr>
                 <tr>
                   <td>Terminal ID </td>
                   <td>
-                    <input type="number" name="" id="" />
+                    <input type="number" name="" id="" placeholder="154" />
                   </td>
                   <td>
                     <input
@@ -301,13 +342,14 @@ const ConfigRight = () => {
                       name=""
                       id=""
                       className="terminalInputTwo"
+                      placeholder="8"
                     />
                   </td>
                 </tr>
                 <tr>
                   <td>Terminal ID </td>
                   <td>
-                    <input type="number" name="" id="" />
+                    <input type="number" name="" id="" placeholder="154" />
                   </td>
                   <td>
                     <input
@@ -315,13 +357,14 @@ const ConfigRight = () => {
                       name=""
                       id=""
                       className="terminalInputTwo"
+                      placeholder="8"
                     />
                   </td>
                 </tr>
                 <tr>
                   <td>Terminal ID </td>
                   <td>
-                    <input type="number" name="" id="" />
+                    <input type="number" name="" id="" placeholder="154" />
                   </td>
                   <td>
                     <input
@@ -329,13 +372,14 @@ const ConfigRight = () => {
                       name=""
                       id=""
                       className="terminalInputTwo"
+                      placeholder="8"
                     />
                   </td>
                 </tr>
                 <tr>
                   <td>Terminal ID </td>
                   <td>
-                    <input type="number" name="" id="" />
+                    <input type="number" name="" id="" placeholder="154" />
                   </td>
                   <td>
                     <input
@@ -343,6 +387,7 @@ const ConfigRight = () => {
                       name=""
                       id=""
                       className="terminalInputTwo"
+                      placeholder="8"
                     />
                   </td>
                 </tr>
@@ -359,7 +404,11 @@ const ConfigRight = () => {
               <nav aria-label="Page navigation example">
                 <ul className="pagination">
                   <li className="page-item">
-                    <a className="page-link previousPagination" href="/" aria-label="Previous">
+                    <a
+                      className="page-link previousPagination"
+                      href="/"
+                      aria-label="Previous"
+                    >
                       <span>
                         <svg
                           width="16"
@@ -406,7 +455,11 @@ const ConfigRight = () => {
                     </a>
                   </li>
                   <li className="page-item">
-                    <a className="page-link nextPagination" href="/" aria-label="Next">
+                    <a
+                      className="page-link nextPagination"
+                      href="/"
+                      aria-label="Next"
+                    >
                       <span>Last</span>
                       <span>
                         <svg

@@ -23,6 +23,7 @@ function App() {
     const newTheme =
       theme === "light" ? "light" : theme === "dark" ? "dark" : "default";
     setTheme(newTheme);
+    document.body.setAttribute("data-theme", theme)
   }, [setTheme, theme]);
 
   return (

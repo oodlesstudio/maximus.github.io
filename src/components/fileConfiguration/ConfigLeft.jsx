@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Select from "react-select";
-import { Modal } from "react-bootstrap";
+import { Modal, Tooltip, OverlayTrigger } from "react-bootstrap";
 
 // Images
 import Pdf from "../../images/common/pdf.svg";
@@ -10,9 +10,17 @@ import ErrorGif from "../../images/common/errorGif.gif";
 import SuccessGif from "../../images/common/successGif.gif";
 
 const options = [
-  { value: "chocolate", label: "Chocolate" },
-  { value: "strawberry", label: "Strawberry" },
-  { value: "vanilla", label: "Vanilla" },
+  { value: "10 Entries", label: "10 Entries" },
+  { value: "25 Entries", label: "25 Entries" },
+  { value: "50 Entries", label: "50 Entries" },
+  { value: "100 Entries", label: "100 Entries" },
+];
+
+const ConfigTableLeftEntries = [
+  { value: "10 Entries", label: "10 Entries" },
+  { value: "25 Entries", label: "25 Entries" },
+  { value: "50 Entries", label: "50 Entries" },
+  { value: "100 Entries", label: "100 Entries" },
 ];
 
 const ConfigLeft = () => {
@@ -21,7 +29,20 @@ const ConfigLeft = () => {
   const [resetFilters, setResetFilters] = useState(false);
   const [saveFilters, setSaveFilters] = useState(false);
 
-  const [showFilters, setShowFilters] = useState(false)
+  const [showFilters, setShowFilters] = useState(false);
+
+  // Tooltip
+  const renderTooltip = (props) => (
+    <Tooltip id="button-tooltip" {...props}>
+      Export to pdf
+    </Tooltip>
+  );
+
+  const renderTooltipExcel = (props) => (
+    <Tooltip id="button-tooltip" {...props}>
+      Export to excel
+    </Tooltip>
+  );
 
   return (
     <div className="configLeft">
@@ -74,6 +95,8 @@ const ConfigLeft = () => {
                   onChange={setSelectedOption}
                   options={options}
                   id="clientName"
+                  classNamePrefix="reactSelectBox"
+                  placeholder="Shri Vasavamba..."
                 />
               </div>
               <div className="clientNameSelect col">
@@ -85,6 +108,8 @@ const ConfigLeft = () => {
                   onChange={setSelectedOption}
                   options={options}
                   id="logType"
+                  classNamePrefix="reactSelectBox"
+                  placeholder="CBS"
                 />
               </div>
               <div className="clientNameSelect col">
@@ -96,6 +121,8 @@ const ConfigLeft = () => {
                   onChange={setSelectedOption}
                   options={options}
                   id="channelType"
+                  classNamePrefix="reactSelectBox"
+                  placeholder="ATM"
                 />
               </div>
             </div>
@@ -118,153 +145,176 @@ const ConfigLeft = () => {
             </div>
           </div>
 
-          { showFilters?
-          <div className="lightBlueBox configTopBlueBox absoluteFiltersBox">
-            <div className="d-flex justify-content-between align-items-center configLeftFilters">
-              <h6 className="fontWeight-600 colorBlack">Filters</h6>
-              <button type="button" className="allFiltersBtn" onClick={() =>setShowFilters(false)}>
-                <span>
-                  <svg
-                    width="16"
-                    height="16"
-                    viewBox="0 0 16 16"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M15.4056 1.86735C15.7571 1.51588 15.7571 0.946033 15.4056 0.594561C15.0542 0.243089 14.4843 0.243089 14.1328 0.594561L15.4056 1.86735ZM0.594378 14.133C0.242906 14.4845 0.242906 15.0543 0.594378 15.4058C0.94585 15.7573 1.5157 15.7573 1.86717 15.4058L0.594378 14.133ZM14.1328 0.594561L0.594378 14.133L1.86717 15.4058L15.4056 1.86735L14.1328 0.594561Z"
-                      fill="#003087"
-                    />
-                    <path
-                      d="M0.594368 1.86735C0.242896 1.51588 0.242896 0.946033 0.594368 0.594561C0.94584 0.243089 1.51569 0.243089 1.86716 0.594561L0.594368 1.86735ZM15.4056 14.133C15.7571 14.4845 15.7571 15.0543 15.4056 15.4058C15.0542 15.7573 14.4843 15.7573 14.1328 15.4058L15.4056 14.133ZM1.86716 0.594561L15.4056 14.133L14.1328 15.4058L0.594368 1.86735L1.86716 0.594561Z"
-                      fill="#003087"
-                    />
-                  </svg>
-                </span>
-              </button>
-            </div>
-            <div className="hrGreyLine"></div>
+          {showFilters ? (
+            <div className="lightBlueBox configTopBlueBox absoluteFiltersBox">
+              <div className="d-flex justify-content-between align-items-center configLeftFilters">
+                <h6 className="fontWeight-600 colorBlack">Filters</h6>
+                <button
+                  type="button"
+                  className="allFiltersBtn"
+                  onClick={() => setShowFilters(false)}
+                >
+                  <span>
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M15.4056 1.86735C15.7571 1.51588 15.7571 0.946033 15.4056 0.594561C15.0542 0.243089 14.4843 0.243089 14.1328 0.594561L15.4056 1.86735ZM0.594378 14.133C0.242906 14.4845 0.242906 15.0543 0.594378 15.4058C0.94585 15.7573 1.5157 15.7573 1.86717 15.4058L0.594378 14.133ZM14.1328 0.594561L0.594378 14.133L1.86717 15.4058L15.4056 1.86735L14.1328 0.594561Z"
+                        fill="#003087"
+                      />
+                      <path
+                        d="M0.594368 1.86735C0.242896 1.51588 0.242896 0.946033 0.594368 0.594561C0.94584 0.243089 1.51569 0.243089 1.86716 0.594561L0.594368 1.86735ZM15.4056 14.133C15.7571 14.4845 15.7571 15.0543 15.4056 15.4058C15.0542 15.7573 14.4843 15.7573 14.1328 15.4058L15.4056 14.133ZM1.86716 0.594561L15.4056 14.133L14.1328 15.4058L0.594368 1.86735L1.86716 0.594561Z"
+                        fill="#003087"
+                      />
+                    </svg>
+                  </span>
+                </button>
+              </div>
+              <div className="hrGreyLine"></div>
 
-            <div className="configSelectBoxTop row">
-              <div className="clientNameSelect col">
-                <label htmlFor="clientName">Client Name</label>
-                <Select
-                  defaultValue={selectedOption}
-                  onChange={setSelectedOption}
-                  options={options}
-                  id="clientName"
-                />
+              <div className="configSelectBoxTop row">
+                <div className="clientNameSelect col">
+                  <label htmlFor="clientName">Client Name</label>
+                  <Select
+                    defaultValue={selectedOption}
+                    onChange={setSelectedOption}
+                    options={options}
+                    id="clientName"
+                    classNamePrefix="reactSelectBox"
+                    placeholder="Shri Vasavamba..."
+                  />
+                </div>
+                <div className="clientNameSelect col">
+                  <label htmlFor="logType">Log Type</label>
+                  <Select
+                    defaultValue={selectedOption}
+                    onChange={setSelectedOption}
+                    options={options}
+                    id="logType"
+                    classNamePrefix="reactSelectBox"
+                    placeholder="CBS"
+                  />
+                </div>
+                <div className="clientNameSelect col">
+                  <label htmlFor="channelType">Channel Type</label>
+                  <Select
+                    defaultValue={selectedOption}
+                    onChange={setSelectedOption}
+                    options={options}
+                    id="channelType"
+                    classNamePrefix="reactSelectBox"
+                    placeholder="ATM"
+                  />
+                </div>
+                <div className="clientNameSelect col">
+                  <label htmlFor="clientName">Mode Type</label>
+                  <Select
+                    defaultValue={selectedOption}
+                    onChange={setSelectedOption}
+                    options={options}
+                    id="clientName"
+                    classNamePrefix="reactSelectBox"
+                    placeholder="ACQUIR"
+                  />
+                </div>
+                <div className="clientNameSelect col">
+                  <label htmlFor="logType">File Type</label>
+                  <Select
+                    defaultValue={selectedOption}
+                    onChange={setSelectedOption}
+                    options={options}
+                    id="logType"
+                    classNamePrefix="reactSelectBox"
+                    placeholder="Plain Text"
+                  />
+                </div>
+                <div className="clientNameSelect col">
+                  <label htmlFor="channelType">File Extention</label>
+                  <Select
+                    defaultValue={selectedOption}
+                    onChange={setSelectedOption}
+                    options={options}
+                    id="channelType"
+                    classNamePrefix="reactSelectBox"
+                    placeholder=".XLS"
+                  />
+                </div>
+                <div className="clientNameSelect col">
+                  <label htmlFor="channelType">Vendor</label>
+                  <Select
+                    defaultValue={selectedOption}
+                    onChange={setSelectedOption}
+                    options={options}
+                    id="channelType"
+                    classNamePrefix="reactSelectBox"
+                    placeholder="A"
+                  />
+                </div>
+                <div className="clientNameSelect col">
+                  <label htmlFor="channelType">File Prefix</label>
+                  <Select
+                    defaultValue={selectedOption}
+                    onChange={setSelectedOption}
+                    options={options}
+                    id="channelType"
+                    classNamePrefix="reactSelectBox"
+                    placeholder="PROCESS"
+                  />
+                </div>
+                <div className="clientNameSelect col">
+                  <label htmlFor="channelType">Cut Off Time</label>
+                  <input
+                    type="number"
+                    name=""
+                    id=""
+                    className="filtersInputNumber"
+                    placeholder="11:59"
+                  />
+                </div>
+                <div className="clientNameSelect col">
+                  <label htmlFor="channelType">Start Line No.</label>
+                  <input
+                    type="number"
+                    name=""
+                    id=""
+                    className="filtersInputNumber"
+                    placeholder="0"
+                  />
+                </div>
+                <div className="clientNameSelect col">
+                  <label htmlFor="channelType">End Line No.</label>
+                  <input
+                    type="number"
+                    name=""
+                    id=""
+                    className="filtersInputNumber"
+                    placeholder="420"
+                  />
+                </div>
               </div>
-              <div className="clientNameSelect col">
-                <label htmlFor="logType">Log Type</label>
-                <Select
-                  defaultValue={selectedOption}
-                  onChange={setSelectedOption}
-                  options={options}
-                  id="logType"
-                />
-              </div>
-              <div className="clientNameSelect col">
-                <label htmlFor="channelType">Channel Type</label>
-                <Select
-                  defaultValue={selectedOption}
-                  onChange={setSelectedOption}
-                  options={options}
-                  id="channelType"
-                />
-              </div>
-              <div className="clientNameSelect col">
-                <label htmlFor="clientName">Mode Type</label>
-                <Select
-                  defaultValue={selectedOption}
-                  onChange={setSelectedOption}
-                  options={options}
-                  id="clientName"
-                />
-              </div>
-              <div className="clientNameSelect col">
-                <label htmlFor="logType">File Type</label>
-                <Select
-                  defaultValue={selectedOption}
-                  onChange={setSelectedOption}
-                  options={options}
-                  id="logType"
-                />
-              </div>
-              <div className="clientNameSelect col">
-                <label htmlFor="channelType">File Extention</label>
-                <Select
-                  defaultValue={selectedOption}
-                  onChange={setSelectedOption}
-                  options={options}
-                  id="channelType"
-                />
-              </div>
-              <div className="clientNameSelect col">
-                <label htmlFor="channelType">Vendor</label>
-                <Select
-                  defaultValue={selectedOption}
-                  onChange={setSelectedOption}
-                  options={options}
-                  id="channelType"
-                />
-              </div>
-              <div className="clientNameSelect col">
-                <label htmlFor="channelType">File Prefix</label>
-                <Select
-                  defaultValue={selectedOption}
-                  onChange={setSelectedOption}
-                  options={options}
-                  id="channelType"
-                />
-              </div>
-              <div className="clientNameSelect col">
-                <label htmlFor="channelType">Cut Off Time</label>
-                <input
-                  type="number"
-                  name=""
-                  id=""
-                  className="filtersInputNumber"
-                />
-              </div>
-              <div className="clientNameSelect col">
-                <label htmlFor="channelType">Start Line No.</label>
-                <input
-                  type="number"
-                  name=""
-                  id=""
-                  className="filtersInputNumber"
-                />
-              </div>
-              <div className="clientNameSelect col">
-                <label htmlFor="channelType">End Line No.</label>
-                <input
-                  type="number"
-                  name=""
-                  id=""
-                  className="filtersInputNumber"
-                />
-              </div>
-            </div>
 
-            <div className="text-center btnsBtm">
-              <button
-                type="button"
-                className="btnPrimaryOutline"
-                onClick={() => setResetFilters(!resetFilters)}
-              >
-                Reset
-              </button>
-              <button
-                type="button"
-                className="btnPrimary ms-2"
-                onClick={() => setSaveFilters(!saveFilters)}
-              >
-                Save
-              </button>
+              <div className="text-center btnsBtm">
+                <button
+                  type="button"
+                  className="btnPrimaryOutline"
+                  onClick={() => setResetFilters(!resetFilters)}
+                >
+                  Reset
+                </button>
+                <button
+                  type="button"
+                  className="btnPrimary ms-2"
+                  onClick={() => setSaveFilters(!saveFilters)}
+                >
+                  Save
+                </button>
+              </div>
             </div>
-          </div>
-          :null}
+          ) : null}
         </div>
 
         {/* Reset Filters */}
@@ -324,8 +374,10 @@ const ConfigLeft = () => {
               <Select
                 defaultValue={selectedOption}
                 onChange={setSelectedOption}
-                options={options}
+                options={ConfigTableLeftEntries}
                 isSearchable={false}
+                placeholder="10 Entries"
+                classNamePrefix="reactSelectBox"
               />
             </div>
             <div className="d-flex">
@@ -342,12 +394,24 @@ const ConfigLeft = () => {
                 />
               </div>
 
-              <button type="button" className="iconButtonBox ms-2">
-                <img src={Pdf} alt="Pdf" />
-              </button>
-              <button type="button" className="iconButtonBox ms-2">
-                <img src={Excel} alt="Excel" />
-              </button>
+              <OverlayTrigger
+                placement="top"
+                delay={{ show: 250, hide: 400 }}
+                overlay={renderTooltip}
+              >
+                <button type="button" className="iconButtonBox ms-2">
+                  <img src={Pdf} alt="Pdf" />
+                </button>
+              </OverlayTrigger>
+              <OverlayTrigger
+                placement="top"
+                delay={{ show: 250, hide: 400 }}
+                overlay={renderTooltipExcel}
+              >
+                <button type="button" className="iconButtonBox ms-2">
+                  <img src={Excel} alt="Excel" />
+                </button>
+              </OverlayTrigger>
             </div>
           </div>
 
