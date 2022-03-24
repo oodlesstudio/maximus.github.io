@@ -159,7 +159,7 @@ const SidebarSmall = (props) => {
 
       {/* Client Management */}
       <div className="sidebarSmallImg">
-        <OverlayTrigger trigger="click" placement="right" overlay={popover}>
+        <OverlayTrigger trigger="click" placement="right" overlay={popover} rootClose>
           <svg
             width="24"
             height="24"
@@ -182,7 +182,7 @@ const SidebarSmall = (props) => {
         <OverlayTrigger
           trigger="click"
           placement="right"
-          overlay={popover}
+          overlay={popover} rootClose
         >
         <svg
           width="24"
@@ -206,7 +206,7 @@ const SidebarSmall = (props) => {
         <OverlayTrigger
           trigger="click"
           placement="right"
-          overlay={popover}
+          overlay={popover} rootClose
         >
         <svg
           width="24"
@@ -230,7 +230,7 @@ const SidebarSmall = (props) => {
         <OverlayTrigger
           trigger="click"
           placement="right"
-          overlay={popover}
+          overlay={popover} rootClose
         >
         <svg
           width="24"
@@ -254,7 +254,7 @@ const SidebarSmall = (props) => {
         <OverlayTrigger
           trigger="click"
           placement="right"
-          overlay={popover}
+          overlay={popover} rootClose
         >
         <svg
           width="24"
@@ -278,7 +278,7 @@ const SidebarSmall = (props) => {
         <OverlayTrigger
           trigger="click"
           placement="right"
-          overlay={popover}
+          overlay={popover} rootClose
         >
         <svg
           width="24"
@@ -302,7 +302,7 @@ const SidebarSmall = (props) => {
         <OverlayTrigger
           trigger="click"
           placement="right"
-          overlay={popover}
+          overlay={popover} rootClose
         >
         <svg
           width="24"
@@ -327,7 +327,7 @@ const SidebarSmall = (props) => {
         <OverlayTrigger
           trigger="click"
           placement="right"
-          overlay={popover}
+          overlay={popover} rootClose
         >
         <svg
           width="24"
@@ -351,7 +351,7 @@ const SidebarSmall = (props) => {
         <OverlayTrigger
           trigger="click"
           placement="right"
-          overlay={popover}
+          overlay={popover} rootClose
         >
         <svg
           width="24"
@@ -377,7 +377,7 @@ const SidebarSmall = (props) => {
         <OverlayTrigger
           trigger="click"
           placement="right"
-          overlay={popover}
+          overlay={popover} rootClose
         >
         <svg
           width="24"
@@ -403,7 +403,7 @@ const SidebarSmall = (props) => {
         <OverlayTrigger
           trigger="click"
           placement="right"
-          overlay={popover}
+          overlay={popover} rootClose
         >
         <svg
           width="24"
@@ -429,7 +429,7 @@ const SidebarSmall = (props) => {
         <OverlayTrigger
           trigger="click"
           placement="right"
-          overlay={popover}
+          overlay={popover} rootClose
         >
         <svg
           width="24"
@@ -455,7 +455,7 @@ const SidebarSmall = (props) => {
         <OverlayTrigger
           trigger="click"
           placement="right"
-          overlay={popover}
+          overlay={popover} rootClose
         >
         <svg
           width="24"

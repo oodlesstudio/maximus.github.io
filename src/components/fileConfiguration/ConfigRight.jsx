@@ -38,6 +38,7 @@ const ConfigRight = () => {
                   stroke-width="1.5"
                   stroke-linecap="round"
                   stroke-linejoin="round"
+                  className="breadcrumbIcon"
                 />
               </svg>
             </span>
@@ -59,6 +60,7 @@ const ConfigRight = () => {
                   stroke-width="1.5"
                   stroke-linecap="round"
                   stroke-linejoin="round"
+                  className="breadcrumbIcon"
                 />
               </svg>
             </span>

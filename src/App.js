@@ -21,7 +21,7 @@ function App() {
 
   useEffect(() => {
     const newTheme =
-      theme === "light" ? "light" : theme === "dark" ? "dark" : "original";
+      theme === "light" ? "light" : theme === "dark" ? "dark" : "default";
     setTheme(newTheme);
   }, [setTheme, theme]);
 

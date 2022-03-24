@@ -1,32 +1,3 @@
-:root {
-  /* Colors Default Theme */
-  --color-primary-default: #003087;
-  --color-secondary-default: #c54031;
-  --color-secondary-light-defaut: #fbd2ce;
-  --color-black: #000000;
-  --color-light-blue: #e1ecff;
-  --color-light-blue2: #f6f6fe;
-  --color-border-default: #d5d9e0;
-  --color-background-default: #fafafa;
-  --color-table-bg: #f5f9ff;
-  --color-table-border: #e3e3e3;
-  --color-scrollbar: #455278;
-
-  /* Colors Light Theme */
-  --color-light-grey: #f6f6f6;
-  --color-white: #ffffff;
-  --color-whiteLight: rgba(255, 255, 255, 0.8);
-
-  /* Colors Dark Theme */
-  --color-primary-dark: #1669fe;
-  --color-secondary-dark: #ff5c49;
-  --color-secondary-light-dark: #4b1813;
-  --color-dark1: #001336;
-  --color-dark2: #000e28;
-  --color-border-dark: #32374a;
-  --color-background-dark: #000a1b;
-}
-
 /* Config Left */
 .configMainContent .configLeft {
   width: 61.13%;
@@ -92,6 +63,7 @@
   letter-spacing: 0.02em;
   color: var(--color-black);
   width: 100%;
+  background-color: var(--border-box-bg);
 }
 .absoluteFiltersBox .btnsBtm{
   margin-top: 8px;
@@ -123,7 +95,7 @@
   height: 560px;
 }
 .tableBorderBox .table {
-  --bs-table-striped-bg: var(--color-table-bg);
+  --bs-table-striped-bg: var(--color-light-blue);
   --bs-table-striped-color: var(--color-black);
   --bs-table-hover-bg: var(--color-light-blue);
   --bs-table-hover-color: var(--color-black);
@@ -201,11 +173,16 @@
   color: var(--color-secondary-default);
 }
 .clientNameSelect .css-1s2u09g-control {
-  background-color: var(--color-white);
+  background-color: var(--border-box-bg);
   border-color: var(--color-border-default);
 }
 .clientNameSelect .css-319lph-ValueContainer {
   padding: 0 0 0 14px;
+}
+.clientNameSelect .css-1pahdxg-control,
+.clientNameSelect .css-26l3qy-menu {
+  background-color: var(--border-box-bg);
+  color: var(--color-black);
 }
 .clientNameSelect .css-14el2xx-placeholder {
   font-size: 14px;
@@ -216,6 +193,9 @@
 .clientNameSelect .css-6j8wv5-Input {
   padding: 0;
   margin: 0;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  color: var(--color-black);
 }
 .clientNameSelect .css-1okebmr-indicatorSeparator {
   display: none;
@@ -283,6 +263,7 @@
   font-size: 12px;
   letter-spacing: 0.02em;
   color: var(--color-black);
+  background-color: var(--border-box-bg);
 }
 .tableBorderBox .configTableRight .terminalInputTwo {
   width: 116.63px !important;
@@ -305,6 +286,7 @@
   align-items: center;
   border-radius: 8px;
   margin-right: 6px;
+  background-color: transparent;
 }
 .pagination .active .paginationBottom,
 .pagination .paginationBottom:hover{
@@ -324,6 +306,7 @@
   align-items: center;
   height: 24px;
   text-decoration: underline;
+  background-color: transparent;
 }
 .previousPagination{
   margin-right: 4px;

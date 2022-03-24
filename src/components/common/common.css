@@ -1,40 +1,10 @@
-:root {
-  /* Colors Default Theme */
-  --color-primary-default: #003087;
-  --color-secondary-default: #c54031;
-  --color-secondary-light-defaut: #fbd2ce;
-  --color-black: #000000;
-  --color-light-blue: #e1ecff;
-  --color-light-blue2: #f6f6fe;
-  --color-border-default: #d5d9e0;
-  --color-background-default: #fafafa;
-  --color-table-bg: #f5f9ff;
-  --color-table-border: #e3e3e3;
-  --color-scrollbar: #455278;
-  --color-headerTooltip: #4f4f4f;
-  --color-popoverborder: #f3f2fc;
-
-  /* Colors Light Theme */
-  --color-light-grey: #f6f6f6;
-  --color-white: #ffffff;
-  --color-whiteLight: rgba(255, 255, 255, 0.8);
-
-  /* Colors Dark Theme */
-  --color-primary-dark: #1669fe;
-  --color-secondary-dark: #ff5c49;
-  --color-secondary-light-dark: #4b1813;
-  --color-dark1: #001336;
-  --color-dark2: #000e28;
-  --color-border-dark: #32374a;
-  --color-background-dark: #000a1b;
-}
-
 /* Header */
 .headerBox {
-  background-color: var(--color-secondary-light-defaut);
+  background-color: var(--header-background);
   height: 64px;
   position: fixed;
   z-index: 10;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.16);
 }
 .headerLeft {
   width: 390px;
@@ -52,6 +22,18 @@
 .headerMyAccount .fontSize10-m {
   margin-top: 3px;
 }
+.notificationCount{
+  font-weight: var(--font-weight-600);
+  font-size: 10px;
+  color: var(--color-white);
+  background-color: var(--color-notificationsRed);
+  width: 18px;
+  height: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 56.25px;
+}
 .headerHamburger {
   border: none;
   background-color: transparent;
@@ -68,7 +50,6 @@
 /* Tooltip */
 .tooltip-inner {
   background-color: var(--color-headerTooltip);
-  border: 0.5px solid var(--color-white);
   font-weight: 500;
   font-size: 12px;
 }
@@ -85,6 +66,8 @@
 }
 .headerSettingsPopover .popover-body {
   padding: 0;
+  color: var(--color-black);
+  background-color: var(--background-white);
 }
 .headerSettingsPopover ul {
   padding: 0;
@@ -256,9 +239,10 @@
 /* Side Bar */
 .sideBar {
   width: 240px;
-  background-color: var(--color-light-blue);
+  background-color: var(--sidebar-color);
   padding: 16px 8px;
   position: relative;
+  border-right: 1px solid var(--color-border-default);
 }
 .sidebarButton {
   width: 28px;
@@ -270,7 +254,7 @@
   position: absolute;
   top: 32%;
   right: -14px;
-  z-index: 10;
+  z-index: 2;
 }
 .sideBar .accordion .accordion-item {
   margin-bottom: 8px;
@@ -278,16 +262,18 @@
   border-radius: 4px;
 }
 .sideBar .accordion .accordion-item .accordion-button {
-  background-color: var(--color-light-blue);
+  background-color: var(--sidebar-color);
   padding: 8px;
 }
 .sideBar .accordion .accordion-item .accordion-button:hover {
-  background-color: var(--color-whiteLight);
+  background-color: var(--sidebar-accordion-bg);
   border-radius: 4px;
   transition: all 0.3s ease-in-out;
 }
 .sideBar .accordion .accordion-item .accordion-button:not(.collapsed) {
-  background-color: var(--color-whiteLight);
+  background-color: var(--sidebar-accordion-bg);
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
 }
 .sideBar .accordion .accordion-item .accordion-body {
   padding: 0;
@@ -295,6 +281,9 @@
 .sideBar .accordion .accordion-item .accordion-body ul {
   padding: 0;
   margin: 0;
+  background-color: var(--sidebar-accordion-bg);
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
 }
 .sideBar .accordion .accordion-item .accordion-body ul li {
   list-style: none;
@@ -326,10 +315,11 @@
 /* SidebarSmall */
 .sidebarSmall {
   width: 56px;
-  background-color: var(--color-light-blue);
+  background-color: var(--sidebar-color);
   padding: 16px 8px;
   text-align: center;
   position: relative;
+  border-right: 1px solid var(--color-border-default);
 }
 .sidebarSmall .sidebarSmallImg {
   width: 40px;
@@ -341,7 +331,7 @@
   margin-bottom: 8px;
 }
 .sidebarSmall .sidebarSmallImg:hover {
-  background-color: var(--color-whiteLight);
+  background-color: var(--sidebar-accordion-bg);
   transition: all 0.3s ease-in-out;
   cursor: pointer;
 }
@@ -410,4 +400,5 @@
 /* Footer */
 .footerBox {
   height: 40px;
+  background-color: var(--footer-bg);
 }
