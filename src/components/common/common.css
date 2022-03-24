@@ -58,6 +58,13 @@
   margin-right: 16px;
   display: none;
 }
+.headerSideMenu {
+  width: 240px;
+}
+.headerSideMenu .offcanvas-body {
+  padding: 0;
+  background-color: var(--color-light-blue);
+}
 /* Tooltip */
 .tooltip-inner {
   background-color: var(--color-headerTooltip);
@@ -197,7 +204,7 @@
 }
 
 @media (max-width: 992px) {
-  .headerBox{
+  .headerBox {
     justify-content: space-between;
   }
   .headerLeft {
@@ -242,7 +249,7 @@
 }
 
 @media (max-width: 767px) {
-  .mainView{
+  .mainView {
     padding-top: 88px;
   }
 }
@@ -374,6 +381,9 @@
 @media (max-width: 992px) {
   .sideBar {
     display: none;
+  }
+  .headerSideMenu .offcanvas-body .sideBar {
+    display: block;
   }
 }
 

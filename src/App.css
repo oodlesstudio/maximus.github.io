@@ -65,6 +65,20 @@ a {
   --font-weight-500: 500;
   --font-weight-600: 600;
 }
+[data-theme='default'] {
+  /* Colors Default Theme */
+  --color-primary-default: #003087;
+  --color-secondary-default: #c54031;
+  --color-secondary-light-defaut: #fbd2ce;
+  --color-black: #000000;
+  --color-light-blue: #e1ecff;
+  --color-light-blue2: #f6f6fe;
+  --color-border-default: #d5d9e0;
+  --color-background-default: #fafafa;
+  --color-table-bg: #f5f9ff;
+  --color-table-border: #e3e3e3;
+  --color-scrollbar: #455278;
+}
 [data-theme='light'] {
   /* Colors Light Theme */
   --color-primary-default: #003087;

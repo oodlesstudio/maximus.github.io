@@ -6,7 +6,11 @@ import {
   Popover,
   Button,
   Modal,
+  Offcanvas,
 } from "react-bootstrap";
+import SideBar from "./SideBar";
+import { useDispatch } from "react-redux";
+import { changeThemes } from "../../constants/actions/themeChangeAction";
 
 // Images
 import Logo from "../../images/common/logo.svg";
@@ -31,6 +35,12 @@ const Header = () => {
   const [openDefaultModal, setOpenDefaultModal] = useState(false);
   const [openLightModal, setOpenLightModal] = useState(false);
   const [openDarkModal, setOpenDarkModal] = useState(false);
+
+  // SideMenu
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
   // Settings Popover
   const popover = (
@@ -75,38 +85,56 @@ const Header = () => {
     </Popover>
   );
 
+  // Change Theme
+  const dispatch = useDispatch();
+  const changeThemeDefault = () => {
+    dispatch(changeThemes("default"));
+  };
+  const changeThemeLight = () => {
+    dispatch(changeThemes("light"));
+  };
+  const changeThemeDark = () => {
+    dispatch(changeThemes("dark"));
+  };
+
   return (
     <div className="headerBox w-100 d-flex align-items-center">
       {/* Header Left */}
       <div className="headerLeft d-flex justify-content-between align-items-center">
         <div className="d-flex align-items-center">
-        <button className="headerHamburger">
-          <span>
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M1 19H23V16.2H1V19ZM1 5V7.8H23V5H1ZM1 13.4H23V10.6H1V13.4Z"
-                fill="black"
-              />
-            </svg>
-          </span>
-        </button>
-        <OverlayTrigger
-          placement="bottom"
-          delay={{ show: 250, hide: 400 }}
-          overlay={renderTooltip}
-        >
-          <img src={Logo} alt="Logo" />
-        </OverlayTrigger>
+          <button className="headerHamburger" onClick={handleShow}>
+            <span>
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1 19H23V16.2H1V19ZM1 5V7.8H23V5H1ZM1 13.4H23V10.6H1V13.4Z"
+                  fill="black"
+                />
+              </svg>
+            </span>
+          </button>
+          <OverlayTrigger
+            placement="bottom"
+            delay={{ show: 250, hide: 400 }}
+            overlay={renderTooltip}
+          >
+            <img src={Logo} alt="Logo" />
+          </OverlayTrigger>
         </div>
         <p className="fontSize14">
           Session Time: <span className="fontSize14-sb">59:12</span>
         </p>
+
+        <Offcanvas show={show} onHide={handleClose} className="headerSideMenu">
+          <Offcanvas.Body>
+            <SideBar buttonCollapse={handleClose} />
+          </Offcanvas.Body>
+        </Offcanvas>
       </div>
 
       {/* Header Right */}
@@ -255,7 +283,9 @@ const Header = () => {
             </Modal.Body>
             <Modal.Footer>
               <Button variant="secondary btnPrimaryOutline">Cancel</Button>
-              <Button variant="primary btnPrimary">Apply Theme</Button>
+              <Button variant="primary btnPrimary" onClick={changeThemeDefault}>
+                Apply Theme
+              </Button>
             </Modal.Footer>
           </Modal>
         )}
@@ -280,7 +310,9 @@ const Header = () => {
             </Modal.Body>
             <Modal.Footer>
               <Button variant="secondary btnPrimaryOutline">Cancel</Button>
-              <Button variant="primary btnPrimary">Apply Theme</Button>
+              <Button variant="primary btnPrimary" onClick={changeThemeLight}>
+                Apply Theme
+              </Button>
             </Modal.Footer>
           </Modal>
         )}
@@ -305,7 +337,9 @@ const Header = () => {
             </Modal.Body>
             <Modal.Footer>
               <Button variant="secondary btnPrimaryOutline">Cancel</Button>
-              <Button variant="primary btnPrimary">Apply Theme</Button>
+              <Button variant="primary btnPrimary" onClick={changeThemeDark}>
+                Apply Theme
+              </Button>
             </Modal.Footer>
           </Modal>
         )}
