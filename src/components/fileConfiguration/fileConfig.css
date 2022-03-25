@@ -24,13 +24,48 @@
 .configLeft .btnsBtm {
   margin: 16px 0 24px;
 }
-.configBottomHeadingBox{
+.configBottomHeadingBox {
   height: 60px;
   padding-top: 24px;
 }
+.breadCrumbLeft {
+  display: none !important;
+}
+.bs-tooltip-top .tooltip-arrow::before {
+  border-top-color: var(--color-headerTooltip);
+}
+
 @media (max-width: 992px) {
   .configMainContent .configLeft {
     width: 100%;
+  }
+  .breadCrumbLeft {
+    display: inherit !important;
+  }
+  .configRightHead {
+    display: none !important;
+  }
+  .configLeftBottom {
+    padding-bottom: 24px !important;
+  }
+  .configBottomHeadingBoxRight {
+    height: 24px;
+  }
+  .configRightBottom {
+    padding-bottom: 0 !important;
+  }
+}
+@media (max-width: 426px) {
+  .configLeftHead {
+    flex-direction: column-reverse;
+    align-items: flex-start !important;
+    height: inherit;
+    margin-top: 8px;
+    margin-bottom: 16px;
+  }
+  .fileConfigHead {
+    font-size: var(--font-size16);
+    margin-top: 8px;
   }
 }
 /* Config Blue Box Absolute */
@@ -42,19 +77,19 @@
   z-index: 10;
   /* display: none; */
 }
-.absoluteFiltersBox .configSelectBoxTop{
+.absoluteFiltersBox .configSelectBoxTop {
   margin-top: 11px;
 }
-.absoluteFiltersBox .clientNameSelect{
+.absoluteFiltersBox .clientNameSelect {
   margin-bottom: 16px;
 }
 .absoluteFiltersBox .col,
-.configTopBlueBox .col{
+.configTopBlueBox .col {
   flex: inherit;
   padding: 0 8px;
   width: 33.33%;
 }
-.absoluteFiltersBox .filtersInputNumber{
+.absoluteFiltersBox .filtersInputNumber {
   height: 38px;
   border: 1px solid var(--color-border-default);
   border-radius: 4px;
@@ -65,15 +100,15 @@
   width: 100%;
   background-color: var(--border-box-bg);
 }
-.absoluteFiltersBox .filtersInputNumber::placeholder{
+.absoluteFiltersBox .filtersInputNumber::placeholder {
   font-size: 14px;
   letter-spacing: 0.02em;
   color: var(--color-black);
 }
-.absoluteFiltersBox .btnsBtm{
+.absoluteFiltersBox .btnsBtm {
   margin-top: 8px;
 }
-.absoluteFiltersBox .allFiltersBtn{
+.absoluteFiltersBox .allFiltersBtn {
   background-color: transparent;
   border: none;
   width: inherit;
@@ -81,7 +116,7 @@
 }
 @media (max-width: 767px) {
   .absoluteFiltersBox .col,
-  .configTopBlueBox .col{
+  .configTopBlueBox .col {
     flex: inherit;
     padding: 0 8px;
     width: 100%;
@@ -100,7 +135,7 @@
   height: 560px;
 }
 .tableBorderBox .table {
-  --bs-table-striped-bg: var(--color-light-blue);
+  --bs-table-striped-bg: var(--table-striped-color);
   --bs-table-striped-color: var(--color-black);
   --bs-table-hover-bg: var(--color-light-blue);
   --bs-table-hover-color: var(--color-black);
@@ -143,11 +178,11 @@
   border-bottom: none;
 }
 /* Table Scroll Bar */
-/* ::-webkit-scrollbar {
-  -webkit-appearance: none;
+::-webkit-scrollbar {
+  width: 3px;
 }
 ::-webkit-scrollbar:vertical {
-  width: 3px;
+  display: none;
 }
 ::-webkit-scrollbar:horizontal {
   height: 3px;
@@ -159,7 +194,7 @@
 ::-webkit-scrollbar-track {
   border-radius: 50px;
   background-color: var(--color-background-default);
-} */
+}
 
 /* Select Box */
 .configSelectBoxTop {
@@ -208,24 +243,38 @@
 .clientNameSelect .css-tj5bde-Svg {
   fill: var(--color-primary-default);
 }
+.clientNameSelect .css-tlfecz-indicatorContainer {
+  padding-left: 0;
+}
 .configFormatEntities {
   width: 131px;
 }
-.reactSelectBox__option{
+.reactSelectBox__option {
   background-color: white;
 }
-.reactSelectBox__option:hover{
+.reactSelectBox__option:hover {
   background-color: var(--selectbox-hover);
 }
 
 /* Config Right */
 .configMainContent .configRight {
   width: 37.67%;
-  padding-bottom: 17px;
+  padding-bottom: 16px;
+}
+@media (min-width: 1600px) {
+  .tableBorderBox .table {
+    width: 100%;
+  }
 }
 @media (max-width: 992px) {
   .configMainContent .configRight {
     width: 100%;
+  }
+}
+@media (max-width: 426px) {
+  .tableBorderBox .table thead tr th,
+  .tableBorderBox .table tbody tr td {
+    font-size: var(--font-size12);
   }
 }
 /* Config Right Top */
@@ -234,7 +283,7 @@
   height: 218px;
 }
 .configDotLeftContent {
-  width: 94px;
+  width: 95px;
   letter-spacing: 0.02em;
 }
 .configDotCenterContent {
@@ -247,6 +296,26 @@
 }
 .configDotRightContent .clientNameSelect {
   width: 100%;
+}
+@media (max-width: 426px) {
+  .configDotCenterContent{
+    display: none !important;
+  }
+  .configTopBlueBoxRight{
+    padding: 16px 16px 4px;
+    height: inherit;
+  }
+  .configTopBlueBoxRight .d-flex{
+    flex-direction: column;
+    margin-bottom: 12px !important;
+  }
+  .configDotLeftContent{
+    width: 100%;
+    margin-bottom: 4px;
+  }
+  .configDotRightContent{
+    width: 100% !important;
+  }
 }
 /* Config Right Bottom */
 .tableBorderBox .configTableRight {
@@ -267,7 +336,7 @@
 .tableBorderBox .configTableRight input[type="number"] {
   border: 1px solid var(--color-border-default);
   border-radius: 4px;
-  width: 136.63px;
+  width: 100%;
   height: 30px;
   padding-left: 12px;
   font-family: "Inter";
@@ -283,14 +352,14 @@
   color: var(--color-black);
 }
 .tableBorderBox .configTableRight .terminalInputTwo {
-  width: 116.63px !important;
+  width: 100% !important;
 }
 
 /* Pagination */
-.pagination{
+.pagination {
   margin-bottom: 0;
 }
-.pagination .paginationBottom{
+.pagination .paginationBottom {
   border: none;
   font-size: 12px;
   padding: 0;
@@ -306,13 +375,13 @@
   background-color: transparent;
 }
 .pagination .active .paginationBottom,
-.pagination .paginationBottom:hover{
-  background-color: var(--color-primary-default); 
+.pagination .paginationBottom:hover {
+  background-color: var(--color-primary-default);
   font-weight: 500;
   color: var(--color-white);
 }
 .previousPagination,
-.nextPagination{
+.nextPagination {
   border: none;
   font-weight: 500;
   font-size: 12px;
@@ -325,19 +394,19 @@
   text-decoration: underline;
   background-color: transparent;
 }
-.previousPagination{
+.previousPagination {
   margin-right: 4px;
 }
-.previousPagination span:last-child{
+.previousPagination span:last-child {
   margin-left: 2px;
 }
-.nextPagination{
+.nextPagination {
   margin-left: 4px;
 }
-.nextPagination span:first-child{
+.nextPagination span:first-child {
   margin-right: 2px;
 }
 .previousPagination:hover,
-.nextPagination:hover{
+.nextPagination:hover {
   background-color: transparent;
 }

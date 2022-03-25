@@ -95,6 +95,7 @@ a {
   --selectbox-hover: #e1ecff;
   --modal-header: #fbd2ce;
   --color-popoverborder: #f3f2fc;
+  --table-striped-color:#F5F9FF;
 }
 [data-theme="light"] {
   /* Colors Light Theme */
@@ -115,8 +116,9 @@ a {
   --footer-bg: #f6f6f6;
   --border-box-bg: #ffffff;
   --selectbox-hover: #e1ecff;
-  --modal-header: #F6F6F6;
+  --modal-header: #FFFFFF;
   --color-popoverborder: #f3f2fc;
+  --table-striped-color: #FAFAFA;
 }
 [data-theme="dark"] {
   /* Colors Dark Theme */
@@ -139,8 +141,9 @@ a {
   --footer-bg: #000713;
   --border-box-bg: #000a1b;
   --selectbox-hover: #001336;
-  --modal-header: #001336;
+  --modal-header: #000A1B;
   --color-popoverborder: #32374a;
+  --table-striped-color: #001336;
 }
 
 /* Font Sizes */
@@ -248,6 +251,11 @@ button {
   background-color: transparent;
   border-radius: 4px;
 }
+@media (max-width: 426px) {
+  .iconButtonBox{
+    margin-left: 4px !important;
+  }
+}
 
 /* Search Box */
 .has-search {
@@ -269,10 +277,13 @@ button {
   top: 11px;
   left: 12px;
 }
-@media (max-width: 767px) {
+@media (max-width: 426px) {
   .has-search .form-control {
     width: 105px;
     margin-left: 8px;
+  }
+  .has-search .form-control-feedback {
+    left: 20px;
   }
 }
 

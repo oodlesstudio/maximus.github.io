@@ -22,7 +22,7 @@
 .headerMyAccount .fontSize10-m {
   margin-top: 3px;
 }
-.notificationCount{
+.notificationCount {
   font-weight: var(--font-weight-600);
   font-size: 10px;
   color: var(--color-white);
@@ -41,7 +41,13 @@
   display: none;
 }
 .headerSideMenu {
-  width: 240px;
+  width: 258px;
+}
+.headerSideMenu .sidebarButton{
+  top: 45%;
+}
+.headerSideMenu .sideBar {
+  border: none;
 }
 .headerSideMenu .offcanvas-body {
   padding: 0;
@@ -94,7 +100,7 @@
 .headerSettingsPopover .popover-arrow::before {
   border: none;
 }
-.bs-popover-bottom>.popover-arrow::after{
+.bs-popover-bottom > .popover-arrow::after {
   border-bottom-color: var(--background-white);
 }
 
@@ -102,7 +108,7 @@
 .defaultThemeModal .modal-content {
   border-radius: 8px;
   border: none;
-  background-color: var(--color-background-default);
+  background-color: var(--color-light-blue);
   width: 441px;
 }
 .defaultThemeModal .modal-header {
@@ -167,7 +173,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: var(--border-box-bg);
+  background-color: var(--color-light-blue);
   padding: 24px 0 40px;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
@@ -197,7 +203,7 @@
     justify-content: space-between;
   }
   .headerLeft {
-    width: 328px;
+    width: 312px;
     margin-left: 16px;
   }
   .headerRight {
@@ -345,9 +351,9 @@
   border: none;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.16);
   border-radius: 4px;
-  background-color: var(--sidebar-color);
+  background-color: var(--background-white);
 }
-.bs-popover-end>.popover-arrow::after{
+.bs-popover-end > .popover-arrow::after {
   border-right-color: var(--sidebar-color);
 }
 .sidebarPopover .popover-body {
@@ -382,8 +388,20 @@
   .sideBar {
     display: none;
   }
+  .sidebarSmall {
+    display: none;
+  }
   .headerSideMenu .offcanvas-body .sideBar {
     display: block;
+  }
+}
+@media (max-width: 426px) {
+  .paginationBox{
+    flex-direction: column;
+    margin: 16px 0 24px !important;
+  }
+  .paginationBox .paginationLeft{
+    margin-bottom: 8px;
   }
 }
 

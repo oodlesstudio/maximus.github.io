@@ -89,7 +89,7 @@ const ConfigRight = () => {
           <div className="d-flex mb-3">
             <div className="configDotLeftContent fontSize14">Client Name</div>
             <div className="configDotCenterContent fontSize14">:</div>
-            <div className="configDotRightContent fontSize14-m">
+            <div className="configDotRightContent fontSize14-m" style={{width: '286px'}}>
               Sri Vasavamba Cooperative Urban Bank Ltd
             </div>
           </div>
@@ -120,7 +120,7 @@ const ConfigRight = () => {
                   onChange={setSelectedOption}
                   options={options}
                   id="clientName"
-                  placeholder="Sri Vasavamba Cooperative Urb..."
+                  placeholder="Shri Vasavamba..."
                   classNamePrefix="reactSelectBox"
                 />
               </div>
@@ -129,10 +129,10 @@ const ConfigRight = () => {
         </div>
       </div>
 
-      <div className="configBottomHeadingBox"></div>
+      <div className="configBottomHeadingBoxRight configBottomHeadingBox"></div>
 
       {/* Config Left Bottom */}
-      <div className="configLeftBottom pb-3">
+      <div className="configLeftBottom configRightBottom pb-3">
         <div className="tableBorderBox">
           <div className="d-flex justify-content-between align-items-center mt-3 mb-2">
             <div className="clientNameSelect configFormatEntities">
@@ -173,11 +173,11 @@ const ConfigRight = () => {
             <table className="table table-striped table-hover table-borderless align-middle configTableRight">
               <thead>
                 <tr>
-                  <th scope="col" style={{ width: "30%" }}>
+                  <th scope="col" style={{ width: "24.95%" }}>
                     Field Name
                   </th>
-                  <th scope="col">Start Position</th>
-                  <th scope="col">Field Length</th>
+                  <th scope="col" style={{ width: "33.49%" }}>Start Position</th>
+                  <th scope="col" style={{ width: "28.59%" }}>Field Length</th>
                 </tr>
               </thead>
               <tbody>

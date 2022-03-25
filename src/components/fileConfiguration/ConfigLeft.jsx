@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Select from "react-select";
 import { Modal, Tooltip, OverlayTrigger } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 // Images
 import Pdf from "../../images/common/pdf.svg";
@@ -48,10 +49,59 @@ const ConfigLeft = () => {
     <div className="configLeft">
       {/* Config Left Top */}
       <div className="configLeftTop">
-        <div className="configLeftHead d-flex align-items-center">
+        <div className="configLeftHead d-flex justify-content-between align-items-center">
           <h5 className="fontWeight-600 fileConfigHead colorBlack">
             File Configuration
           </h5>
+          <div className="d-flex align-items-center breadCrumbLeft">
+            <Link to="/">
+              <p className="fontSize12 colorPrimaryDefault">Home</p>
+            </Link>
+            <span>
+              <svg
+                width="10"
+                height="16"
+                viewBox="0 0 10 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                className="mx-1"
+              >
+                <path
+                  d="M3 4L7 8L3 12"
+                  stroke="black"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  className="breadcrumbIcon"
+                />
+              </svg>
+            </span>
+            <Link to="/">
+              <p className="fontSize12 colorPrimaryDefault">Configuration</p>
+            </Link>
+            <span>
+              <svg
+                width="10"
+                height="16"
+                viewBox="0 0 10 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                className="mx-1"
+              >
+                <path
+                  d="M3 4L7 8L3 12"
+                  stroke="black"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  className="breadcrumbIcon"
+                />
+              </svg>
+            </span>
+            <Link to="/">
+              <p className="fontSize12">File Configuration</p>
+            </Link>
+          </div>
         </div>
 
         <div className="position-relative">
@@ -571,9 +621,9 @@ const ConfigLeft = () => {
               <nav aria-label="Page navigation example">
                 <ul className="pagination">
                   <li className="page-item">
-                    <a
+                    <Link
                       className="page-link previousPagination"
-                      href="/"
+                      to="/"
                       aria-label="Previous"
                     >
                       <span>
@@ -594,37 +644,37 @@ const ConfigLeft = () => {
                         </svg>
                       </span>
                       <span>First</span>
-                    </a>
+                    </Link>
                   </li>
                   <li className="page-item">
-                    <a className="page-link paginationBottom" href="/">
+                    <Link className="page-link paginationBottom" to="/">
                       1
-                    </a>
+                    </Link>
                   </li>
                   <li className="page-item">
-                    <a className="page-link paginationBottom" href="/">
+                    <Link className="page-link paginationBottom" to="/">
                       2
-                    </a>
+                    </Link>
                   </li>
                   <li className="page-item active">
-                    <a className="page-link paginationBottom" href="/">
+                    <Link className="page-link paginationBottom" to="/">
                       3
-                    </a>
+                    </Link>
                   </li>
                   <li className="page-item">
-                    <a className="page-link paginationBottom" href="/">
+                    <Link className="page-link paginationBottom" to="/">
                       4
-                    </a>
+                    </Link>
                   </li>
                   <li className="page-item">
-                    <a className="page-link paginationBottom" href="/">
+                    <Link className="page-link paginationBottom" to="/">
                       5
-                    </a>
+                    </Link>
                   </li>
                   <li className="page-item">
-                    <a
+                    <Link
                       className="page-link nextPagination"
-                      href="/"
+                      to="/"
                       aria-label="Next"
                     >
                       <span>Last</span>
@@ -645,7 +695,7 @@ const ConfigLeft = () => {
                           />
                         </svg>
                       </span>
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </nav>
