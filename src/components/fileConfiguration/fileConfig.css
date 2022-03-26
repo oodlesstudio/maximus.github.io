@@ -94,14 +94,14 @@
   border: 1px solid var(--color-border-default);
   border-radius: 4px;
   padding-left: 16px;
-  font-size: 14px;
+  font-size: var(--font-size14);
   letter-spacing: 0.02em;
   color: var(--color-black);
   width: 100%;
   background-color: var(--border-box-bg);
 }
 .absoluteFiltersBox .filtersInputNumber::placeholder {
-  font-size: 14px;
+  font-size: var(--font-size14);
   letter-spacing: 0.02em;
   color: var(--color-black);
 }
@@ -204,7 +204,7 @@
   width: 30.4%;
 }
 .clientNameSelect label {
-  font-size: 14px;
+  font-size: var(--font-size14);
   letter-spacing: 0.02em;
   color: var(--color-black);
   margin-bottom: 8px;
@@ -225,7 +225,7 @@
   color: var(--color-black);
 }
 .clientNameSelect .css-14el2xx-placeholder {
-  font-size: 14px;
+  font-size: var(--font-size14);
   letter-spacing: 0.02em;
   color: var(--color-black);
   margin: 0;
@@ -233,7 +233,7 @@
 .clientNameSelect .css-6j8wv5-Input {
   padding: 0;
   margin: 0;
-  font-size: 14px;
+  font-size: var(--font-size14);
   letter-spacing: 0.02em;
   color: var(--color-black);
 }
@@ -340,14 +340,14 @@
   height: 30px;
   padding-left: 12px;
   font-family: "Inter";
-  font-size: 12px;
+  font-size: var(--font-size12);
   letter-spacing: 0.02em;
   color: var(--color-black);
   background-color: var(--border-box-bg);
 }
 .tableBorderBox .configTableRight input[type="number"]::placeholder {
   font-family: "Inter";
-  font-size: 12px;
+  font-size: var(--font-size12);
   letter-spacing: 0.02em;
   color: var(--color-black);
 }
@@ -361,7 +361,7 @@
 }
 .pagination .paginationBottom {
   border: none;
-  font-size: 12px;
+  font-size: var(--font-size12);
   padding: 0;
   letter-spacing: 0.02em;
   color: var(--color-black);
@@ -384,7 +384,7 @@
 .nextPagination {
   border: none;
   font-weight: 500;
-  font-size: 12px;
+  font-size: var(--font-size12);
   padding: 0;
   letter-spacing: 0.02em;
   color: var(--color-primary-default);

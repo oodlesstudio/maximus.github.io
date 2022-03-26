@@ -24,7 +24,7 @@
 }
 .notificationCount {
   font-weight: var(--font-weight-600);
-  font-size: 10px;
+  font-size: var(--font-size10);
   color: var(--color-white);
   background-color: var(--color-notificationsRed);
   width: 18px;
@@ -57,7 +57,7 @@
 .tooltip-inner {
   background-color: var(--color-headerTooltip);
   font-weight: 500;
-  font-size: 12px;
+  font-size: var(--font-size12);
 }
 .bs-tooltip-bottom .tooltip-arrow::before {
   border-bottom-color: var(--color-headerTooltip);
@@ -145,7 +145,7 @@
 }
 .defaultThemeModal .modal-footer .btnPrimary {
   margin-left: 16px;
-  width: 172px;
+  width: 8.96vw;
 }
 .defaultThemeModal .modal-footer .btnPrimary:hover,
 .defaultThemeModal .modal-footer .btnPrimary:focus {
@@ -310,7 +310,7 @@
   transition: all 0.3s ease-in-out;
 }
 .sideBar .accordion .subMenu li a .subMenuRight {
-  font-size: 13px;
+  font-size: var(--font-size13);
   line-height: 18px;
   color: var(--color-black);
   margin-left: 8px;
@@ -376,7 +376,7 @@
   transition: all 0.3s ease-in-out;
 }
 .sidebarPopover ul li a .subMenuRight {
-  font-size: 13px;
+  font-size: var(--font-size13);
   line-height: 18px;
   color: var(--color-black);
   margin-left: 8px;
