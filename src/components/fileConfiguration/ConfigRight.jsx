@@ -169,11 +169,11 @@ const ConfigRight = () => {
           </div>
 
           {/* Table */}
-          <div className="table-responsive tableContentBox">
+          <div className="table-responsive tableContentBox tableConfigRight">
             <table className="table table-striped table-hover table-borderless align-middle configTableRight">
               <thead>
                 <tr>
-                  <th scope="col" style={{ width: "24.95%" }}>
+                  <th scope="col" style={{ width: "24.94%" }}>
                     Field Name
                   </th>
                   <th scope="col" style={{ width: "33.49%" }}>Start Position</th>

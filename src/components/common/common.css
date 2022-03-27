@@ -1,34 +1,34 @@
 /* Header */
 .headerBox {
   background-color: var(--header-background);
-  height: 64px;
+  height: 3.33vw;
   position: fixed;
   z-index: 10;
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.16);
 }
 .headerLeft {
-  width: 390px;
+  width: 20.31vw;
   height: 100%;
-  margin-left: 20px;
+  margin-left: 1.04vw;
 }
 .headerRight {
-  width: calc(100% - 390px);
+  width: calc(100% - 20.31vw);
   height: 100%;
-  margin-right: 16px;
+  margin-right: 0.83vw;
 }
 .headerMyAccount {
-  margin-left: 6px;
+  margin-left: 0.31vw;
 }
 .headerMyAccount .fontSize10-m {
-  margin-top: 3px;
+  margin-top: 0.15vw;
 }
 .notificationCount {
   font-weight: var(--font-weight-600);
   font-size: var(--font-size10);
   color: var(--color-white);
   background-color: var(--color-notificationsRed);
-  width: 18px;
-  height: 18px;
+  width: 0.93vw;
+  height: 0.93vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -37,13 +37,13 @@
 .headerHamburger {
   border: none;
   background-color: transparent;
-  margin-right: 16px;
+  margin-right: 0.83vw;
   display: none;
 }
 .headerSideMenu {
-  width: 258px;
+  width: 13.28vw;
 }
-.headerSideMenu .sidebarButton{
+.headerSideMenu .sidebarButton {
   top: 45%;
 }
 .headerSideMenu .sideBar {
@@ -67,8 +67,8 @@
   border: none;
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.16);
   border-radius: 4px;
-  padding: 8px 0;
-  width: 217px;
+  padding: 0.41vw 0;
+  width: 11.3vw;
   background-color: var(--background-white);
 }
 .headerSettingsPopover .popover-body {
@@ -82,14 +82,14 @@
 }
 .headerSettingsPopover ul li {
   list-style: none;
-  padding: 0 16px;
+  padding: 0 0.83vw;
 }
 .headerSettingsPopover ul li button {
   border: none;
   background-color: transparent;
   letter-spacing: 0.02em;
   width: 100%;
-  height: 40px;
+  height: 2.08vw;
   border-bottom: 1px solid var(--color-popoverborder);
   text-align: left;
 }
@@ -109,11 +109,11 @@
   border-radius: 8px;
   border: none;
   background-color: var(--color-light-blue);
-  width: 441px;
+  width: 22.96vw;
 }
 .defaultThemeModal .modal-header {
-  height: 40px;
-  padding: 0 20px 0 24px;
+  height: 2.08vw;
+  padding: 0 1.04vw 0 1.25vw;
   background-color: var(--modal-header);
   border: none;
   border-top-left-radius: 8px;
@@ -125,27 +125,27 @@
   opacity: 1;
 }
 .defaultThemeModal .modal-body {
-  padding: 32px 0;
+  padding: 1.66vw 0;
   display: flex;
   justify-content: center;
 }
 .defaultThemeModal .modal-body p {
   line-height: 1.5;
-  width: 277px;
+  width: 14.42vw;
 }
 .defaultThemeModal .modal-footer {
   border: none;
   padding: 0;
   justify-content: center;
-  margin-bottom: 40px;
+  margin-bottom: 2.08vw;
 }
 .defaultThemeModal .modal-footer .btnPrimary,
 .defaultThemeModal .modal-footer .btnPrimaryOutline {
   margin: 0;
 }
 .defaultThemeModal .modal-footer .btnPrimary {
-  margin-left: 16px;
-  width: 8.96vw;
+  margin-left: 0.83vw;
+  width: 8.95vw;
 }
 .defaultThemeModal .modal-footer .btnPrimary:hover,
 .defaultThemeModal .modal-footer .btnPrimary:focus {
@@ -158,14 +158,14 @@
 }
 /* Site Configuration Modal */
 .siteConfigurationModal .modal-body {
-  padding: 24px 0;
+  padding: 1.25vw 0;
 }
 .siteConfigurationModal .clientNameSelect {
-  width: 361px;
+  width: 18.8vw;
 }
 .siteConfigurationModal .modal-footer .btnPrimary {
   margin-left: 0;
-  width: 361px;
+  width: 18.8vw;
 }
 /* Error/Save Filters  Modals */
 .saveFiltersModal .modal-body {
@@ -174,13 +174,13 @@
   justify-content: center;
   align-items: center;
   background-color: var(--color-light-blue);
-  padding: 24px 0 40px;
+  padding: 1.25vw 0 2.08vw;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
 }
 .saveFiltersModal .modal-body img {
-  width: 64px;
-  margin-bottom: 8px;
+  width: 3.33vw;
+  margin-bottom: 0.41vw;
 }
 .saveFiltersModal .modal-body p {
   line-height: 1.21;
@@ -188,14 +188,14 @@
 }
 
 .errorFiltersModal .modal-body {
-  padding: 24px 0 40px;
+  padding: 1.25vw 0 2.08vw;
 }
 .errorFiltersModal .modal-body img {
-  width: 64px;
-  margin-bottom: 8px;
+  width: 3.33vw;
+  margin-bottom: 0.41vw;
 }
 .errorFiltersModal .modal-body p {
-  width: 300px;
+  width: 15.62vw;
 }
 
 @media (max-width: 992px) {
@@ -203,12 +203,12 @@
     justify-content: space-between;
   }
   .headerLeft {
-    width: 312px;
-    margin-left: 16px;
+    width: 16.25vw;
+    margin-left: 0.83vw;
   }
   .headerRight {
     width: auto;
-    margin-right: 24px;
+    margin-right: 1.25vw;
   }
   .headerMyAccount {
     display: none;
@@ -219,14 +219,14 @@
 }
 @media (max-width: 767px) {
   .headerBox {
-    height: 88px;
+    height: 4.58vw;
   }
   .headerLeft {
     width: 50%;
     margin: 0;
     flex-direction: column;
     align-items: flex-start !important;
-    padding: 12px 0 16px 16px;
+    padding: 0.62vw 0 0.82vw 0.83vw;
   }
   .headerRight {
     width: 50%;
@@ -234,48 +234,48 @@
     justify-content: space-between !important;
     align-items: flex-end !important;
     margin: 0;
-    padding: 14px 16px 12px 0;
+    padding: 0.72vw 0.83vw 0.62vw 0;
   }
 }
 
 /* Main View */
 .mainView {
-  padding-top: 64px;
+  padding-top: 3.33vw;
 }
 
 @media (max-width: 767px) {
   .mainView {
-    padding-top: 88px;
+    padding-top: 4.58vw;
   }
 }
 /* Side Bar */
 .sideBar {
-  width: 240px;
+  width: 12.5vw;
   background-color: var(--sidebar-color);
-  padding: 16px 8px;
+  padding: 0.83vw 0.41vw;
   position: relative;
   border-right: 1px solid var(--color-border-default);
 }
 .sidebarButton {
-  width: 28px;
-  height: 28px;
+  width: 1.45vw;
+  height: 1.45vw;
   border: none;
   background-color: var(--color-primary-default);
   border-radius: 50%;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
   position: absolute;
   top: 32%;
-  right: -14px;
+  right: -0.72vw;
   z-index: 2;
 }
 .sideBar .accordion .accordion-item {
-  margin-bottom: 8px;
+  margin-bottom: 0.41vw;
   border: none;
   border-radius: 4px;
 }
 .sideBar .accordion .accordion-item .accordion-button {
   background-color: var(--sidebar-color);
-  padding: 8px;
+  padding: 0.41vw;
 }
 .sideBar .accordion .accordion-item .accordion-button:hover {
   background-color: var(--sidebar-accordion-bg);
@@ -303,7 +303,7 @@
 .sideBar .accordion ul li a {
   display: flex;
   align-items: center;
-  padding: 8px;
+  padding: 0.41vw;
 }
 .sideBar .accordion ul li a:hover {
   background-color: var(--color-secondary-light-defaut);
@@ -311,9 +311,9 @@
 }
 .sideBar .accordion .subMenu li a .subMenuRight {
   font-size: var(--font-size13);
-  line-height: 18px;
+  line-height: 1.38;
   color: var(--color-black);
-  margin-left: 8px;
+  margin-left: 0.41vw;
 }
 
 .sideBar .accordion-button::after {
@@ -326,21 +326,21 @@
 
 /* SidebarSmall */
 .sidebarSmall {
-  width: 56px;
+  width: 2.91vw;
   background-color: var(--sidebar-color);
-  padding: 16px 8px;
+  padding: 0.83vw 0.41vw;
   text-align: center;
   position: relative;
   border-right: 1px solid var(--color-border-default);
 }
 .sidebarSmall .sidebarSmallImg {
-  width: 40px;
-  height: 40px;
+  width: 2.08vw;
+  height: 2.08vw;
   border-radius: 4px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 8px;
+  margin-bottom: 0.41vw;
 }
 .sidebarSmall .sidebarSmallImg:hover {
   background-color: var(--sidebar-accordion-bg);
@@ -369,7 +369,7 @@
 .sidebarPopover ul li a {
   display: flex;
   align-items: center;
-  padding: 8px;
+  padding: 0.41vw;
 }
 .sidebarPopover ul li a:hover {
   background-color: var(--color-secondary-light-defaut);
@@ -377,9 +377,9 @@
 }
 .sidebarPopover ul li a .subMenuRight {
   font-size: var(--font-size13);
-  line-height: 18px;
+  line-height: 1.38;
   color: var(--color-black);
-  margin-left: 8px;
+  margin-left: 0.41vw;
 }
 .sidebarPopover .popover-arrow::before {
   border: none;
@@ -396,12 +396,12 @@
   }
 }
 @media (max-width: 426px) {
-  .paginationBox{
+  .paginationBox {
     flex-direction: column;
-    margin: 16px 0 24px !important;
+    margin: 0.83vw 0 1.25vw !important;
   }
-  .paginationBox .paginationLeft{
-    margin-bottom: 8px;
+  .paginationBox .paginationLeft {
+    margin-bottom: 0.41vw;
   }
 }
 
@@ -410,13 +410,13 @@
   width: 100%;
   height: 100%;
   background-color: var(--color-background-default);
-  padding: 0 16px;
+  padding: 0 0.83vw;
 }
 .sidebarOpened {
-  width: calc(100% - 240px);
+  width: calc(100% - 12.5vw);
 }
 .sidebarClosed {
-  width: calc(100% - 56px);
+  width: calc(100% - 2.91vw);
 }
 @media (max-width: 992px) {
   .mainWindow {
@@ -427,6 +427,6 @@
 
 /* Footer */
 .footerBox {
-  height: 40px;
+  height: 2.08vw;
   background-color: var(--footer-bg);
 }

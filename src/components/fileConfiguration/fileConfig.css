@@ -4,29 +4,30 @@
 }
 .configLeftHead,
 .configRightHead {
-  height: 43px;
+  height: 2.23vw;
 }
 .fileConfigHead {
   letter-spacing: 0.03em;
+  font-size: 1.04vw;
 }
 .configTopBlueBox {
-  padding: 0 16px;
-  min-height: 218px;
+  padding: 0 0.83vw;
+  min-height: 11.58vw;
 }
 .configLeftFilters {
-  padding: 12px 0;
+  padding: 0.62vw 0;
 }
 .allFiltersBtn {
-  width: 98px;
-  height: 28px;
+  width: 5.1vw;
+  height: 1.45vw;
   border: 1px solid var(--color-primary-default);
 }
 .configLeft .btnsBtm {
-  margin: 16px 0 24px;
+  margin: 0.83vw 0 1.25vw;
 }
 .configBottomHeadingBox {
-  height: 60px;
-  padding-top: 24px;
+  height: 3.12vw;
+  padding-top: 1.25vw;
 }
 .breadCrumbLeft {
   display: none !important;
@@ -46,10 +47,10 @@
     display: none !important;
   }
   .configLeftBottom {
-    padding-bottom: 24px !important;
+    padding-bottom: 1.25vw !important;
   }
   .configBottomHeadingBoxRight {
-    height: 24px;
+    height: 1.25vw;
   }
   .configRightBottom {
     padding-bottom: 0 !important;
@@ -60,12 +61,12 @@
     flex-direction: column-reverse;
     align-items: flex-start !important;
     height: inherit;
-    margin-top: 8px;
-    margin-bottom: 16px;
+    margin-top: 0.41vw;
+    margin-bottom: 0.83vw;
   }
   .fileConfigHead {
     font-size: var(--font-size16);
-    margin-top: 8px;
+    margin-top: 0.41vw;
   }
 }
 /* Config Blue Box Absolute */
@@ -75,25 +76,24 @@
   left: 0;
   width: 100%;
   z-index: 10;
-  /* display: none; */
 }
 .absoluteFiltersBox .configSelectBoxTop {
-  margin-top: 11px;
+  margin-top: 0.57vw;
 }
 .absoluteFiltersBox .clientNameSelect {
-  margin-bottom: 16px;
+  margin-bottom: 0.83vw;
 }
 .absoluteFiltersBox .col,
 .configTopBlueBox .col {
   flex: inherit;
-  padding: 0 8px;
+  padding: 0 0.41vw;
   width: 33.33%;
 }
 .absoluteFiltersBox .filtersInputNumber {
-  height: 38px;
+  height: 1.97vw;
   border: 1px solid var(--color-border-default);
   border-radius: 4px;
-  padding-left: 16px;
+  padding-left: 0.83vw;
   font-size: var(--font-size14);
   letter-spacing: 0.02em;
   color: var(--color-black);
@@ -106,7 +106,7 @@
   color: var(--color-black);
 }
 .absoluteFiltersBox .btnsBtm {
-  margin-top: 8px;
+  margin-top: 0.41vw;
 }
 .absoluteFiltersBox .allFiltersBtn {
   background-color: transparent;
@@ -118,29 +118,37 @@
   .absoluteFiltersBox .col,
   .configTopBlueBox .col {
     flex: inherit;
-    padding: 0 8px;
+    padding: 0 0.41vw;
     width: 100%;
-    margin-bottom: 16px;
+    margin-bottom: 0.83vw;
   }
   .configLeft .btnsBtm .btnPrimary,
   .configLeft .btnsBtm .btnPrimaryOutline {
-    width: 150px;
+    width: 7.81vw;
   }
   .configLeft .btnsBtm {
-    margin-top: 8px;
+    margin-top: 0.41vw;
   }
 }
 /* Table Border Box */
 .tableBorderBox .tableContentBox {
-  height: 560px;
+  height: 29.16vw;
 }
 .tableBorderBox .table {
-  --bs-table-striped-bg: var(--table-striped-color);
+  --bs-table-striped-bg: var(--border-box-bg);
   --bs-table-striped-color: var(--color-black);
   --bs-table-hover-bg: var(--color-light-blue);
   --bs-table-hover-color: var(--color-black);
   color: var(--color-black);
-  width: 805px;
+  min-width: 41.92vw;
+}
+.tableBorderBox .table tbody {
+  --bs-table-bg: var(--table-striped-color);
+  --bs-table-accent-bg: var(--table-striped-color);
+}
+.tableConfigRight .table {
+  width: 41.92vw;
+  min-width: inherit;
 }
 .tableBorderBox .table thead {
   position: sticky;
@@ -150,9 +158,9 @@
   font-weight: var(--font-weight-500);
   font-size: var(--font-size14);
   background-color: var(--color-secondary-light-defaut);
-  height: 41px;
+  height: 2.13vw;
   padding: 0;
-  padding-left: 14px;
+  padding-left: 0.72vw;
   vertical-align: middle;
 }
 .tableBorderBox .table thead tr th:first-child,
@@ -167,9 +175,9 @@
 }
 .tableBorderBox .table tbody tr td {
   font-size: var(--font-size14);
-  height: 64px;
+  height: 3.33vw;
   padding: 0;
-  padding-left: 14px;
+  padding-left: 0.72vw;
 }
 .tableBorderBox .table tbody tr {
   border-bottom: 1px solid var(--color-table-border);
@@ -179,13 +187,13 @@
 }
 /* Table Scroll Bar */
 ::-webkit-scrollbar {
-  width: 3px;
+  width: 0.15vw;
 }
 ::-webkit-scrollbar:vertical {
   display: none;
 }
 ::-webkit-scrollbar:horizontal {
-  height: 3px;
+  height: 0.15vw;
 }
 ::-webkit-scrollbar-thumb {
   background-color: var(--color-scrollbar);
@@ -198,7 +206,7 @@
 
 /* Select Box */
 .configSelectBoxTop {
-  margin-top: 20px;
+  margin-top: 1.04vw;
 }
 .clientNameSelect {
   width: 30.4%;
@@ -207,33 +215,37 @@
   font-size: var(--font-size14);
   letter-spacing: 0.02em;
   color: var(--color-black);
-  margin-bottom: 8px;
+  margin-bottom: 0.41vw;
 }
 .clientNameSelect label span {
   color: var(--color-secondary-default);
 }
+.clientNameSelect .css-b62m3t-container {
+  height: 1.97vw;
+  font-size: var(--font-size14);
+}
 .clientNameSelect .css-1s2u09g-control {
   background-color: var(--border-box-bg);
   border-color: var(--color-border-default);
-}
-.clientNameSelect .css-319lph-ValueContainer {
-  padding: 0 0 0 14px;
+  min-height: inherit;
+  height: 1.97vw;
 }
 .clientNameSelect .css-1pahdxg-control,
 .clientNameSelect .css-26l3qy-menu {
   background-color: var(--border-box-bg);
   color: var(--color-black);
 }
+.clientNameSelect .css-319lph-ValueContainer {
+  padding: 0 0 0 0.72vw;
+}
 .clientNameSelect .css-14el2xx-placeholder {
-  font-size: var(--font-size14);
+  margin: 0;
   letter-spacing: 0.02em;
   color: var(--color-black);
-  margin: 0;
 }
 .clientNameSelect .css-6j8wv5-Input {
   padding: 0;
   margin: 0;
-  font-size: var(--font-size14);
   letter-spacing: 0.02em;
   color: var(--color-black);
 }
@@ -244,27 +256,20 @@
   fill: var(--color-primary-default);
 }
 .clientNameSelect .css-tlfecz-indicatorContainer {
-  padding-left: 0;
-}
-.configFormatEntities {
-  width: 131px;
-}
-.reactSelectBox__option {
-  background-color: white;
+  padding: 0;
+  padding-right: 0.43vw;
 }
 .reactSelectBox__option:hover {
   background-color: var(--selectbox-hover);
+}
+.configFormatEntities {
+  width: 6.82vw;
 }
 
 /* Config Right */
 .configMainContent .configRight {
   width: 37.67%;
-  padding-bottom: 16px;
-}
-@media (min-width: 1600px) {
-  .tableBorderBox .table {
-    width: 100%;
-  }
+  padding-bottom: 0.83vw;
 }
 @media (max-width: 992px) {
   .configMainContent .configRight {
@@ -279,41 +284,41 @@
 }
 /* Config Right Top */
 .configTopBlueBoxRight {
-  padding: 26px 20px;
-  height: 218px;
+  padding: 1.35vw 1.04vw;
+  min-height: 11.58vw;
 }
 .configDotLeftContent {
-  width: 95px;
+  width: 4.94vw;
   letter-spacing: 0.02em;
 }
 .configDotCenterContent {
-  width: 4px;
-  margin: 0 8px;
+  width: 0.2vw;
+  margin: 0 0.41vw;
   letter-spacing: 0.02em;
 }
 .configDotRightContent {
-  width: calc(100% - 114px);
+  width: calc(100% - 5.93vw);
 }
 .configDotRightContent .clientNameSelect {
   width: 100%;
 }
 @media (max-width: 426px) {
-  .configDotCenterContent{
+  .configDotCenterContent {
     display: none !important;
   }
-  .configTopBlueBoxRight{
-    padding: 16px 16px 4px;
+  .configTopBlueBoxRight {
+    padding: 0.83vw 0.83vw 0.2vw;
     height: inherit;
   }
-  .configTopBlueBoxRight .d-flex{
+  .configTopBlueBoxRight .d-flex {
     flex-direction: column;
-    margin-bottom: 12px !important;
+    margin-bottom: 0.62vw !important;
   }
-  .configDotLeftContent{
+  .configDotLeftContent {
     width: 100%;
-    margin-bottom: 4px;
+    margin-bottom: 0.2vw;
   }
-  .configDotRightContent{
+  .configDotRightContent {
     width: 100% !important;
   }
 }
@@ -322,23 +327,23 @@
   width: 100%;
 }
 .tableBorderBox .configTableRight thead tr th:first-child {
-  padding-left: 16px;
+  padding-left: 0.83vw;
 }
 .tableBorderBox .configTableRight tbody tr td:first-child {
-  padding-left: 16px;
+  padding-left: 0.83vw;
 }
 .tableBorderBox .configTableRight thead tr th:last-child {
-  padding-right: 8px;
+  padding-right: 0.41vw;
 }
 .tableBorderBox .configTableRight tbody tr td:last-child {
-  padding-right: 8px;
+  padding-right: 0.41vw;
 }
 .tableBorderBox .configTableRight input[type="number"] {
   border: 1px solid var(--color-border-default);
   border-radius: 4px;
   width: 100%;
-  height: 30px;
-  padding-left: 12px;
+  height: 1.56vw;
+  padding-left: 0.62vw;
   font-family: "Inter";
   font-size: var(--font-size12);
   letter-spacing: 0.02em;
@@ -365,13 +370,13 @@
   padding: 0;
   letter-spacing: 0.02em;
   color: var(--color-black);
-  width: 24px;
-  height: 24px;
+  width: 1.25vw;
+  height: 1.25vw;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 8px;
-  margin-right: 6px;
+  margin-right: 0.31vw;
   background-color: transparent;
 }
 .pagination .active .paginationBottom,
@@ -390,21 +395,21 @@
   color: var(--color-primary-default);
   display: flex;
   align-items: center;
-  height: 24px;
+  height: 1.25vw;
   text-decoration: underline;
   background-color: transparent;
 }
 .previousPagination {
-  margin-right: 4px;
+  margin-right: 0.2vw;
 }
 .previousPagination span:last-child {
-  margin-left: 2px;
+  margin-left: 0.1vw;
 }
 .nextPagination {
-  margin-left: 4px;
+  margin-left: 0.2vw;
 }
 .nextPagination span:first-child {
-  margin-right: 2px;
+  margin-right: 0.1vw;
 }
 .previousPagination:hover,
 .nextPagination:hover {

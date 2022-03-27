@@ -467,10 +467,10 @@ const ConfigLeft = () => {
 
           {/* Table */}
           <div className="table-responsive tableContentBox">
-            <table className="table table-striped table-hover table-borderless align-middle">
+            <table className="table table-striped table-hover table-borderless align-middle tableConfigLeft">
               <thead>
                 <tr>
-                  <th scope="col" style={{ width: "17.89%" }}>
+                  <th scope="col" style={{ width: "15.65%" }}>
                     Client Name
                   </th>
                   <th scope="col">Log Type</th>
