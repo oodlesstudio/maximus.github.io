@@ -27,10 +27,6 @@ a {
   outline: none !important;
 }
 
-h6{
-  font-size: 0.83vw !important;
-}
-
 :root {
   /* Colors Default Theme */
   --color-primary-default: #003087;
@@ -181,6 +177,10 @@ h6{
   font-size: var(--font-size16);
   color: var(--color-black);
   line-height: 1.21;
+}
+
+h6{
+  font-size: var(--font-size16) !important;
 }
 
 /* Letter Spacing */

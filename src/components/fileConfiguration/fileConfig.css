@@ -4,7 +4,7 @@
 }
 .configLeftHead,
 .configRightHead {
-  height: 2.23vw;
+  height: 2.68vw;
 }
 .fileConfigHead {
   letter-spacing: 0.03em;
@@ -18,8 +18,8 @@
   padding: 0.62vw 0;
 }
 .allFiltersBtn {
-  width: 5.1vw;
-  height: 1.45vw;
+  width: 6.12vw;
+  height: 1.75vw;
   border: 1px solid var(--color-primary-default);
 }
 .configLeft .btnsBtm {
