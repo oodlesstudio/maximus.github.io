@@ -43,7 +43,7 @@
 .headerSideMenu {
   width: 13.28vw;
 }
-.headerSideMenu .sidebarButton {
+.headerSideMenu .sidebarButton{
   top: 45%;
 }
 .headerSideMenu .sideBar {
@@ -250,7 +250,7 @@
 }
 /* Side Bar */
 .sideBar {
-  width: 12.5vw;
+  width: 15vw;
   background-color: var(--sidebar-color);
   padding: 0.83vw 0.41vw;
   position: relative;
@@ -326,12 +326,15 @@
 
 /* SidebarSmall */
 .sidebarSmall {
-  width: 2.91vw;
+  width: 3.5vw;
   background-color: var(--sidebar-color);
   padding: 0.83vw 0.41vw;
   text-align: center;
   position: relative;
   border-right: 1px solid var(--color-border-default);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .sidebarSmall .sidebarSmallImg {
   width: 2.08vw;
@@ -396,11 +399,11 @@
   }
 }
 @media (max-width: 426px) {
-  .paginationBox {
+  .paginationBox{
     flex-direction: column;
     margin: 0.83vw 0 1.25vw !important;
   }
-  .paginationBox .paginationLeft {
+  .paginationBox .paginationLeft{
     margin-bottom: 0.41vw;
   }
 }
@@ -413,10 +416,10 @@
   padding: 0 0.83vw;
 }
 .sidebarOpened {
-  width: calc(100% - 12.5vw);
+  width: calc(100% - 15vw);
 }
 .sidebarClosed {
-  width: calc(100% - 2.91vw);
+  width: calc(100% - 3.5vw);
 }
 @media (max-width: 992px) {
   .mainWindow {

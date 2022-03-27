@@ -8,7 +8,7 @@
 }
 .fileConfigHead {
   letter-spacing: 0.03em;
-  font-size: 1.04vw;
+  font-size: var(--font-size20);
 }
 .configTopBlueBox {
   padding: 0 0.83vw;
@@ -263,7 +263,7 @@
   background-color: var(--selectbox-hover);
 }
 .configFormatEntities {
-  width: 6.82vw;
+  width: 8.18vw;
 }
 
 /* Config Right */
@@ -288,7 +288,7 @@
   min-height: 11.58vw;
 }
 .configDotLeftContent {
-  width: 4.94vw;
+  width: 6vw;
   letter-spacing: 0.02em;
 }
 .configDotCenterContent {

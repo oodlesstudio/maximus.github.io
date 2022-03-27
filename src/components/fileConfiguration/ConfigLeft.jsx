@@ -470,7 +470,7 @@ const ConfigLeft = () => {
             <table className="table table-striped table-hover table-borderless align-middle tableConfigLeft">
               <thead>
                 <tr>
-                  <th scope="col" style={{ width: "15.65%" }}>
+                  <th scope="col" style={{ width: "8.5vw" }}>
                     Client Name
                   </th>
                   <th scope="col">Log Type</th>

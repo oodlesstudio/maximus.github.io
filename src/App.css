@@ -64,12 +64,12 @@ h6{
   --color-background-dark: #000a1b;
 
   /* Font Sizes */
-  --font-size10: 0.52vw;
-  --font-size12: 0.62vw;
-  --font-size13: 0.67vw;
-  --font-size14: 0.72vw;
-  --font-size16: 0.83vw;
-  --font-size20: 1.04vw;
+  --font-size10: 0.62vw;
+  --font-size12: 0.75vw;
+  --font-size13: 0.81vw;
+  --font-size14: 0.87vw;
+  --font-size16: 1vw;
+  --font-size20: 1.25vw;
 
   /* Font Weights */
   --font-weight-500: 500;
