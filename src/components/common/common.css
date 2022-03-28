@@ -1,34 +1,34 @@
 /* Header */
 .headerBox {
   background-color: var(--header-background);
-  height: 3.33vw;
+  height: 50px;
   position: fixed;
   z-index: 10;
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.16);
 }
 .headerLeft {
-  width: 20.31vw;
+  width: 320px;
   height: 100%;
-  margin-left: 1.04vw;
+  margin-left: 16px;
 }
 .headerRight {
-  width: calc(100% - 20.31vw);
+  width: calc(100% - 320px);
   height: 100%;
-  margin-right: 0.83vw;
+  margin-right: 16px;
 }
 .headerMyAccount {
-  margin-left: 0.31vw;
+  margin-left: 4px;
 }
 .headerMyAccount .fontSize10-m {
-  margin-top: 0.15vw;
+  margin-top: 2px;
 }
 .notificationCount {
   font-weight: var(--font-weight-600);
   font-size: var(--font-size10);
   color: var(--color-white);
   background-color: var(--color-notificationsRed);
-  width: 0.93vw;
-  height: 0.93vw;
+  width: 18px;
+  height: 18px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -37,13 +37,13 @@
 .headerHamburger {
   border: none;
   background-color: transparent;
-  margin-right: 0.83vw;
+  margin-right: 12px;
   display: none;
 }
 .headerSideMenu {
-  width: 13.28vw;
+  width: 258px;
 }
-.headerSideMenu .sidebarButton{
+.headerSideMenu .sidebarButton {
   top: 45%;
 }
 .headerSideMenu .sideBar {
@@ -67,8 +67,8 @@
   border: none;
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.16);
   border-radius: 4px;
-  padding: 0.41vw 0;
-  width: 11.3vw;
+  padding: 6px 0;
+  width: 188px;
   background-color: var(--background-white);
 }
 .headerSettingsPopover .popover-body {
@@ -82,16 +82,20 @@
 }
 .headerSettingsPopover ul li {
   list-style: none;
-  padding: 0 0.83vw;
+  padding: 0 12px;
 }
 .headerSettingsPopover ul li button {
   border: none;
   background-color: transparent;
   letter-spacing: 0.02em;
   width: 100%;
-  height: 2.08vw;
+  height: 32px;
   border-bottom: 1px solid var(--color-popoverborder);
   text-align: left;
+}
+.headerSettingsPopover ul li button:hover {
+  border-color: var(--color-secondary-light-defaut);
+  transition: all 0.3s ease-in-out;
 }
 .headerSettingsPopover ul li:hover {
   background-color: var(--color-secondary-light-defaut);
@@ -109,11 +113,11 @@
   border-radius: 8px;
   border: none;
   background-color: var(--color-light-blue);
-  width: 22.96vw;
+  width: 400px;
 }
 .defaultThemeModal .modal-header {
-  height: 2.08vw;
-  padding: 0 1.04vw 0 1.25vw;
+  height: 36px;
+  padding: 0 12px;
   background-color: var(--modal-header);
   border: none;
   border-top-left-radius: 8px;
@@ -125,27 +129,27 @@
   opacity: 1;
 }
 .defaultThemeModal .modal-body {
-  padding: 1.66vw 0;
+  padding: 24px 0;
   display: flex;
   justify-content: center;
 }
 .defaultThemeModal .modal-body p {
   line-height: 1.5;
-  width: 14.42vw;
+  width: 277px;
 }
 .defaultThemeModal .modal-footer {
   border: none;
   padding: 0;
   justify-content: center;
-  margin-bottom: 2.08vw;
+  margin-bottom: 30px;
 }
 .defaultThemeModal .modal-footer .btnPrimary,
 .defaultThemeModal .modal-footer .btnPrimaryOutline {
   margin: 0;
 }
 .defaultThemeModal .modal-footer .btnPrimary {
-  margin-left: 0.83vw;
-  width: 8.95vw;
+  margin-left: 12px;
+  width: 125px;
 }
 .defaultThemeModal .modal-footer .btnPrimary:hover,
 .defaultThemeModal .modal-footer .btnPrimary:focus {
@@ -158,44 +162,45 @@
 }
 /* Site Configuration Modal */
 .siteConfigurationModal .modal-body {
-  padding: 1.25vw 0;
+  padding: 24px 0 16px;
 }
 .siteConfigurationModal .clientNameSelect {
-  width: 18.8vw;
+  width: 361px;
 }
 .siteConfigurationModal .modal-footer .btnPrimary {
   margin-left: 0;
-  width: 18.8vw;
+  width: 361px;
 }
-/* Error/Save Filters  Modals */
+/* Success Filters  Modals */
 .saveFiltersModal .modal-body {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: var(--color-light-blue);
-  padding: 1.25vw 0 2.08vw;
+  padding: 24px 0 30px;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
 }
 .saveFiltersModal .modal-body img {
-  width: 3.33vw;
-  margin-bottom: 0.41vw;
+  width: 56px;
+  margin-bottom: 8px;
 }
 .saveFiltersModal .modal-body p {
+  font-size: var(--font-size16);
   line-height: 1.21;
   width: 100%;
 }
-
+/* Error Filters  Modals */
 .errorFiltersModal .modal-body {
-  padding: 1.25vw 0 2.08vw;
+  padding: 24px 0 30px;
 }
 .errorFiltersModal .modal-body img {
-  width: 3.33vw;
-  margin-bottom: 0.41vw;
+  width: 56px;
+  margin-bottom: 8px;
 }
 .errorFiltersModal .modal-body p {
-  width: 15.62vw;
+  width: 300px;
 }
 
 @media (max-width: 992px) {
@@ -203,12 +208,11 @@
     justify-content: space-between;
   }
   .headerLeft {
-    width: 16.25vw;
-    margin-left: 0.83vw;
+    width: 312px;
   }
   .headerRight {
     width: auto;
-    margin-right: 1.25vw;
+    margin-right: 16px;
   }
   .headerMyAccount {
     display: none;
@@ -219,14 +223,14 @@
 }
 @media (max-width: 767px) {
   .headerBox {
-    height: 4.58vw;
+    height: 88px;
   }
   .headerLeft {
     width: 50%;
     margin: 0;
     flex-direction: column;
     align-items: flex-start !important;
-    padding: 0.62vw 0 0.82vw 0.83vw;
+    padding: 12px 0 12px 12px;
   }
   .headerRight {
     width: 50%;
@@ -234,48 +238,48 @@
     justify-content: space-between !important;
     align-items: flex-end !important;
     margin: 0;
-    padding: 0.72vw 0.83vw 0.62vw 0;
+    padding: 12px 12px 12px 0;
   }
 }
 
 /* Main View */
 .mainView {
-  padding-top: 3.33vw;
+  padding-top: 50px;
 }
 
 @media (max-width: 767px) {
   .mainView {
-    padding-top: 4.58vw;
+    padding-top: 88px;
   }
 }
 /* Side Bar */
 .sideBar {
-  width: 15vw;
+  width: 216px;
   background-color: var(--sidebar-color);
-  padding: 0.83vw 0.41vw;
+  padding: 8px;
   position: relative;
   border-right: 1px solid var(--color-border-default);
 }
 .sidebarButton {
-  width: 1.45vw;
-  height: 1.45vw;
+  width: 24px;
+  height: 24px;
   border: none;
   background-color: var(--color-primary-default);
   border-radius: 50%;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
   position: absolute;
   top: 32%;
-  right: -0.72vw;
+  right: -12px;
   z-index: 2;
 }
 .sideBar .accordion .accordion-item {
-  margin-bottom: 0.41vw;
+  margin-bottom: 6px;
   border: none;
   border-radius: 4px;
 }
 .sideBar .accordion .accordion-item .accordion-button {
   background-color: var(--sidebar-color);
-  padding: 0.41vw;
+  padding: 6px;
 }
 .sideBar .accordion .accordion-item .accordion-button:hover {
   background-color: var(--sidebar-accordion-bg);
@@ -303,7 +307,7 @@
 .sideBar .accordion ul li a {
   display: flex;
   align-items: center;
-  padding: 0.41vw;
+  padding: 6px;
 }
 .sideBar .accordion ul li a:hover {
   background-color: var(--color-secondary-light-defaut);
@@ -311,14 +315,19 @@
 }
 .sideBar .accordion .subMenu li a .subMenuRight {
   font-size: var(--font-size13);
-  line-height: 1.38;
+  line-height: 18px;
   color: var(--color-black);
-  margin-left: 0.41vw;
+  margin-left: 8px;
 }
 
 .sideBar .accordion-button::after {
   transform: rotate(0deg);
   background-image: url(../../images/sidebar/chevron.svg);
+}
+.sideBar .accordion-button::after {
+  background-size: 14px;
+  width: 14px;
+  height: 14px;
 }
 .sideBar .accordion-button:not(.collapsed)::after {
   transform: rotate(-90deg);
@@ -326,9 +335,9 @@
 
 /* SidebarSmall */
 .sidebarSmall {
-  width: 3.5vw;
+  width: 50px;
   background-color: var(--sidebar-color);
-  padding: 0.83vw 0.41vw;
+  padding: 8px;
   text-align: center;
   position: relative;
   border-right: 1px solid var(--color-border-default);
@@ -337,13 +346,13 @@
   align-items: center;
 }
 .sidebarSmall .sidebarSmallImg {
-  width: 2.08vw;
-  height: 2.08vw;
+  width: 40px;
+  height: 40px;
   border-radius: 4px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 0.41vw;
+  margin-bottom: 8px;
 }
 .sidebarSmall .sidebarSmallImg:hover {
   background-color: var(--sidebar-accordion-bg);
@@ -357,7 +366,7 @@
   background-color: var(--background-white);
 }
 .bs-popover-end > .popover-arrow::after {
-  border-right-color: var(--sidebar-color);
+  border-right-color: var(--background-white);
 }
 .sidebarPopover .popover-body {
   padding: 0;
@@ -372,7 +381,7 @@
 .sidebarPopover ul li a {
   display: flex;
   align-items: center;
-  padding: 0.41vw;
+  padding: 6px;
 }
 .sidebarPopover ul li a:hover {
   background-color: var(--color-secondary-light-defaut);
@@ -382,7 +391,7 @@
   font-size: var(--font-size13);
   line-height: 1.38;
   color: var(--color-black);
-  margin-left: 0.41vw;
+  margin-left: 8px;
 }
 .sidebarPopover .popover-arrow::before {
   border: none;
@@ -398,28 +407,19 @@
     display: block;
   }
 }
-@media (max-width: 426px) {
-  .paginationBox{
-    flex-direction: column;
-    margin: 0.83vw 0 1.25vw !important;
-  }
-  .paginationBox .paginationLeft{
-    margin-bottom: 0.41vw;
-  }
-}
 
 /* Main Window */
 .mainWindow {
   width: 100%;
   height: 100%;
   background-color: var(--color-background-default);
-  padding: 0 0.83vw;
+  padding: 0 12px;
 }
 .sidebarOpened {
-  width: calc(100% - 15vw);
+  width: calc(100% - 216px);
 }
 .sidebarClosed {
-  width: calc(100% - 3.5vw);
+  width: calc(100% - 50px);
 }
 @media (max-width: 992px) {
   .mainWindow {
@@ -430,6 +430,6 @@
 
 /* Footer */
 .footerBox {
-  height: 2.08vw;
+  height: 32px;
   background-color: var(--footer-bg);
 }

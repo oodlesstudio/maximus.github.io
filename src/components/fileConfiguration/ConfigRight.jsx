@@ -33,6 +33,7 @@ const ConfigRight = () => {
     <div className="configRight">
       {/* Config Left Top */}
       <div className="configLeftTop">
+        {/* BreadCrumb */}
         <div className="configRightHead d-flex align-items-center justify-content-end">
           <div className="d-flex align-items-center">
             <Link to="/">
@@ -86,7 +87,7 @@ const ConfigRight = () => {
         </div>
 
         <div className="lightBlueBox configTopBlueBoxRight">
-          <div className="d-flex mb-3">
+          <div className="d-flex mb-16">
             <div className="configDotLeftContent fontSize14">Client Name</div>
             <div className="configDotCenterContent fontSize14">:</div>
             <div className="configDotRightContent fontSize14-m" style={{width: '286px'}}>
@@ -94,13 +95,13 @@ const ConfigRight = () => {
             </div>
           </div>
 
-          <div className="d-flex mb-3">
+          <div className="d-flex mb-16">
             <div className="configDotLeftContent fontSize14">Format No.</div>
             <div className="configDotCenterContent fontSize14">:</div>
             <div className="configDotRightContent fontSize14-m">1</div>
           </div>
 
-          <div className="d-flex mb-3">
+          <div className="d-flex mb-16">
             <div className="configDotLeftContent fontSize14">Format Type</div>
             <div className="configDotCenterContent fontSize14">:</div>
             <div className="configDotRightContent fontSize14-m">Current</div>
@@ -132,7 +133,7 @@ const ConfigRight = () => {
       <div className="configBottomHeadingBoxRight configBottomHeadingBox"></div>
 
       {/* Config Left Bottom */}
-      <div className="configLeftBottom configRightBottom pb-3">
+      <div className="configLeftBottom configRightBottom">
         <div className="tableBorderBox">
           <div className="d-flex justify-content-between align-items-center mt-3 mb-2">
             <div className="clientNameSelect configFormatEntities">
@@ -152,7 +153,7 @@ const ConfigRight = () => {
                 delay={{ show: 250, hide: 400 }}
                 overlay={renderTooltip}
               >
-                <button type="button" className="iconButtonBox ms-2">
+                <button type="button" className="iconButtonBox">
                   <img src={Pdf} alt="Pdf" />
                 </button>
               </OverlayTrigger>
@@ -161,7 +162,7 @@ const ConfigRight = () => {
                 delay={{ show: 250, hide: 400 }}
                 overlay={renderTooltipExcel}
               >
-                <button type="button" className="iconButtonBox ms-2">
+                <button type="button" className="iconButtonBox">
                   <img src={Excel} alt="Excel" />
                 </button>
               </OverlayTrigger>
@@ -169,11 +170,11 @@ const ConfigRight = () => {
           </div>
 
           {/* Table */}
-          <div className="table-responsive tableContentBox tableConfigRight">
+          <div className="table-responsive tableContentBox">
             <table className="table table-striped table-hover table-borderless align-middle configTableRight">
               <thead>
                 <tr>
-                  <th scope="col" style={{ width: "24.94%" }}>
+                  <th scope="col" style={{ width: "24.95%" }}>
                     Field Name
                   </th>
                   <th scope="col" style={{ width: "33.49%" }}>Start Position</th>

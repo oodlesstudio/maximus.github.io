@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
 import "./App.css";
+import "./fonts.css";
 import Router from "./constants/Router";
 import useLocalStorage from "use-local-storage";
 
