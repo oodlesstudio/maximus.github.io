@@ -41,8 +41,8 @@ const ConfigRight = () => {
             </Link>
             <span>
               <svg
-                width="10"
-                height="16"
+                width="8"
+                height="auto"
                 viewBox="0 0 10 16"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -63,8 +63,8 @@ const ConfigRight = () => {
             </Link>
             <span>
               <svg
-                width="10"
-                height="16"
+                width="8"
+                height="auto"
                 viewBox="0 0 10 16"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -90,7 +90,10 @@ const ConfigRight = () => {
           <div className="d-flex mb-16">
             <div className="configDotLeftContent fontSize14">Client Name</div>
             <div className="configDotCenterContent fontSize14">:</div>
-            <div className="configDotRightContent fontSize14-m" style={{width: '286px'}}>
+            <div
+              className="configDotRightContent fontSize14-m"
+              style={{ width: "286px" }}
+            >
               Sri Vasavamba Cooperative Urban Bank Ltd
             </div>
           </div>
@@ -177,8 +180,12 @@ const ConfigRight = () => {
                   <th scope="col" style={{ width: "24.95%" }}>
                     Field Name
                   </th>
-                  <th scope="col" style={{ width: "33.49%" }}>Start Position</th>
-                  <th scope="col" style={{ width: "28.59%" }}>Field Length</th>
+                  <th scope="col" style={{ width: "33.49%" }}>
+                    Start Position
+                  </th>
+                  <th scope="col" style={{ width: "28.59%" }}>
+                    Field Length
+                  </th>
                 </tr>
               </thead>
               <tbody>
@@ -410,23 +417,7 @@ const ConfigRight = () => {
                       href="/"
                       aria-label="Previous"
                     >
-                      <span>
-                        <svg
-                          width="16"
-                          height="16"
-                          viewBox="0 0 16 16"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M10 2.6665L4.66667 7.99984L10 13.3332"
-                            stroke="#003087"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                        </svg>
-                      </span>
+                      <span class="icon-Dropdown-Arrow" style={{fontSize: '12px'}}></span>
                       <span>First</span>
                     </a>
                   </li>
@@ -462,23 +453,7 @@ const ConfigRight = () => {
                       aria-label="Next"
                     >
                       <span>Last</span>
-                      <span>
-                        <svg
-                          width="16"
-                          height="16"
-                          viewBox="0 0 16 16"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M6 13.3335L11.3333 8.00016L6 2.66683"
-                            stroke="#003087"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                        </svg>
-                      </span>
+                      <span class="icon-Dropdown-Arrow-1" style={{fontSize: '12px'}}></span>
                     </a>
                   </li>
                 </ul>

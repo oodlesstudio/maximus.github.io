@@ -159,6 +159,17 @@ const ConfigLeft = () => {
                   placeholder="ATM"
                 />
               </div>
+              <div className="clientNameSelect col">
+                  <label htmlFor="clientName">Mode Type</label>
+                  <Select
+                    defaultValue={selectedOption}
+                    onChange={setSelectedOption}
+                    options={options}
+                    id="clientName"
+                    classNamePrefix="reactSelectBox"
+                    placeholder="ACQUIR"
+                  />
+                </div>
             </div>
 
             <div className="text-center btnsBtm">
@@ -463,7 +474,7 @@ const ConfigLeft = () => {
               </thead>
               <tbody>
                 <tr>
-                  <td>Sri Vasavamba Cooperative Urban Bank Ltd</td>
+                  <td><p className="tableTextInner">Sri Vasavamba Cooperative Urban Bank Ltd</p></td>
                   <td>CBS</td>
                   <td>POS</td>
                   <td>RGCS</td>
@@ -472,7 +483,7 @@ const ConfigLeft = () => {
                   <td>.txt</td>
                 </tr>
                 <tr>
-                  <td>Punjab National Bank</td>
+                  <td><p className="tableTextInner">Punjab National Bank</p></td>
                   <td>CBS</td>
                   <td>POS</td>
                   <td>RGCS</td>
@@ -481,7 +492,7 @@ const ConfigLeft = () => {
                   <td>.txt</td>
                 </tr>
                 <tr>
-                  <td>Sri Vasavamba Cooperative Urban Bank Ltd</td>
+                  <td><p className="tableTextInner">Sri Vasavamba Cooperative Urban Bank Ltd</p></td>
                   <td>CBS</td>
                   <td>POS</td>
                   <td>RGCS</td>
@@ -490,7 +501,7 @@ const ConfigLeft = () => {
                   <td>.txt</td>
                 </tr>
                 <tr>
-                  <td>Punjab National Bank</td>
+                  <td><p className="tableTextInner">Punjab National Bank</p></td>
                   <td>CBS</td>
                   <td>POS</td>
                   <td>RGCS</td>
@@ -499,7 +510,7 @@ const ConfigLeft = () => {
                   <td>.txt</td>
                 </tr>
                 <tr>
-                  <td>Sri Vasavamba Cooperative Urban Bank Ltd</td>
+                  <td><p className="tableTextInner">Sri Vasavamba Cooperative Urban Bank Ltd</p></td>
                   <td>CBS</td>
                   <td>POS</td>
                   <td>RGCS</td>
@@ -508,7 +519,7 @@ const ConfigLeft = () => {
                   <td>.txt</td>
                 </tr>
                 <tr>
-                  <td>Punjab National Bank</td>
+                  <td><p className="tableTextInner">Punjab National Bank</p></td>
                   <td>CBS</td>
                   <td>POS</td>
                   <td>RGCS</td>
@@ -517,7 +528,7 @@ const ConfigLeft = () => {
                   <td>.txt</td>
                 </tr>
                 <tr>
-                  <td>Sri Vasavamba Cooperative Urban Bank Ltd</td>
+                  <td><p className="tableTextInner">Sri Vasavamba Cooperative Urban Bank Ltd</p></td>
                   <td>CBS</td>
                   <td>POS</td>
                   <td>RGCS</td>
@@ -526,7 +537,7 @@ const ConfigLeft = () => {
                   <td>.txt</td>
                 </tr>
                 <tr>
-                  <td>Punjab National Bank</td>
+                  <td><p className="tableTextInner">Punjab National Bank</p></td>
                   <td>CBS</td>
                   <td>POS</td>
                   <td>RGCS</td>
@@ -535,7 +546,7 @@ const ConfigLeft = () => {
                   <td>.txt</td>
                 </tr>
                 <tr>
-                  <td>Sri Vasavamba Cooperative Urban Bank Ltd</td>
+                  <td><p className="tableTextInner">Sri Vasavamba Cooperative Urban Bank Ltd</p></td>
                   <td>CBS</td>
                   <td>POS</td>
                   <td>RGCS</td>
@@ -544,7 +555,7 @@ const ConfigLeft = () => {
                   <td>.txt</td>
                 </tr>
                 <tr>
-                  <td>Punjab National Bank</td>
+                  <td><p className="tableTextInner">Punjab National Bank</p></td>
                   <td>CBS</td>
                   <td>POS</td>
                   <td>RGCS</td>
@@ -553,7 +564,7 @@ const ConfigLeft = () => {
                   <td>.txt</td>
                 </tr>
                 <tr>
-                  <td>Sri Vasavamba Cooperative Urban Bank Ltd</td>
+                  <td><p className="tableTextInner">Sri Vasavamba Cooperative Urban Bank Ltd</p></td>
                   <td>CBS</td>
                   <td>POS</td>
                   <td>RGCS</td>
@@ -562,7 +573,7 @@ const ConfigLeft = () => {
                   <td>.txt</td>
                 </tr>
                 <tr>
-                  <td>Punjab National Bank</td>
+                  <td><p className="tableTextInner">Punjab National Bank</p></td>
                   <td>CBS</td>
                   <td>POS</td>
                   <td>RGCS</td>
@@ -571,7 +582,7 @@ const ConfigLeft = () => {
                   <td>.txt</td>
                 </tr>
                 <tr>
-                  <td>Sri Vasavamba Cooperative Urban Bank Ltd</td>
+                  <td><p className="tableTextInner">Sri Vasavamba Cooperative Urban Bank Ltd</p></td>
                   <td>CBS</td>
                   <td>POS</td>
                   <td>RGCS</td>
@@ -580,7 +591,7 @@ const ConfigLeft = () => {
                   <td>.txt</td>
                 </tr>
                 <tr>
-                  <td>Punjab National Bank</td>
+                  <td><p className="tableTextInner">Punjab National Bank</p></td>
                   <td>CBS</td>
                   <td>POS</td>
                   <td>RGCS</td>
@@ -606,23 +617,10 @@ const ConfigLeft = () => {
                       to="/"
                       aria-label="Previous"
                     >
-                      <span>
-                        <svg
-                          width="16"
-                          height="16"
-                          viewBox="0 0 16 16"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M10 2.6665L4.66667 7.99984L10 13.3332"
-                            stroke="#003087"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                        </svg>
-                      </span>
+                      <span
+                        class="icon-Dropdown-Arrow"
+                        style={{ fontSize: "12px" }}
+                      ></span>
                       <span>First</span>
                     </Link>
                   </li>
@@ -658,23 +656,10 @@ const ConfigLeft = () => {
                       aria-label="Next"
                     >
                       <span>Last</span>
-                      <span>
-                        <svg
-                          width="16"
-                          height="16"
-                          viewBox="0 0 16 16"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M6 13.3335L11.3333 8.00016L6 2.66683"
-                            stroke="#003087"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                        </svg>
-                      </span>
+                      <span
+                        class="icon-Dropdown-Arrow-1"
+                        style={{ fontSize: "12px" }}
+                      ></span>
                     </Link>
                   </li>
                 </ul>

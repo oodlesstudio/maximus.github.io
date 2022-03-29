@@ -58,7 +58,7 @@ const SidebarSmall = (props) => {
     <div className="sidebarSmall">
       {/* Home */}
       <div className="sidebarSmallImg">
-        <span class="icon-Icon-NameHome"></span>
+        <span class="icon-Icon-NameHome sidebarIconSize"></span>
       </div>
 
       {/* Client Management */}
@@ -69,7 +69,7 @@ const SidebarSmall = (props) => {
           overlay={popover}
           rootClose
         >
-          <span class="icon-Icon-NameClient-Management"></span>
+          <span class="icon-Icon-NameClient-Management sidebarIconSize"></span>
         </OverlayTrigger>
       </div>
 
@@ -81,7 +81,7 @@ const SidebarSmall = (props) => {
           overlay={popover}
           rootClose
         >
-          <span class="icon-Icon-NameUser-Management"></span>
+          <span class="icon-Icon-NameUser-Management sidebarIconSize"></span>
         </OverlayTrigger>
       </div>
 
@@ -93,7 +93,7 @@ const SidebarSmall = (props) => {
           overlay={popover}
           rootClose
         >
-          <span class="icon-Icon-NameConfiguration"></span>
+          <span class="icon-Icon-NameConfiguration sidebarIconSize"></span>
         </OverlayTrigger>
       </div>
 
@@ -105,7 +105,7 @@ const SidebarSmall = (props) => {
           overlay={popover}
           rootClose
         >
-          <span class="icon-Icon-NameImport-Logs"></span>
+          <span class="icon-Icon-NameImport-Logs sidebarIconSize"></span>
         </OverlayTrigger>
       </div>
 
@@ -117,7 +117,7 @@ const SidebarSmall = (props) => {
           overlay={popover}
           rootClose
         >
-          <span class="icon-Icon-NameRun-Recon"></span>
+          <span class="icon-Icon-NameRun-Recon sidebarIconSize"></span>
         </OverlayTrigger>
       </div>
 
@@ -129,7 +129,7 @@ const SidebarSmall = (props) => {
           overlay={popover}
           rootClose
         >
-          <span class="icon-Icon-NameDaily-Reports"></span>
+          <span class="icon-Icon-NameDaily-Reports sidebarIconSize"></span>
         </OverlayTrigger>
       </div>
 
@@ -141,12 +141,11 @@ const SidebarSmall = (props) => {
           overlay={popover}
           rootClose
         >
-          <span class="icon-Icon-NameMIS-Reports"></span>
+          <span class="icon-Icon-NameMIS-Reports sidebarIconSize"></span>
         </OverlayTrigger>
       </div>
 
       {/* Audit Reports */}
-
       <div className="sidebarSmallImg">
         <OverlayTrigger
           trigger="click"
@@ -154,7 +153,7 @@ const SidebarSmall = (props) => {
           overlay={popover}
           rootClose
         >
-          <span class="icon-Icon-NameAudit-Reports"></span>
+          <span class="icon-Icon-NameAudit-Reports sidebarIconSize"></span>
         </OverlayTrigger>
       </div>
 
@@ -166,7 +165,7 @@ const SidebarSmall = (props) => {
           overlay={popover}
           rootClose
         >
-          <span class="icon-Icon-NameCBR"></span>
+          <span class="icon-Icon-NameCBR sidebarIconSize"></span>
         </OverlayTrigger>
       </div>
 
@@ -178,7 +177,7 @@ const SidebarSmall = (props) => {
           overlay={popover}
           rootClose
         >
-          <span class="icon-Icon-NameException-Reports"></span>
+          <span class="icon-Icon-NameException-Reports sidebarIconSize"></span>
         </OverlayTrigger>
       </div>
 
@@ -190,7 +189,7 @@ const SidebarSmall = (props) => {
           overlay={popover}
           rootClose
         >
-          <span class="icon-Icon-NameEOD-Reports"></span>
+          <span class="icon-Icon-NameEOD-Reports sidebarIconSize"></span>
         </OverlayTrigger>
       </div>
 
@@ -202,7 +201,7 @@ const SidebarSmall = (props) => {
           overlay={popover}
           rootClose
         >
-          <span class="icon-Icon-NameFraud-Reports"></span>
+          <span class="icon-Icon-NameFraud-Reports sidebarIconSize"></span>
         </OverlayTrigger>
       </div>
 
@@ -214,7 +213,7 @@ const SidebarSmall = (props) => {
           overlay={popover}
           rootClose
         >
-          <span class="icon-Icon-NameSearch"></span>
+          <span class="icon-Icon-NameSearch sidebarIconSize"></span>
         </OverlayTrigger>
       </div>
 

@@ -1,3 +1,7 @@
+.sidebarIconSize{
+  font-size: 18px;
+}
+
 /* Header */
 .headerBox {
   background-color: var(--header-background);
@@ -325,9 +329,9 @@
   background-image: url(../../images/sidebar/chevron.svg);
 }
 .sideBar .accordion-button::after {
-  background-size: 14px;
-  width: 14px;
-  height: 14px;
+  background-size: 18px;
+  width: 18px;
+  height: 18px;
 }
 .sideBar .accordion-button:not(.collapsed)::after {
   transform: rotate(-90deg);

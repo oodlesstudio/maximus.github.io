@@ -16,7 +16,7 @@ const SideBar = (props) => {
               aria-expanded="false"
               aria-controls="collapseHome"
             >
-              <span class="icon-Icon-NameHome"></span>
+              <span class="icon-Icon-NameHome sidebarIconSize"></span>
               <span className="fontSize14 ms-2">Home</span>
             </button>
           </h2>
@@ -31,7 +31,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-<span class="icon-Icon"></span>
+                      <span class="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">File Configuration</span>
                   </Link>
@@ -39,7 +39,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-<span class="icon-Icon"></span>
+                      <span class="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">
                       Field Identification Config
@@ -49,7 +49,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-<span class="icon-Icon"></span>
+                      <span class="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">Matching Rule Config</span>
                   </Link>
@@ -57,7 +57,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-<span class="icon-Icon"></span>
+                      <span class="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">Force Sattlement</span>
                   </Link>
@@ -65,7 +65,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-<span class="icon-Icon"></span>
+                      <span class="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">
                       Force Sattlement Rule Configuration
@@ -88,7 +88,7 @@ const SideBar = (props) => {
               aria-expanded="true"
               aria-controls="collapseOne"
             >
-              <span class="icon-Icon-NameClient-Management"></span>
+              <span class="icon-Icon-NameClient-Management sidebarIconSize"></span>
               <span className="fontSize14 ms-2">Client Management</span>
             </button>
           </h2>
@@ -103,7 +103,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-<span class="icon-Icon"></span>
+                      <span class="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">File Configuration</span>
                   </Link>
@@ -111,7 +111,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-<span class="icon-Icon"></span>
+                      <span class="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">
                       Field Identification Config
@@ -121,7 +121,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-<span class="icon-Icon"></span>
+                      <span class="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">Matching Rule Config</span>
                   </Link>
@@ -129,7 +129,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-<span class="icon-Icon"></span>
+                      <span class="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">Force Sattlement</span>
                   </Link>
@@ -137,7 +137,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-<span class="icon-Icon"></span>
+                      <span class="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">
                       Force Sattlement Rule Configuration
@@ -160,7 +160,7 @@ const SideBar = (props) => {
               aria-expanded="false"
               aria-controls="collapseTwo"
             >
-              <span class="icon-Icon-NameUser-Management"></span>
+              <span class="icon-Icon-NameUser-Management sidebarIconSize"></span>
               <span className="fontSize14 ms-2">User Management</span>
             </button>
           </h2>
@@ -175,7 +175,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-<span class="icon-Icon"></span>
+                      <span class="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">File Configuration</span>
                   </Link>
@@ -183,7 +183,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-<span class="icon-Icon"></span>
+                      <span class="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">
                       Field Identification Config
@@ -193,7 +193,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-<span class="icon-Icon"></span>
+                      <span class="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">Matching Rule Config</span>
                   </Link>
@@ -201,7 +201,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-<span class="icon-Icon"></span>
+                      <span class="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">Force Sattlement</span>
                   </Link>
@@ -209,7 +209,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-<span class="icon-Icon"></span>
+                      <span class="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">
                       Force Sattlement Rule Configuration
@@ -232,7 +232,7 @@ const SideBar = (props) => {
               aria-expanded="false"
               aria-controls="collapseThree"
             >
-              <span class="icon-Icon-NameConfiguration"></span>
+              <span class="icon-Icon-NameConfiguration sidebarIconSize"></span>
               <span className="fontSize14 ms-2">Configuration</span>
             </button>
           </h2>
@@ -247,7 +247,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-<span class="icon-Icon"></span>
+                      <span class="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">File Configuration</span>
                   </Link>
@@ -255,7 +255,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-<span class="icon-Icon"></span>
+                      <span class="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">
                       Field Identification Config
@@ -265,7 +265,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-<span class="icon-Icon"></span>
+                      <span class="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">Matching Rule Config</span>
                   </Link>
@@ -273,7 +273,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-<span class="icon-Icon"></span>
+                      <span class="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">Force Sattlement</span>
                   </Link>
@@ -281,7 +281,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-<span class="icon-Icon"></span>
+                      <span class="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">
                       Force Sattlement Rule Configuration
@@ -304,7 +304,7 @@ const SideBar = (props) => {
               aria-expanded="false"
               aria-controls="collapseFour"
             >
-              <span class="icon-Icon-NameImport-Logs"></span>
+              <span class="icon-Icon-NameImport-Logs sidebarIconSize"></span>
               <span className="fontSize14 ms-2">Import Logs</span>
             </button>
           </h2>
@@ -319,7 +319,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-<span class="icon-Icon"></span>
+                      <span class="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">File Configuration</span>
                   </Link>
@@ -327,7 +327,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-<span class="icon-Icon"></span>
+                      <span class="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">
                       Field Identification Config
@@ -337,7 +337,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-<span class="icon-Icon"></span>
+                      <span class="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">Matching Rule Config</span>
                   </Link>
@@ -345,7 +345,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-<span class="icon-Icon"></span>
+                      <span class="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">Force Sattlement</span>
                   </Link>
@@ -353,7 +353,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-<span class="icon-Icon"></span>
+                      <span class="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">
                       Force Sattlement Rule Configuration
@@ -376,7 +376,7 @@ const SideBar = (props) => {
               aria-expanded="false"
               aria-controls="collapseFive"
             >
-              <span class="icon-Icon-NameRun-Recon"></span>
+              <span class="icon-Icon-NameRun-Recon sidebarIconSize"></span>
               <span className="fontSize14 ms-2">Run Recon</span>
             </button>
           </h2>
@@ -391,7 +391,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-<span class="icon-Icon"></span>
+                      <span class="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">File Configuration</span>
                   </Link>
@@ -399,7 +399,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-<span class="icon-Icon"></span>
+                      <span class="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">
                       Field Identification Config
@@ -409,7 +409,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-<span class="icon-Icon"></span>
+                      <span class="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">Matching Rule Config</span>
                   </Link>
@@ -417,7 +417,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-<span class="icon-Icon"></span>
+                      <span class="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">Force Sattlement</span>
                   </Link>
@@ -425,7 +425,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-<span class="icon-Icon"></span>
+                      <span class="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">
                       Force Sattlement Rule Configuration
@@ -448,7 +448,7 @@ const SideBar = (props) => {
               aria-expanded="false"
               aria-controls="collapseSix"
             >
-              <span class="icon-Icon-NameDaily-Reports"></span>
+              <span class="icon-Icon-NameDaily-Reports sidebarIconSize"></span>
               <span className="fontSize14 ms-2">Daily Reports</span>
             </button>
           </h2>
@@ -463,7 +463,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-<span class="icon-Icon"></span>
+                      <span class="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">File Configuration</span>
                   </Link>
@@ -471,7 +471,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-<span class="icon-Icon"></span>
+                      <span class="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">
                       Field Identification Config
@@ -481,7 +481,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-<span class="icon-Icon"></span>
+                      <span class="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">Matching Rule Config</span>
                   </Link>
@@ -489,7 +489,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-<span class="icon-Icon"></span>
+                      <span class="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">Force Sattlement</span>
                   </Link>
@@ -497,7 +497,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-<span class="icon-Icon"></span>
+                      <span class="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">
                       Force Sattlement Rule Configuration
@@ -520,7 +520,7 @@ const SideBar = (props) => {
               aria-expanded="false"
               aria-controls="collapseSeven"
             >
-              <span class="icon-Icon-NameMIS-Reports"></span>
+              <span class="icon-Icon-NameMIS-Reports sidebarIconSize"></span>
               <span className="fontSize14 ms-2">MIS Reports</span>
             </button>
           </h2>
@@ -535,7 +535,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-<span class="icon-Icon"></span>
+                      <span class="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">File Configuration</span>
                   </Link>
@@ -543,7 +543,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-<span class="icon-Icon"></span>
+                      <span class="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">
                       Field Identification Config
@@ -553,7 +553,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-<span class="icon-Icon"></span>
+                      <span class="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">Matching Rule Config</span>
                   </Link>
@@ -561,7 +561,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-<span class="icon-Icon"></span>
+                      <span class="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">Force Sattlement</span>
                   </Link>
@@ -569,7 +569,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-<span class="icon-Icon"></span>
+                      <span class="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">
                       Force Sattlement Rule Configuration
@@ -592,7 +592,7 @@ const SideBar = (props) => {
               aria-expanded="false"
               aria-controls="collapseEight"
             >
-              <span class="icon-Icon-NameAudit-Reports"></span>
+              <span class="icon-Icon-NameAudit-Reports sidebarIconSize"></span>
               <span className="fontSize14 ms-2">Audit Reports</span>
             </button>
           </h2>
@@ -607,7 +607,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-<span class="icon-Icon"></span>
+                      <span class="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">File Configuration</span>
                   </Link>
@@ -615,7 +615,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-<span class="icon-Icon"></span>
+                      <span class="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">
                       Field Identification Config
@@ -625,7 +625,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-<span class="icon-Icon"></span>
+                      <span class="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">Matching Rule Config</span>
                   </Link>
@@ -633,7 +633,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-<span class="icon-Icon"></span>
+                      <span class="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">Force Sattlement</span>
                   </Link>
@@ -641,7 +641,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-<span class="icon-Icon"></span>
+                      <span class="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">
                       Force Sattlement Rule Configuration
@@ -664,7 +664,7 @@ const SideBar = (props) => {
               aria-expanded="false"
               aria-controls="collapseNine"
             >
-              <span class="icon-Icon-NameCBR"></span>
+              <span class="icon-Icon-NameCBR sidebarIconSize"></span>
               <span className="fontSize14 ms-2">CBR</span>
             </button>
           </h2>
@@ -679,7 +679,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-<span class="icon-Icon"></span>
+                      <span class="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">File Configuration</span>
                   </Link>
@@ -687,7 +687,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-<span class="icon-Icon"></span>
+                      <span class="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">
                       Field Identification Config
@@ -697,7 +697,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-<span class="icon-Icon"></span>
+                      <span class="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">Matching Rule Config</span>
                   </Link>
@@ -705,7 +705,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-<span class="icon-Icon"></span>
+                      <span class="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">Force Sattlement</span>
                   </Link>
@@ -713,7 +713,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-<span class="icon-Icon"></span>
+                      <span class="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">
                       Force Sattlement Rule Configuration
@@ -736,7 +736,7 @@ const SideBar = (props) => {
               aria-expanded="false"
               aria-controls="collapseTen"
             >
-              <span class="icon-Icon-NameException-Reports"></span>
+              <span class="icon-Icon-NameException-Reports sidebarIconSize"></span>
               <span className="fontSize14 ms-2">Exception Reports</span>
             </button>
           </h2>
@@ -751,7 +751,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-<span class="icon-Icon"></span>
+                      <span class="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">File Configuration</span>
                   </Link>
@@ -759,7 +759,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-<span class="icon-Icon"></span>
+                      <span class="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">
                       Field Identification Config
@@ -769,7 +769,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-<span class="icon-Icon"></span>
+                      <span class="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">Matching Rule Config</span>
                   </Link>
@@ -777,7 +777,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-<span class="icon-Icon"></span>
+                      <span class="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">Force Sattlement</span>
                   </Link>
@@ -785,7 +785,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-<span class="icon-Icon"></span>
+                      <span class="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">
                       Force Sattlement Rule Configuration
@@ -808,7 +808,7 @@ const SideBar = (props) => {
               aria-expanded="false"
               aria-controls="collapseEleven"
             >
-              <span class="icon-Icon-NameEOD-Reports"></span>
+              <span class="icon-Icon-NameEOD-Reports sidebarIconSize"></span>
               <span className="fontSize14 ms-2">EOD Reports</span>
             </button>
           </h2>
@@ -823,7 +823,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-<span class="icon-Icon"></span>
+                      <span class="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">File Configuration</span>
                   </Link>
@@ -831,7 +831,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-<span class="icon-Icon"></span>
+                      <span class="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">
                       Field Identification Config
@@ -841,7 +841,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-<span class="icon-Icon"></span>
+                      <span class="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">Matching Rule Config</span>
                   </Link>
@@ -849,7 +849,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-<span class="icon-Icon"></span>
+                      <span class="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">Force Sattlement</span>
                   </Link>
@@ -857,7 +857,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-<span class="icon-Icon"></span>
+                      <span class="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">
                       Force Sattlement Rule Configuration
@@ -880,7 +880,7 @@ const SideBar = (props) => {
               aria-expanded="false"
               aria-controls="collapseTwelve"
             >
-              <span class="icon-Icon-NameFraud-Reports"></span>
+              <span class="icon-Icon-NameFraud-Reports sidebarIconSize"></span>
               <span className="fontSize14 ms-2">Fraud Reports</span>
             </button>
           </h2>
@@ -895,7 +895,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-<span class="icon-Icon"></span>
+                      <span class="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">File Configuration</span>
                   </Link>
@@ -903,7 +903,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-<span class="icon-Icon"></span>
+                      <span class="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">
                       Field Identification Config
@@ -913,7 +913,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-<span class="icon-Icon"></span>
+                      <span class="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">Matching Rule Config</span>
                   </Link>
@@ -921,7 +921,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-<span class="icon-Icon"></span>
+                      <span class="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">Force Sattlement</span>
                   </Link>
@@ -929,7 +929,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-<span class="icon-Icon"></span>
+                      <span class="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">
                       Force Sattlement Rule Configuration
@@ -952,7 +952,7 @@ const SideBar = (props) => {
               aria-expanded="false"
               aria-controls="collapseThirteen"
             >
-              <span class="icon-Icon-NameSearch"></span>
+              <span class="icon-Icon-NameSearch sidebarIconSize"></span>
               <span className="fontSize14 ms-2">Search</span>
             </button>
           </h2>
@@ -967,7 +967,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-<span class="icon-Icon"></span>
+                      <span class="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">File Configuration</span>
                   </Link>
@@ -975,7 +975,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-<span class="icon-Icon"></span>
+                      <span class="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">
                       Field Identification Config
@@ -985,7 +985,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-<span class="icon-Icon"></span>
+                      <span class="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">Matching Rule Config</span>
                   </Link>
@@ -993,7 +993,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-<span class="icon-Icon"></span>
+                      <span class="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">Force Sattlement</span>
                   </Link>
@@ -1001,7 +1001,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-<span class="icon-Icon"></span>
+                      <span class="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">
                       Force Sattlement Rule Configuration

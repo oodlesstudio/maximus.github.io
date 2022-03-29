@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { useDispatch } from "react-redux";
+import React, { useState, useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
 import Select from "react-select";
 import {
   OverlayTrigger,
@@ -17,6 +17,8 @@ import { changeThemes } from "../../constants/actions/themeChangeAction";
 // Images
 import Logo from "../../images/common/logo.svg";
 import LogoRight from "../../images/common/logoRight.svg";
+import LogoDark from "../../images/common/logoDark.svg";
+import LogoDarkRight from "../../images/common/logoDarkRight.svg";
 
 const options = [
   { value: "chocolate", label: "Chocolate" },
@@ -25,6 +27,27 @@ const options = [
 ];
 
 const Header = () => {
+  // Change Logo
+  const changeTheme = useSelector((state) => {
+    return state.themeChangeReducer;
+  });
+
+  const [logoLeft, setLogoLeft] = useState(Logo);
+  const [logoRight, setLogoRight] = useState(LogoRight);
+
+  useEffect(() => {
+    if (changeTheme.theme === "default") {
+      setLogoLeft(Logo);
+      setLogoRight(LogoRight);
+    } else if (changeTheme.theme === "light") {
+      setLogoLeft(Logo);
+      setLogoRight(LogoRight);
+    } else if (changeTheme.theme === "dark") {
+      setLogoLeft(LogoDark);
+      setLogoRight(LogoDarkRight);
+    }
+  }, [changeTheme]);
+
   // Select Menu
   const [selectedOption, setSelectedOption] = useState(null);
 
@@ -111,26 +134,14 @@ const Header = () => {
       <div className="headerLeft d-flex justify-content-between align-items-center">
         <div className="d-flex align-items-center">
           <button className="headerHamburger" onClick={handleShow}>
-            <span class="icon-Logo-2">
-              <span class="path1"></span>
-              <span class="path2"></span>
-              <span class="path3"></span>
-              <span class="path4"></span>
-              <span class="path5"></span>
-              <span class="path6"></span>
-              <span class="path7"></span>
-              <span class="path8"></span>
-              <span class="path9"></span>
-              <span class="path10"></span>
-              <span class="path11"></span>
-            </span>
+            <span class="icon-Hamburger-Menu"></span>
           </button>
           <OverlayTrigger
             placement="bottom"
             delay={{ show: 250, hide: 400 }}
             overlay={renderTooltip}
           >
-            <img src={Logo} alt="Logo" />
+            <img src={logoLeft} alt="Logo" />
           </OverlayTrigger>
         </div>
         <p className="fontSize14">
@@ -158,13 +169,13 @@ const Header = () => {
             rootClose={true}
           >
             <button type="button" className="me-3">
-            <span class="icon-ant-design_setting-outlined"></span>
+              <span class="icon-ant-design_setting-outlined"></span>
             </button>
           </OverlayTrigger>
 
           {/* Notifications */}
           <button type="button" className="position-relative me-3">
-          <span class="icon-ion_notifications-outline"></span>
+            <span class="icon-ion_notifications-outline"></span>
             <span class="position-absolute top-0 start-100 translate-middle notificationCount">
               10
               <span class="visually-hidden">unread messages</span>
@@ -182,7 +193,7 @@ const Header = () => {
           </div>
         </div>
 
-        <img src={LogoRight} alt="Logo Right" className="ms-4" />
+        <img src={logoRight} alt="Logo Right" className="ms-4" />
 
         {/* Site Configuration Modal */}
         {siteConfiguration && (
