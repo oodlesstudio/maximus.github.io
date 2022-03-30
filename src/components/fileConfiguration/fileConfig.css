@@ -37,18 +37,6 @@
   border-top-color: var(--color-headerTooltip);
 }
 .tableTextInner{
-  /* height: 18px;
-  width: 140px;
-  padding: 0;
-  overflow: hidden;
-  position: relative;
-  display: inline-block;
-  text-decoration: none;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  color: #000;
-  transition: all 0.3s ease-in-out; */
-
   width: 150px;
   overflow: hidden;
   white-space: nowrap;
@@ -264,6 +252,10 @@
   margin: 0;
   letter-spacing: 0.02em;
   color: var(--color-black);
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .clientNameSelect .css-6j8wv5-Input {
   margin: 0;
