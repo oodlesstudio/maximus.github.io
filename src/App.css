@@ -332,8 +332,15 @@ input[type="number"] {
   margin-right: 12px !important;
 }
 
+.my-12{
+  margin-top: 12px !important;
+  margin-bottom: 12px !important;
+}
 .mb-16{
   margin-bottom: 16px !important;
+}
+.mb-12{
+  margin-bottom: 12px !important;
 }
 
 .breadcrumbIcon{

@@ -603,7 +603,7 @@ const ConfigLeft = () => {
             </table>
           </div>
 
-          <div className="paginationBox d-flex align-items-center justify-content-between my-4">
+          <div className="paginationBox d-flex align-items-center justify-content-between my-12">
             <div className="paginationLeft fontSize12">
               Showing 1 to 10 of 49 entries
             </div>

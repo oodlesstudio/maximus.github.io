@@ -87,24 +87,23 @@ const ConfigRight = () => {
         </div>
 
         <div className="lightBlueBox configTopBlueBoxRight">
-          <div className="d-flex mb-16">
+          <div className="d-flex mb-12">
             <div className="configDotLeftContent fontSize14">Client Name</div>
             <div className="configDotCenterContent fontSize14">:</div>
             <div
               className="configDotRightContent fontSize14-m"
-              style={{ width: "286px" }}
             >
               Sri Vasavamba Cooperative Urban Bank Ltd
             </div>
           </div>
 
-          <div className="d-flex mb-16">
+          <div className="d-flex mb-12">
             <div className="configDotLeftContent fontSize14">Format No.</div>
             <div className="configDotCenterContent fontSize14">:</div>
             <div className="configDotRightContent fontSize14-m">1</div>
           </div>
 
-          <div className="d-flex mb-16">
+          <div className="d-flex mb-12">
             <div className="configDotLeftContent fontSize14">Format Type</div>
             <div className="configDotCenterContent fontSize14">:</div>
             <div className="configDotRightContent fontSize14-m">Current</div>
@@ -403,7 +402,7 @@ const ConfigRight = () => {
             </table>
           </div>
 
-          <div className="paginationBox d-flex align-items-center justify-content-between my-4">
+          <div className="paginationBox d-flex align-items-center justify-content-between my-12">
             <div className="paginationLeft fontSize12">
               Showing 1 to 10 of 49 entries
             </div>

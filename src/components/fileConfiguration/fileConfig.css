@@ -1,6 +1,6 @@
 /* Config Left */
 .configMainContent .configLeft {
-  width: 61.13%;
+  width: 61.6%;
   padding-bottom: 12px;
 }
 .configLeftHead,
@@ -13,7 +13,7 @@
 }
 .configTopBlueBox {
   padding: 0 12px;
-  min-height: 174px;
+  min-height: 165px;
 }
 .configLeftFilters {
   padding: 12px 0 8px;
@@ -24,7 +24,7 @@
   border: 1px solid var(--color-primary-default);
 }
 .configLeft .btnsBtm {
-  margin: 12px 0 16px;
+  margin: 12px 0;
 }
 .configBottomHeadingBox {
   height: 38px;
@@ -36,14 +36,14 @@
 .bs-tooltip-top .tooltip-arrow::before {
   border-top-color: var(--color-headerTooltip);
 }
-.tableTextInner{
+.tableTextInner {
   width: 150px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
   cursor: pointer;
 }
-.tableTextInner:hover{
+.tableTextInner:hover {
   width: 100%;
   overflow: unset;
   white-space: unset;
@@ -145,7 +145,7 @@
 }
 /* Table Border Box */
 .tableBorderBox .tableContentBox {
-  height: 560px;
+  height: 460px;
 }
 .tableBorderBox .table {
   --bs-table-striped-bg: var(--border-box-bg);
@@ -185,7 +185,7 @@
 }
 .tableBorderBox .table tbody tr td {
   font-size: var(--font-size14);
-  height: 40px;
+  height: 34px;
   padding: 0;
   padding-left: 14px;
   text-align: center;
@@ -217,7 +217,7 @@
 
 /* Select Box */
 .configSelectBoxTop {
-  margin-top: 12px;
+  margin-top: 8px;
   padding: 0 6px;
 }
 .clientNameSelect label {
@@ -284,7 +284,7 @@
 
 /* Config Right */
 .configMainContent .configRight {
-  width: 37.67%;
+  width: 37.6%;
   padding-bottom: 12px;
 }
 @media (min-width: 1600px) {
@@ -307,7 +307,7 @@
 /* Config Right Top */
 .configTopBlueBoxRight {
   padding: 24px 16px;
-  min-height: 174px;
+  height: 165px;
 }
 .configDotLeftContent {
   width: 95px;
@@ -325,22 +325,22 @@
   width: 100%;
 }
 @media (max-width: 426px) {
-  .configDotCenterContent{
+  .configDotCenterContent {
     display: none !important;
   }
-  .configTopBlueBoxRight{
+  .configTopBlueBoxRight {
     padding: 16px 16px 4px;
     height: inherit;
   }
-  .configTopBlueBoxRight .d-flex{
+  .configTopBlueBoxRight .d-flex {
     flex-direction: column;
     margin-bottom: 12px !important;
   }
-  .configDotLeftContent{
+  .configDotLeftContent {
     width: 100%;
     margin-bottom: 4px;
   }
-  .configDotRightContent{
+  .configDotRightContent {
     width: 100% !important;
   }
 }
