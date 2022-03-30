@@ -44,6 +44,13 @@ const ConfigLeft = () => {
     </Tooltip>
   );
 
+  // Tooltip Table Content
+  const tableTooltip = (props) => (
+    <Tooltip id="button-tooltip" {...props}>
+      Sri Vasavamba Cooperative Urban Bank Ltd
+    </Tooltip>
+  );
+
   return (
     <div className="configLeft">
       {/* Config Left Top */}
@@ -121,9 +128,7 @@ const ConfigLeft = () => {
             <div className="hrGreyLine"></div>
             <div className="configSelectBoxTop row">
               <div className="clientNameSelect col">
-                <label htmlFor="clientName">
-                  Client Name<span>*</span>
-                </label>
+                <label htmlFor="clientName">Client Name</label>
                 <Select
                   defaultValue={selectedOption}
                   onChange={setSelectedOption}
@@ -134,9 +139,7 @@ const ConfigLeft = () => {
                 />
               </div>
               <div className="clientNameSelect col">
-                <label htmlFor="logType">
-                  Log Type<span>*</span>
-                </label>
+                <label htmlFor="logType">Log Type</label>
                 <Select
                   defaultValue={selectedOption}
                   onChange={setSelectedOption}
@@ -147,9 +150,7 @@ const ConfigLeft = () => {
                 />
               </div>
               <div className="clientNameSelect col">
-                <label htmlFor="channelType">
-                  Channel Type<span>*</span>
-                </label>
+                <label htmlFor="channelType">Channel Type</label>
                 <Select
                   defaultValue={selectedOption}
                   onChange={setSelectedOption}
@@ -160,16 +161,16 @@ const ConfigLeft = () => {
                 />
               </div>
               <div className="clientNameSelect col">
-                  <label htmlFor="clientName">Mode Type</label>
-                  <Select
-                    defaultValue={selectedOption}
-                    onChange={setSelectedOption}
-                    options={options}
-                    id="clientName"
-                    classNamePrefix="reactSelectBox"
-                    placeholder="ACQUIR"
-                  />
-                </div>
+                <label htmlFor="clientName">Mode Type</label>
+                <Select
+                  defaultValue={selectedOption}
+                  onChange={setSelectedOption}
+                  options={options}
+                  id="clientName"
+                  classNamePrefix="reactSelectBox"
+                  placeholder="ACQUIR"
+                />
+              </div>
             </div>
 
             <div className="text-center btnsBtm">
@@ -474,7 +475,17 @@ const ConfigLeft = () => {
               </thead>
               <tbody>
                 <tr>
-                  <td><p className="tableTextInner">Sri Vasavamba Cooperative Urban Bank Ltd</p></td>
+                  <td>
+                    <OverlayTrigger
+                      placement="bottom"
+                      delay={{ show: 250, hide: 400 }}
+                      overlay={tableTooltip}
+                    >
+                      <p className="tableTextInner">
+                        Sri Vasavamba Cooperative Urban Bank Ltd
+                      </p>
+                    </OverlayTrigger>
+                  </td>
                   <td>CBS</td>
                   <td>POS</td>
                   <td>RGCS</td>
@@ -483,7 +494,9 @@ const ConfigLeft = () => {
                   <td>.txt</td>
                 </tr>
                 <tr>
-                  <td><p className="tableTextInner">Punjab National Bank</p></td>
+                  <td>
+                    <p className="tableTextInner">Punjab National Bank</p>
+                  </td>
                   <td>CBS</td>
                   <td>POS</td>
                   <td>RGCS</td>
@@ -492,7 +505,11 @@ const ConfigLeft = () => {
                   <td>.txt</td>
                 </tr>
                 <tr>
-                  <td><p className="tableTextInner">Sri Vasavamba Cooperative Urban Bank Ltd</p></td>
+                  <td>
+                    <p className="tableTextInner">
+                      Sri Vasavamba Cooperative Urban Bank Ltd
+                    </p>
+                  </td>
                   <td>CBS</td>
                   <td>POS</td>
                   <td>RGCS</td>
@@ -501,7 +518,9 @@ const ConfigLeft = () => {
                   <td>.txt</td>
                 </tr>
                 <tr>
-                  <td><p className="tableTextInner">Punjab National Bank</p></td>
+                  <td>
+                    <p className="tableTextInner">Punjab National Bank</p>
+                  </td>
                   <td>CBS</td>
                   <td>POS</td>
                   <td>RGCS</td>
@@ -510,7 +529,11 @@ const ConfigLeft = () => {
                   <td>.txt</td>
                 </tr>
                 <tr>
-                  <td><p className="tableTextInner">Sri Vasavamba Cooperative Urban Bank Ltd</p></td>
+                  <td>
+                    <p className="tableTextInner">
+                      Sri Vasavamba Cooperative Urban Bank Ltd
+                    </p>
+                  </td>
                   <td>CBS</td>
                   <td>POS</td>
                   <td>RGCS</td>
@@ -519,7 +542,9 @@ const ConfigLeft = () => {
                   <td>.txt</td>
                 </tr>
                 <tr>
-                  <td><p className="tableTextInner">Punjab National Bank</p></td>
+                  <td>
+                    <p className="tableTextInner">Punjab National Bank</p>
+                  </td>
                   <td>CBS</td>
                   <td>POS</td>
                   <td>RGCS</td>
@@ -528,7 +553,11 @@ const ConfigLeft = () => {
                   <td>.txt</td>
                 </tr>
                 <tr>
-                  <td><p className="tableTextInner">Sri Vasavamba Cooperative Urban Bank Ltd</p></td>
+                  <td>
+                    <p className="tableTextInner">
+                      Sri Vasavamba Cooperative Urban Bank Ltd
+                    </p>
+                  </td>
                   <td>CBS</td>
                   <td>POS</td>
                   <td>RGCS</td>
@@ -537,7 +566,9 @@ const ConfigLeft = () => {
                   <td>.txt</td>
                 </tr>
                 <tr>
-                  <td><p className="tableTextInner">Punjab National Bank</p></td>
+                  <td>
+                    <p className="tableTextInner">Punjab National Bank</p>
+                  </td>
                   <td>CBS</td>
                   <td>POS</td>
                   <td>RGCS</td>
@@ -546,7 +577,11 @@ const ConfigLeft = () => {
                   <td>.txt</td>
                 </tr>
                 <tr>
-                  <td><p className="tableTextInner">Sri Vasavamba Cooperative Urban Bank Ltd</p></td>
+                  <td>
+                    <p className="tableTextInner">
+                      Sri Vasavamba Cooperative Urban Bank Ltd
+                    </p>
+                  </td>
                   <td>CBS</td>
                   <td>POS</td>
                   <td>RGCS</td>
@@ -555,7 +590,9 @@ const ConfigLeft = () => {
                   <td>.txt</td>
                 </tr>
                 <tr>
-                  <td><p className="tableTextInner">Punjab National Bank</p></td>
+                  <td>
+                    <p className="tableTextInner">Punjab National Bank</p>
+                  </td>
                   <td>CBS</td>
                   <td>POS</td>
                   <td>RGCS</td>
@@ -564,7 +601,11 @@ const ConfigLeft = () => {
                   <td>.txt</td>
                 </tr>
                 <tr>
-                  <td><p className="tableTextInner">Sri Vasavamba Cooperative Urban Bank Ltd</p></td>
+                  <td>
+                    <p className="tableTextInner">
+                      Sri Vasavamba Cooperative Urban Bank Ltd
+                    </p>
+                  </td>
                   <td>CBS</td>
                   <td>POS</td>
                   <td>RGCS</td>
@@ -573,7 +614,9 @@ const ConfigLeft = () => {
                   <td>.txt</td>
                 </tr>
                 <tr>
-                  <td><p className="tableTextInner">Punjab National Bank</p></td>
+                  <td>
+                    <p className="tableTextInner">Punjab National Bank</p>
+                  </td>
                   <td>CBS</td>
                   <td>POS</td>
                   <td>RGCS</td>
@@ -582,7 +625,11 @@ const ConfigLeft = () => {
                   <td>.txt</td>
                 </tr>
                 <tr>
-                  <td><p className="tableTextInner">Sri Vasavamba Cooperative Urban Bank Ltd</p></td>
+                  <td>
+                    <p className="tableTextInner">
+                      Sri Vasavamba Cooperative Urban Bank Ltd
+                    </p>
+                  </td>
                   <td>CBS</td>
                   <td>POS</td>
                   <td>RGCS</td>
@@ -591,7 +638,9 @@ const ConfigLeft = () => {
                   <td>.txt</td>
                 </tr>
                 <tr>
-                  <td><p className="tableTextInner">Punjab National Bank</p></td>
+                  <td>
+                    <p className="tableTextInner">Punjab National Bank</p>
+                  </td>
                   <td>CBS</td>
                   <td>POS</td>
                   <td>RGCS</td>

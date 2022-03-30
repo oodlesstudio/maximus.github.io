@@ -43,12 +43,12 @@
   text-overflow: ellipsis;
   cursor: pointer;
 }
-.tableTextInner:hover {
+/* .tableTextInner:hover {
   width: 100%;
   overflow: unset;
   white-space: unset;
   text-overflow: unset;
-}
+} */
 
 @media (max-width: 992px) {
   .configMainContent .configLeft {
