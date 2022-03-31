@@ -150,7 +150,7 @@
 .tableBorderBox .table {
   --bs-table-striped-bg: var(--border-box-bg);
   --bs-table-striped-color: var(--color-black);
-  --bs-table-hover-bg: var(--color-light-blue);
+  --bs-table-hover-bg: var(--table-hover-color);
   --bs-table-hover-color: var(--color-black);
   color: var(--color-black);
   width: 805px;

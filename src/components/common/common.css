@@ -45,17 +45,19 @@
   display: none;
 }
 .headerSideMenu {
-  width: 258px;
+  width: 230px;
+  background-color: transparent;
+  border: none;
 }
 .headerSideMenu .sidebarButton {
   top: 45%;
 }
 .headerSideMenu .sideBar {
   border: none;
+  height: 100%;
 }
 .headerSideMenu .offcanvas-body {
   padding: 0;
-  background-color: var(--color-light-blue);
 }
 /* Tooltip */
 .tooltip-inner {

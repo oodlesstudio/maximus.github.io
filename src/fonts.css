@@ -63,7 +63,7 @@
   font-size: 14px;
 }
 .icon-ant-design_setting-outlined:before {
-  content: "\e90f";
+  content: "\e911";
   color: var(--color-primary-default);
   font-size: 18px;
 }
@@ -80,7 +80,7 @@
   color: var(--color-primary-default);
 }
 .icon-fluent_person-16-regular:before {
-  content: "\e914";
+  content: "\e916";
   color: var(--color-primary-default);
   font-size: 18px;
 }
@@ -93,7 +93,7 @@
   color: var(--color-primary-default);
 }
 .icon-ion_notifications-outline:before {
-  content: "\e917";
+  content: "\e91c";
   color: var(--color-primary-default);
   font-size: 18px;
 }

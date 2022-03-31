@@ -97,6 +97,7 @@ a {
   --modal-header: #fbd2ce;
   --color-popoverborder: #f3f2fc;
   --table-striped-color: #f5f9ff;
+  --table-hover-color: #e1ecff;
 }
 [data-theme="light"] {
   /* Colors Light Theme */
@@ -120,6 +121,7 @@ a {
   --modal-header: #ffffff;
   --color-popoverborder: #f3f2fc;
   --table-striped-color: #fafafa;
+  --table-hover-color: #ededed;
 }
 [data-theme="dark"] {
   /* Colors Dark Theme */
@@ -145,6 +147,7 @@ a {
   --modal-header: #000a1b;
   --color-popoverborder: #32374a;
   --table-striped-color: #001336;
+  --table-hover-color: #1e2759;
 }
 
 /* Font Sizes */
