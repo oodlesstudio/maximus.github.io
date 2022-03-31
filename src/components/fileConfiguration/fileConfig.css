@@ -145,7 +145,7 @@
 }
 /* Table Border Box */
 .tableBorderBox .tableContentBox {
-  height: 375px;
+  max-height: 391px;
 }
 .tableBorderBox .table {
   --bs-table-striped-bg: var(--border-box-bg);
@@ -200,9 +200,9 @@
 ::-webkit-scrollbar {
   width: 3px;
 }
-::-webkit-scrollbar:vertical {
+/* ::-webkit-scrollbar:vertical {
   display: none;
-}
+} */
 ::-webkit-scrollbar:horizontal {
   height: 3px;
 }
@@ -244,6 +244,10 @@
 .clientNameSelect .css-26l3qy-menu {
   background-color: var(--border-box-bg);
   color: var(--color-black);
+}
+.clientNameSelect .css-1pahdxg-control {
+  min-height: inherit;
+  height: 32px;
 }
 .clientNameSelect .css-319lph-ValueContainer {
   padding: 0 0 0 12px;

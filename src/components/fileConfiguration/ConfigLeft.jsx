@@ -31,6 +31,10 @@ const ConfigLeft = () => {
 
   const [showFilters, setShowFilters] = useState(false);
 
+  // Select Error
+  const [selectError, setSelectError] = useState(false);
+  const changeSelectError = () => setSelectError(true);
+
   // Tooltip
   const renderTooltip = (props) => (
     <Tooltip id="button-tooltip" {...props}>
@@ -419,12 +423,18 @@ const ConfigLeft = () => {
             <div className="clientNameSelect configFormatEntities">
               <Select
                 defaultValue={selectedOption}
-                onChange={setSelectedOption}
+                onChange={() => {
+                  setSelectedOption();
+                  changeSelectError();
+                }}
                 options={ConfigTableLeftEntries}
                 isSearchable={false}
                 placeholder="10 Entries"
                 classNamePrefix="reactSelectBox"
               />
+              {selectError && (
+                <p className="text-danger font-size9">Enter a correct input</p>
+              )}
             </div>
             <div className="d-flex">
               <div className="form-group has-search">
@@ -464,25 +474,45 @@ const ConfigLeft = () => {
                 <tr>
                   <th scope="col" style={{ width: "22%" }}>
                     Client Name
-                    <span class="icon-Table-Sorting"></span>
+                    <Link to="/">
+                      <span class="icon-Table-Sorting"></span>
+                    </Link>
                   </th>
                   <th scope="col">
-                    Log Type <span class="icon-Table-Sorting"></span>
+                    Log Type
+                    <Link to="/">
+                      <span class="icon-Table-Sorting"></span>
+                    </Link>
                   </th>
                   <th scope="col">
-                    Channel <span class="icon-Table-Sorting"></span>
+                    Channel
+                    <Link to="/">
+                      <span class="icon-Table-Sorting"></span>
+                    </Link>
                   </th>
                   <th scope="col">
-                    File Prefix <span class="icon-Table-Sorting"></span>
+                    File Prefix
+                    <Link to="/">
+                      <span class="icon-Table-Sorting"></span>
+                    </Link>
                   </th>
                   <th scope="col">
-                    Mode <span class="icon-Table-Sorting"></span>
+                    Mode
+                    <Link to="/">
+                      <span class="icon-Table-Sorting"></span>
+                    </Link>
                   </th>
                   <th scope="col">
-                    Vendor Name <span class="icon-Table-Sorting"></span>
+                    Vendor Name
+                    <Link to="/">
+                      <span class="icon-Table-Sorting"></span>
+                    </Link>
                   </th>
                   <th scope="col">
-                    File Extention <span class="icon-Table-Sorting"></span>
+                    File Extention
+                    <Link to="/">
+                      <span class="icon-Table-Sorting"></span>
+                    </Link>
                   </th>
                 </tr>
               </thead>

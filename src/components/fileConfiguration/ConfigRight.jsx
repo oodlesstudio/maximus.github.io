@@ -176,15 +176,12 @@ const ConfigRight = () => {
                 <tr>
                   <th scope="col" style={{ width: "24.95%" }}>
                     Field Name
-                    <span class="icon-Table-Sorting"></span>
                   </th>
                   <th scope="col" style={{ width: "33.49%" }}>
                     Start Position
-                    <span class="icon-Table-Sorting"></span>
                   </th>
                   <th scope="col" style={{ width: "28.59%" }}>
                     Field Length
-                    <span class="icon-Table-Sorting"></span>
                   </th>
                 </tr>
               </thead>
