@@ -90,9 +90,7 @@ const ConfigRight = () => {
           <div className="d-flex mb-12">
             <div className="configDotLeftContent fontSize14">Client Name</div>
             <div className="configDotCenterContent fontSize14">:</div>
-            <div
-              className="configDotRightContent fontSize14-m"
-            >
+            <div className="configDotRightContent fontSize14-m">
               Sri Vasavamba Cooperative Urban Bank Ltd
             </div>
           </div>
@@ -178,12 +176,15 @@ const ConfigRight = () => {
                 <tr>
                   <th scope="col" style={{ width: "24.95%" }}>
                     Field Name
+                    <span class="icon-Table-Sorting"></span>
                   </th>
                   <th scope="col" style={{ width: "33.49%" }}>
                     Start Position
+                    <span class="icon-Table-Sorting"></span>
                   </th>
                   <th scope="col" style={{ width: "28.59%" }}>
                     Field Length
+                    <span class="icon-Table-Sorting"></span>
                   </th>
                 </tr>
               </thead>
@@ -191,67 +192,19 @@ const ConfigRight = () => {
                 <tr>
                   <td>Terminal ID </td>
                   <td>
-                    <input type="number" name="" id="" placeholder="154" />
-                  </td>
-                  <td>
                     <input
                       type="number"
                       name=""
                       id=""
-                      className="terminalInputTwo"
-                      placeholder="8"
+                      placeholder="154"
+                      className="form-control is-invalid"
                     />
-                  </td>
-                </tr>
-                <tr>
-                  <td>Terminal ID </td>
-                  <td>
-                    <input type="number" name="" id="" placeholder="154" />
-                  </td>
-                  <td>
-                    <input
-                      type="number"
-                      name=""
-                      id=""
-                      className="terminalInputTwo"
-                      placeholder="8"
-                    />
-                  </td>
-                </tr>
-                <tr>
-                  <td>Terminal ID </td>
-                  <td>
-                    <input type="number" name="" id="" placeholder="154" />
-                  </td>
-                  <td>
-                    <input
-                      type="number"
-                      name=""
-                      id=""
-                      className="terminalInputTwo"
-                      placeholder="8"
-                    />
-                  </td>
-                </tr>
-                <tr>
-                  <td>Terminal ID </td>
-                  <td>
-                    <input type="number" name="" id="" placeholder="154" />
-                  </td>
-                  <td>
-                    <input
-                      type="number"
-                      name=""
-                      id=""
-                      className="terminalInputTwo"
-                      placeholder="8"
-                    />
-                  </td>
-                </tr>
-                <tr>
-                  <td>Terminal ID </td>
-                  <td>
-                    <input type="number" name="" id="" placeholder="154" />
+                    <div
+                      id="validationServerUsernameFeedback"
+                      class="invalid-feedback text-start mt-0 font-size9"
+                    >
+                      Enter a correct input
+                    </div>
                   </td>
                   <td>
                     <input
@@ -416,7 +369,10 @@ const ConfigRight = () => {
                       href="/"
                       aria-label="Previous"
                     >
-                      <span class="icon-Dropdown-Arrow" style={{fontSize: '12px'}}></span>
+                      <span
+                        class="icon-Dropdown-Arrow"
+                        style={{ fontSize: "12px" }}
+                      ></span>
                       <span>First</span>
                     </a>
                   </li>
@@ -452,7 +408,10 @@ const ConfigRight = () => {
                       aria-label="Next"
                     >
                       <span>Last</span>
-                      <span class="icon-Dropdown-Arrow-1" style={{fontSize: '12px'}}></span>
+                      <span
+                        class="icon-Dropdown-Arrow-1"
+                        style={{ fontSize: "12px" }}
+                      ></span>
                     </a>
                   </li>
                 </ul>

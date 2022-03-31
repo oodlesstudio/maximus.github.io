@@ -1,19 +1,18 @@
 @font-face {
-  font-family: "icomoon";
-  src: url("fonts/icomoon.eot?ehtkdx");
-  src: url("fonts/icomoon.eot?ehtkdx#iefix") format("embedded-opentype"),
-    url("fonts/icomoon.ttf?ehtkdx") format("truetype"),
-    url("fonts/icomoon.woff?ehtkdx") format("woff"),
-    url("fonts/icomoon.svg?ehtkdx#icomoon") format("svg");
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?iw103i');
+  src:  url('fonts/icomoon.eot?iw103i#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?iw103i') format('truetype'),
+    url('fonts/icomoon.woff?iw103i') format('woff'),
+    url('fonts/icomoon.svg?iw103i#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
 }
 
-[class^="icon-"],
-[class*=" icon-"] {
+[class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: "icomoon" !important;
+  font-family: 'icomoon' !important;
   speak: never;
   font-style: normal;
   font-weight: normal;
@@ -517,4 +516,8 @@
   content: "\e91a";
   margin-left: -3.3525390625em;
   color: rgb(0, 0, 0);
+}
+.icon-Table-Sorting:before {
+  content: "\e91e";
+  color: #868686;
 }

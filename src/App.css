@@ -180,6 +180,10 @@ a {
   line-height: 1.21;
 }
 
+.font-size9{
+  font-size: 9px;
+}
+
 h6{
   font-size: var(--font-size16);
 }

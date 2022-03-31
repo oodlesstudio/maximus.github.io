@@ -6,8 +6,8 @@ import { Link } from "react-router-dom";
 // Images
 import Pdf from "../../images/common/pdf.svg";
 import Excel from "../../images/common/excel.svg";
-import ErrorGif from "../../images/common/errorGif.gif";
-import SuccessGif from "../../images/common/successGif.gif";
+import Error from "../../images/common/error.svg";
+import Success from "../../images/common/success.svg";
 
 const options = [
   { value: "10 Entries", label: "10 Entries" },
@@ -377,7 +377,7 @@ const ConfigLeft = () => {
               </Modal.Title>
             </Modal.Header>
             <Modal.Body className="text-center">
-              <img src={ErrorGif} alt="Success" />
+              <img src={Error} alt="Success" />
               <p className="letterSpacing-2 colorBlack">
                 Filters could not be reset due to internal server error.
               </p>
@@ -399,7 +399,7 @@ const ConfigLeft = () => {
               </Modal.Title>
             </Modal.Header>
             <Modal.Body className="text-center">
-              <img src={SuccessGif} alt="Success" />
+              <img src={Success} alt="Success" />
               <p className="letterSpacing-2 colorBlack">
                 Filters Applied Successfully!
               </p>
@@ -464,13 +464,26 @@ const ConfigLeft = () => {
                 <tr>
                   <th scope="col" style={{ width: "22%" }}>
                     Client Name
+                    <span class="icon-Table-Sorting"></span>
                   </th>
-                  <th scope="col">Log Type</th>
-                  <th scope="col">Channel</th>
-                  <th scope="col">File Prefix</th>
-                  <th scope="col">Mode</th>
-                  <th scope="col">Vendor Name</th>
-                  <th scope="col">File Extention</th>
+                  <th scope="col">
+                    Log Type <span class="icon-Table-Sorting"></span>
+                  </th>
+                  <th scope="col">
+                    Channel <span class="icon-Table-Sorting"></span>
+                  </th>
+                  <th scope="col">
+                    File Prefix <span class="icon-Table-Sorting"></span>
+                  </th>
+                  <th scope="col">
+                    Mode <span class="icon-Table-Sorting"></span>
+                  </th>
+                  <th scope="col">
+                    Vendor Name <span class="icon-Table-Sorting"></span>
+                  </th>
+                  <th scope="col">
+                    File Extention <span class="icon-Table-Sorting"></span>
+                  </th>
                 </tr>
               </thead>
               <tbody>
@@ -485,54 +498,6 @@ const ConfigLeft = () => {
                         Sri Vasavamba Cooperative Urban Bank Ltd
                       </p>
                     </OverlayTrigger>
-                  </td>
-                  <td>CBS</td>
-                  <td>POS</td>
-                  <td>RGCS</td>
-                  <td>ISSUER</td>
-                  <td>PROCESSWARE</td>
-                  <td>.txt</td>
-                </tr>
-                <tr>
-                  <td>
-                    <p className="tableTextInner">Punjab National Bank</p>
-                  </td>
-                  <td>CBS</td>
-                  <td>POS</td>
-                  <td>RGCS</td>
-                  <td>ISSUER</td>
-                  <td>PROCESSWARE</td>
-                  <td>.txt</td>
-                </tr>
-                <tr>
-                  <td>
-                    <p className="tableTextInner">
-                      Sri Vasavamba Cooperative Urban Bank Ltd
-                    </p>
-                  </td>
-                  <td>CBS</td>
-                  <td>POS</td>
-                  <td>RGCS</td>
-                  <td>ISSUER</td>
-                  <td>PROCESSWARE</td>
-                  <td>.txt</td>
-                </tr>
-                <tr>
-                  <td>
-                    <p className="tableTextInner">Punjab National Bank</p>
-                  </td>
-                  <td>CBS</td>
-                  <td>POS</td>
-                  <td>RGCS</td>
-                  <td>ISSUER</td>
-                  <td>PROCESSWARE</td>
-                  <td>.txt</td>
-                </tr>
-                <tr>
-                  <td>
-                    <p className="tableTextInner">
-                      Sri Vasavamba Cooperative Urban Bank Ltd
-                    </p>
                   </td>
                   <td>CBS</td>
                   <td>POS</td>
