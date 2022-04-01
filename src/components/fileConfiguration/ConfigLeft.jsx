@@ -32,6 +32,19 @@ const ConfigLeft = () => {
   const [showFilters, setShowFilters] = useState(false);
 
   // Select Error
+  // Client Name
+  const [clientName, setClientName] = useState(false);
+  const changeClientName = () => setClientName(true);
+
+  const [logType, setLogType] = useState(false);
+  const changeLogType = () => setLogType(true);
+
+  const [channelType, setChannelType] = useState(false);
+  const changeChannelType = () => setChannelType(true);
+
+  const [modType, setModType] = useState(false);
+  const changeModType = () => setModType(true);
+
   const [selectError, setSelectError] = useState(false);
   const changeSelectError = () => setSelectError(true);
 
@@ -135,45 +148,77 @@ const ConfigLeft = () => {
                 <label htmlFor="clientName">Client Name</label>
                 <Select
                   defaultValue={selectedOption}
-                  onChange={setSelectedOption}
+                  onChange={() => {
+                    setClientName();
+                    changeClientName();
+                  }}
                   options={options}
                   id="clientName"
                   classNamePrefix="reactSelectBox"
                   placeholder="Shri Vasavamba..."
                 />
+                {clientName && (
+                  <p className="text-danger font-size9">
+                    Enter a correct input
+                  </p>
+                )}
               </div>
               <div className="clientNameSelect col">
                 <label htmlFor="logType">Log Type</label>
                 <Select
                   defaultValue={selectedOption}
-                  onChange={setSelectedOption}
+                  onChange={() => {
+                    setLogType();
+                    changeLogType();
+                  }}
                   options={options}
                   id="logType"
                   classNamePrefix="reactSelectBox"
                   placeholder="CBS"
                 />
+                {logType && (
+                  <p className="text-danger font-size9">
+                    Enter a correct input
+                  </p>
+                )}
               </div>
               <div className="clientNameSelect col">
                 <label htmlFor="channelType">Channel Type</label>
                 <Select
                   defaultValue={selectedOption}
-                  onChange={setSelectedOption}
+                  onChange={() => {
+                    setChannelType();
+                    changeChannelType();
+                  }}
                   options={options}
                   id="channelType"
                   classNamePrefix="reactSelectBox"
                   placeholder="ATM"
                 />
+                {channelType && (
+                  <p className="text-danger font-size9">
+                    Enter a correct input
+                  </p>
+                )}
               </div>
               <div className="clientNameSelect col">
                 <label htmlFor="clientName">Mode Type</label>
                 <Select
                   defaultValue={selectedOption}
-                  onChange={setSelectedOption}
+                  onChange={() => {
+                    setModType();
+                    changeModType();
+                  }}
                   options={options}
                   id="clientName"
                   classNamePrefix="reactSelectBox"
                   placeholder="ACQUIR"
                 />
+                {modType && (
+                  <p className="text-danger font-size9">
+                    Enter a correct input
+                  </p>
+                )}
               </div>
             </div>
 
@@ -237,6 +282,11 @@ const ConfigLeft = () => {
                     classNamePrefix="reactSelectBox"
                     placeholder="Shri Vasavamba..."
                   />
+                  {selectError && (
+                    <p className="text-danger font-size9">
+                      Enter a correct input
+                    </p>
+                  )}
                 </div>
                 <div className="clientNameSelect col">
                   <label htmlFor="logType">Log Type</label>
