@@ -51,7 +51,8 @@
 .terminalWhiteBox .terminalBtnBox {
   width: 350px;
 }
-.terminalWhiteBox .kiHXWb {
+.terminalWhiteBox .kiHXWb,
+.terminalWhiteBox .dGSgsW {
   border: none;
   padding: 0;
   height: 12px;
