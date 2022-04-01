@@ -1,12 +1,26 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const SideBar = (props) => {
+  const path = useLocation().pathname;
+
+  const activeLink = (href) => {
+    if (href === path) {
+      return {
+        color: "#6CA994",
+      };
+    } else {
+      return {
+        color: "#000000",
+      };
+    }
+  };
+
   return (
     <div className="sideBar">
       <div className="accordion" id="accordionExample">
         {/* Home */}
-        <div className="accordion-item">
+        <div className="accordion-item" style={activeLink("/about-us")}>
           <h2 className="accordion-header" id="headingHome">
             <button
               className="accordion-button collapsed"
@@ -105,42 +119,32 @@ const SideBar = (props) => {
                     <span className="subMenuLeft">
                       <span class="icon-Icon"></span>
                     </span>
-                    <span className="subMenuRight">File Configuration</span>
+                    <span className="subMenuRight">Currency Registration</span>
                   </Link>
                 </li>
                 <li>
                   <Link to="/">
+                    <span className="subMenuLeft">
+                      <span class="icon-Icon"></span>
+                    </span>
+                    <span className="subMenuRight">Vendor Registration</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/">
+                    <span className="subMenuLeft">
+                      <span class="icon-Icon"></span>
+                    </span>
+                    <span className="subMenuRight">Client Registration</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/branch-registration">
                     <span className="subMenuLeft">
                       <span class="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">
-                      Field Identification Config
-                    </span>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/">
-                    <span className="subMenuLeft">
-                      <span class="icon-Icon"></span>
-                    </span>
-                    <span className="subMenuRight">Matching Rule Config</span>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/">
-                    <span className="subMenuLeft">
-                      <span class="icon-Icon"></span>
-                    </span>
-                    <span className="subMenuRight">Force Sattlement</span>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/">
-                    <span className="subMenuLeft">
-                      <span class="icon-Icon"></span>
-                    </span>
-                    <span className="subMenuRight">
-                      Force Sattlement Rule Configuration
+                      Branch/Terminal Registration
                     </span>
                   </Link>
                 </li>
@@ -177,7 +181,7 @@ const SideBar = (props) => {
                     <span className="subMenuLeft">
                       <span class="icon-Icon"></span>
                     </span>
-                    <span className="subMenuRight">File Configuration</span>
+                    <span className="subMenuRight">Role Creation</span>
                   </Link>
                 </li>
                 <li>
@@ -185,9 +189,7 @@ const SideBar = (props) => {
                     <span className="subMenuLeft">
                       <span class="icon-Icon"></span>
                     </span>
-                    <span className="subMenuRight">
-                      Field Identification Config
-                    </span>
+                    <span className="subMenuRight">User Details</span>
                   </Link>
                 </li>
                 <li>
@@ -195,25 +197,7 @@ const SideBar = (props) => {
                     <span className="subMenuLeft">
                       <span class="icon-Icon"></span>
                     </span>
-                    <span className="subMenuRight">Matching Rule Config</span>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/">
-                    <span className="subMenuLeft">
-                      <span class="icon-Icon"></span>
-                    </span>
-                    <span className="subMenuRight">Force Sattlement</span>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/">
-                    <span className="subMenuLeft">
-                      <span class="icon-Icon"></span>
-                    </span>
-                    <span className="subMenuRight">
-                      Force Sattlement Rule Configuration
-                    </span>
+                    <span className="subMenuRight">Change Password</span>
                   </Link>
                 </li>
               </ul>
@@ -465,7 +449,23 @@ const SideBar = (props) => {
                     <span className="subMenuLeft">
                       <span class="icon-Icon"></span>
                     </span>
-                    <span className="subMenuRight">File Configuration</span>
+                    <span className="subMenuRight">Unmatched Txns Report</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/">
+                    <span className="subMenuLeft">
+                      <span class="icon-Icon"></span>
+                    </span>
+                    <span className="subMenuRight">Matched Txns Report</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/">
+                    <span className="subMenuLeft">
+                      <span class="icon-Icon"></span>
+                    </span>
+                    <span className="subMenuRight">Reversal Txns Report</span>
                   </Link>
                 </li>
                 <li>
@@ -474,33 +474,7 @@ const SideBar = (props) => {
                       <span class="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">
-                      Field Identification Config
-                    </span>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/">
-                    <span className="subMenuLeft">
-                      <span class="icon-Icon"></span>
-                    </span>
-                    <span className="subMenuRight">Matching Rule Config</span>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/">
-                    <span className="subMenuLeft">
-                      <span class="icon-Icon"></span>
-                    </span>
-                    <span className="subMenuRight">Force Sattlement</span>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/">
-                    <span className="subMenuLeft">
-                      <span class="icon-Icon"></span>
-                    </span>
-                    <span className="subMenuRight">
-                      Force Sattlement Rule Configuration
+                      Successful Amount Count Report
                     </span>
                   </Link>
                 </li>
@@ -537,7 +511,9 @@ const SideBar = (props) => {
                     <span className="subMenuLeft">
                       <span class="icon-Icon"></span>
                     </span>
-                    <span className="subMenuRight">File Configuration</span>
+                    <span className="subMenuRight">
+                      Dispence Summary Report
+                    </span>
                   </Link>
                 </li>
                 <li>
@@ -546,24 +522,8 @@ const SideBar = (props) => {
                       <span class="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">
-                      Field Identification Config
+                      Txns Count Summary Report
                     </span>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/">
-                    <span className="subMenuLeft">
-                      <span class="icon-Icon"></span>
-                    </span>
-                    <span className="subMenuRight">Matching Rule Config</span>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/">
-                    <span className="subMenuLeft">
-                      <span class="icon-Icon"></span>
-                    </span>
-                    <span className="subMenuRight">Force Sattlement</span>
                   </Link>
                 </li>
                 <li>
@@ -572,8 +532,72 @@ const SideBar = (props) => {
                       <span class="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">
-                      Force Sattlement Rule Configuration
+                      Reason Wise Summary Report
                     </span>
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/">
+                    <span className="subMenuLeft">
+                      <span class="icon-Icon"></span>
+                    </span>
+                    <span className="subMenuRight">TTUM Report</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/">
+                    <span className="subMenuLeft">
+                      <span class="icon-Icon"></span>
+                    </span>
+                    <span className="subMenuRight">POS TTUM Report</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/">
+                    <span className="subMenuLeft">
+                      <span class="icon-Icon"></span>
+                    </span>
+                    <span className="subMenuRight">
+                      Pending Acquirer Entry Report
+                    </span>
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/">
+                    <span className="subMenuLeft">
+                      <span class="icon-Icon"></span>
+                    </span>
+                    <span className="subMenuRight">
+                      Tips & Surcharge Report
+                    </span>
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/">
+                    <span className="subMenuLeft">
+                      <span class="icon-Icon"></span>
+                    </span>
+                    <span className="subMenuRight">
+                      Issuer Transaction TTUM Report
+                    </span>
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/">
+                    <span className="subMenuLeft">
+                      <span class="icon-Icon"></span>
+                    </span>
+                    <span className="subMenuRight">
+                      Refund & Cashback TTUM Report
+                    </span>
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/">
+                    <span className="subMenuLeft">
+                      <span class="icon-Icon"></span>
+                    </span>
+                    <span className="subMenuRight">IMPS TTUM Report</span>
                   </Link>
                 </li>
               </ul>
@@ -609,7 +633,7 @@ const SideBar = (props) => {
                     <span className="subMenuLeft">
                       <span class="icon-Icon"></span>
                     </span>
-                    <span className="subMenuRight">File Configuration</span>
+                    <span className="subMenuRight">Sattled Txns Report</span>
                   </Link>
                 </li>
                 <li>
@@ -617,9 +641,7 @@ const SideBar = (props) => {
                     <span className="subMenuLeft">
                       <span class="icon-Icon"></span>
                     </span>
-                    <span className="subMenuRight">
-                      Field Identification Config
-                    </span>
+                    <span className="subMenuRight">ATM Charges Report</span>
                   </Link>
                 </li>
                 <li>
@@ -627,7 +649,7 @@ const SideBar = (props) => {
                     <span className="subMenuLeft">
                       <span class="icon-Icon"></span>
                     </span>
-                    <span className="subMenuRight">Matching Rule Config</span>
+                    <span className="subMenuRight">Bank Sattlement Report</span>
                   </Link>
                 </li>
                 <li>
@@ -635,7 +657,7 @@ const SideBar = (props) => {
                     <span className="subMenuLeft">
                       <span class="icon-Icon"></span>
                     </span>
-                    <span className="subMenuRight">Force Sattlement</span>
+                    <span className="subMenuRight">POS Sattlement Report</span>
                   </Link>
                 </li>
                 <li>
@@ -643,9 +665,31 @@ const SideBar = (props) => {
                     <span className="subMenuLeft">
                       <span class="icon-Icon"></span>
                     </span>
-                    <span className="subMenuRight">
-                      Force Sattlement Rule Configuration
+                    <span className="subMenuRight">Refund Txns Report</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/">
+                    <span className="subMenuLeft">
+                      <span class="icon-Icon"></span>
                     </span>
+                    <span className="subMenuRight">IMPS Sattlement Report</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/">
+                    <span className="subMenuLeft">
+                      <span class="icon-Icon"></span>
+                    </span>
+                    <span className="subMenuRight">UPI Sattlement Report</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/">
+                    <span className="subMenuLeft">
+                      <span class="icon-Icon"></span>
+                    </span>
+                    <span className="subMenuRight">NPCI Bulk Upload</span>
                   </Link>
                 </li>
               </ul>
@@ -681,7 +725,7 @@ const SideBar = (props) => {
                     <span className="subMenuLeft">
                       <span class="icon-Icon"></span>
                     </span>
-                    <span className="subMenuRight">File Configuration</span>
+                    <span className="subMenuRight">Online CBR Entry</span>
                   </Link>
                 </li>
                 <li>
@@ -689,9 +733,7 @@ const SideBar = (props) => {
                     <span className="subMenuLeft">
                       <span class="icon-Icon"></span>
                     </span>
-                    <span className="subMenuRight">
-                      Field Identification Config
-                    </span>
+                    <span className="subMenuRight">CBR Report</span>
                   </Link>
                 </li>
                 <li>
@@ -699,25 +741,7 @@ const SideBar = (props) => {
                     <span className="subMenuLeft">
                       <span class="icon-Icon"></span>
                     </span>
-                    <span className="subMenuRight">Matching Rule Config</span>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/">
-                    <span className="subMenuLeft">
-                      <span class="icon-Icon"></span>
-                    </span>
-                    <span className="subMenuRight">Force Sattlement</span>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/">
-                    <span className="subMenuLeft">
-                      <span class="icon-Icon"></span>
-                    </span>
-                    <span className="subMenuRight">
-                      Force Sattlement Rule Configuration
-                    </span>
+                    <span className="subMenuRight">C3R Report</span>
                   </Link>
                 </li>
               </ul>
@@ -753,7 +777,9 @@ const SideBar = (props) => {
                     <span className="subMenuLeft">
                       <span class="icon-Icon"></span>
                     </span>
-                    <span className="subMenuRight">File Configuration</span>
+                    <span className="subMenuRight">
+                      Duplicate Transaction Report
+                    </span>
                   </Link>
                 </li>
                 <li>
@@ -762,7 +788,7 @@ const SideBar = (props) => {
                       <span class="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">
-                      Field Identification Config
+                      CBR Opening / Closeing Balance
                     </span>
                   </Link>
                 </li>
@@ -771,7 +797,7 @@ const SideBar = (props) => {
                     <span className="subMenuLeft">
                       <span class="icon-Icon"></span>
                     </span>
-                    <span className="subMenuRight">Matching Rule Config</span>
+                    <span className="subMenuRight">CBR vs EJ Report</span>
                   </Link>
                 </li>
                 <li>
@@ -779,17 +805,7 @@ const SideBar = (props) => {
                     <span className="subMenuLeft">
                       <span class="icon-Icon"></span>
                     </span>
-                    <span className="subMenuRight">Force Sattlement</span>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/">
-                    <span className="subMenuLeft">
-                      <span class="icon-Icon"></span>
-                    </span>
-                    <span className="subMenuRight">
-                      Force Sattlement Rule Configuration
-                    </span>
+                    <span className="subMenuRight">EJ Transaction Report</span>
                   </Link>
                 </li>
               </ul>
@@ -825,7 +841,9 @@ const SideBar = (props) => {
                     <span className="subMenuLeft">
                       <span class="icon-Icon"></span>
                     </span>
-                    <span className="subMenuRight">File Configuration</span>
+                    <span className="subMenuRight">
+                      Day Wise ATM Status Report
+                    </span>
                   </Link>
                 </li>
                 <li>
@@ -834,33 +852,7 @@ const SideBar = (props) => {
                       <span class="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">
-                      Field Identification Config
-                    </span>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/">
-                    <span className="subMenuLeft">
-                      <span class="icon-Icon"></span>
-                    </span>
-                    <span className="subMenuRight">Matching Rule Config</span>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/">
-                    <span className="subMenuLeft">
-                      <span class="icon-Icon"></span>
-                    </span>
-                    <span className="subMenuRight">Force Sattlement</span>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/">
-                    <span className="subMenuLeft">
-                      <span class="icon-Icon"></span>
-                    </span>
-                    <span className="subMenuRight">
-                      Force Sattlement Rule Configuration
+                      Terminal Wise Status Report
                     </span>
                   </Link>
                 </li>
@@ -897,7 +889,9 @@ const SideBar = (props) => {
                     <span className="subMenuLeft">
                       <span class="icon-Icon"></span>
                     </span>
-                    <span className="subMenuRight">File Configuration</span>
+                    <span className="subMenuRight">
+                      Multiple Txn With Same Terminal
+                    </span>
                   </Link>
                 </li>
                 <li>
@@ -906,24 +900,8 @@ const SideBar = (props) => {
                       <span class="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">
-                      Field Identification Config
+                      Multiple Txn with Diff. Terminal
                     </span>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/">
-                    <span className="subMenuLeft">
-                      <span class="icon-Icon"></span>
-                    </span>
-                    <span className="subMenuRight">Matching Rule Config</span>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/">
-                    <span className="subMenuLeft">
-                      <span class="icon-Icon"></span>
-                    </span>
-                    <span className="subMenuRight">Force Sattlement</span>
                   </Link>
                 </li>
                 <li>
@@ -932,7 +910,27 @@ const SideBar = (props) => {
                       <span class="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">
-                      Force Sattlement Rule Configuration
+                      Frequent Reversal Report
+                    </span>
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/">
+                    <span className="subMenuLeft">
+                      <span class="icon-Icon"></span>
+                    </span>
+                    <span className="subMenuRight">
+                      Midnight Transaction Report
+                    </span>
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/">
+                    <span className="subMenuLeft">
+                      <span class="icon-Icon"></span>
+                    </span>
+                    <span className="subMenuRight">
+                      High Value Transaction Reports
                     </span>
                   </Link>
                 </li>
@@ -969,43 +967,7 @@ const SideBar = (props) => {
                     <span className="subMenuLeft">
                       <span class="icon-Icon"></span>
                     </span>
-                    <span className="subMenuRight">File Configuration</span>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/">
-                    <span className="subMenuLeft">
-                      <span class="icon-Icon"></span>
-                    </span>
-                    <span className="subMenuRight">
-                      Field Identification Config
-                    </span>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/">
-                    <span className="subMenuLeft">
-                      <span class="icon-Icon"></span>
-                    </span>
-                    <span className="subMenuRight">Matching Rule Config</span>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/">
-                    <span className="subMenuLeft">
-                      <span class="icon-Icon"></span>
-                    </span>
-                    <span className="subMenuRight">Force Sattlement</span>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/">
-                    <span className="subMenuLeft">
-                      <span class="icon-Icon"></span>
-                    </span>
-                    <span className="subMenuRight">
-                      Force Sattlement Rule Configuration
-                    </span>
+                    <span className="subMenuRight">Search By RRN</span>
                   </Link>
                 </li>
               </ul>

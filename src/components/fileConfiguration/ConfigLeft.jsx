@@ -32,7 +32,6 @@ const ConfigLeft = () => {
   const [showFilters, setShowFilters] = useState(false);
 
   // Select Error
-  // Client Name
   const [clientName, setClientName] = useState(false);
   const changeClientName = () => setClientName(true);
 

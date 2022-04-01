@@ -2,7 +2,81 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Popover, OverlayTrigger } from "react-bootstrap";
 
-const popover = (
+const clientManagement = (
+  <Popover id="popover-basic" className="sidebarPopover">
+    <Popover.Body>
+      <ul className="subMenu">
+        <li>
+          <Link to="/">
+            <span className="subMenuLeft">
+              <span class="icon-Icon"></span>
+            </span>
+            <span className="subMenuRight">Currency Registration</span>
+          </Link>
+        </li>
+        <li>
+          <Link to="/">
+            <span className="subMenuLeft">
+              <span class="icon-Icon"></span>
+            </span>
+            <span className="subMenuRight">Vendor Registration</span>
+          </Link>
+        </li>
+        <li>
+          <Link to="/">
+            <span className="subMenuLeft">
+              <span class="icon-Icon"></span>
+            </span>
+            <span className="subMenuRight">Client Registration</span>
+          </Link>
+        </li>
+        <li>
+          <Link to="/branch-registration">
+            <span className="subMenuLeft">
+              <span class="icon-Icon"></span>
+            </span>
+            <span className="subMenuRight">Branch/Terminal Registration</span>
+          </Link>
+        </li>
+      </ul>
+    </Popover.Body>
+  </Popover>
+);
+
+const userManagement = (
+  <Popover id="popover-basic" className="sidebarPopover">
+    <Popover.Body>
+      <ul className="subMenu">
+        <li>
+          <Link to="/">
+            <span className="subMenuLeft">
+              <span class="icon-Icon"></span>
+            </span>
+            <span className="subMenuRight">Role Creation</span>
+          </Link>
+        </li>
+        <li>
+          <Link to="/">
+            <span className="subMenuLeft">
+              <span class="icon-Icon"></span>
+            </span>
+            <span className="subMenuRight">User Details</span>
+          </Link>
+        </li>
+        <li>
+          <Link to="/">
+            <span className="subMenuLeft">
+              <span class="icon-Icon"></span>
+            </span>
+            <span className="subMenuRight">Change Password</span>
+          </Link>
+        </li>
+      </ul>
+    </Popover.Body>
+  </Popover>
+);
+
+const configuration = (
   <Popover id="popover-basic" className="sidebarPopover">
     <Popover.Body>
       <ul className="subMenu">
@@ -53,6 +127,378 @@ const popover = (
   </Popover>
 );
 
+const dailyReports = (
+  <Popover id="popover-basic" className="sidebarPopover">
+    <Popover.Body>
+      <ul className="subMenu">
+        <li>
+          <Link to="/">
+            <span className="subMenuLeft">
+              <span class="icon-Icon"></span>
+            </span>
+            <span className="subMenuRight">Unmatched Txns Report</span>
+          </Link>
+        </li>
+        <li>
+          <Link to="/">
+            <span className="subMenuLeft">
+              <span class="icon-Icon"></span>
+            </span>
+            <span className="subMenuRight">Matched Txns Report</span>
+          </Link>
+        </li>
+        <li>
+          <Link to="/">
+            <span className="subMenuLeft">
+              <span class="icon-Icon"></span>
+            </span>
+            <span className="subMenuRight">Reversal Txns Report</span>
+          </Link>
+        </li>
+        <li>
+          <Link to="/">
+            <span className="subMenuLeft">
+              <span class="icon-Icon"></span>
+            </span>
+            <span className="subMenuRight">Successful Amount Count Report</span>
+          </Link>
+        </li>
+      </ul>
+    </Popover.Body>
+  </Popover>
+);
+
+const misReports = (
+  <Popover id="popover-basic" className="sidebarPopover">
+    <Popover.Body>
+      <ul className="subMenu">
+        <li>
+          <Link to="/">
+            <span className="subMenuLeft">
+              <span class="icon-Icon"></span>
+            </span>
+            <span className="subMenuRight">Dispence Summary Report</span>
+          </Link>
+        </li>
+        <li>
+          <Link to="/">
+            <span className="subMenuLeft">
+              <span class="icon-Icon"></span>
+            </span>
+            <span className="subMenuRight">Txns Count Summary Report</span>
+          </Link>
+        </li>
+        <li>
+          <Link to="/">
+            <span className="subMenuLeft">
+              <span class="icon-Icon"></span>
+            </span>
+            <span className="subMenuRight">Reason Wise Summary Report</span>
+          </Link>
+        </li>
+        <li>
+          <Link to="/">
+            <span className="subMenuLeft">
+              <span class="icon-Icon"></span>
+            </span>
+            <span className="subMenuRight">TTUM Report</span>
+          </Link>
+        </li>
+        <li>
+          <Link to="/">
+            <span className="subMenuLeft">
+              <span class="icon-Icon"></span>
+            </span>
+            <span className="subMenuRight">POS TTUM Report</span>
+          </Link>
+        </li>
+        <li>
+          <Link to="/">
+            <span className="subMenuLeft">
+              <span class="icon-Icon"></span>
+            </span>
+            <span className="subMenuRight">Pending Acquirer Entry Report</span>
+          </Link>
+        </li>
+        <li>
+          <Link to="/">
+            <span className="subMenuLeft">
+              <span class="icon-Icon"></span>
+            </span>
+            <span className="subMenuRight">Tips & Surcharge Report</span>
+          </Link>
+        </li>
+        <li>
+          <Link to="/">
+            <span className="subMenuLeft">
+              <span class="icon-Icon"></span>
+            </span>
+            <span className="subMenuRight">Issuer Transaction TTUM Report</span>
+          </Link>
+        </li>
+        <li>
+          <Link to="/">
+            <span className="subMenuLeft">
+              <span class="icon-Icon"></span>
+            </span>
+            <span className="subMenuRight">Refund & Cashback TTUM Report</span>
+          </Link>
+        </li>
+        <li>
+          <Link to="/">
+            <span className="subMenuLeft">
+              <span class="icon-Icon"></span>
+            </span>
+            <span className="subMenuRight">IMPS TTUM Report</span>
+          </Link>
+        </li>
+      </ul>
+    </Popover.Body>
+  </Popover>
+);
+
+const auditReports = (
+  <Popover id="popover-basic" className="sidebarPopover">
+    <Popover.Body>
+      <ul className="subMenu">
+        <li>
+          <Link to="/">
+            <span className="subMenuLeft">
+              <span class="icon-Icon"></span>
+            </span>
+            <span className="subMenuRight">Sattled Txns Report</span>
+          </Link>
+        </li>
+        <li>
+          <Link to="/">
+            <span className="subMenuLeft">
+              <span class="icon-Icon"></span>
+            </span>
+            <span className="subMenuRight">ATM Charges Report</span>
+          </Link>
+        </li>
+        <li>
+          <Link to="/">
+            <span className="subMenuLeft">
+              <span class="icon-Icon"></span>
+            </span>
+            <span className="subMenuRight">Bank Sattlement Report</span>
+          </Link>
+        </li>
+        <li>
+          <Link to="/">
+            <span className="subMenuLeft">
+              <span class="icon-Icon"></span>
+            </span>
+            <span className="subMenuRight">POS Sattlement Report</span>
+          </Link>
+        </li>
+        <li>
+          <Link to="/">
+            <span className="subMenuLeft">
+              <span class="icon-Icon"></span>
+            </span>
+            <span className="subMenuRight">Refund Txns Report</span>
+          </Link>
+        </li>
+        <li>
+          <Link to="/">
+            <span className="subMenuLeft">
+              <span class="icon-Icon"></span>
+            </span>
+            <span className="subMenuRight">IMPS Sattlement Report</span>
+          </Link>
+        </li>
+        <li>
+          <Link to="/">
+            <span className="subMenuLeft">
+              <span class="icon-Icon"></span>
+            </span>
+            <span className="subMenuRight">UPI Sattlement Report</span>
+          </Link>
+        </li>
+        <li>
+          <Link to="/">
+            <span className="subMenuLeft">
+              <span class="icon-Icon"></span>
+            </span>
+            <span className="subMenuRight">NPCI Bulk Upload</span>
+          </Link>
+        </li>
+      </ul>
+    </Popover.Body>
+  </Popover>
+);
+
+const cbr = (
+  <Popover id="popover-basic" className="sidebarPopover">
+    <Popover.Body>
+      <ul className="subMenu">
+        <li>
+          <Link to="/">
+            <span className="subMenuLeft">
+              <span class="icon-Icon"></span>
+            </span>
+            <span className="subMenuRight">Online CBR Entry</span>
+          </Link>
+        </li>
+        <li>
+          <Link to="/">
+            <span className="subMenuLeft">
+              <span class="icon-Icon"></span>
+            </span>
+            <span className="subMenuRight">CBR Report</span>
+          </Link>
+        </li>
+        <li>
+          <Link to="/">
+            <span className="subMenuLeft">
+              <span class="icon-Icon"></span>
+            </span>
+            <span className="subMenuRight">C3R Report</span>
+          </Link>
+        </li>
+      </ul>
+    </Popover.Body>
+  </Popover>
+);
+
+const exceptionReports = (
+  <Popover id="popover-basic" className="sidebarPopover">
+    <Popover.Body>
+      <ul className="subMenu">
+        <li>
+          <Link to="/">
+            <span className="subMenuLeft">
+              <span class="icon-Icon"></span>
+            </span>
+            <span className="subMenuRight">Duplicate Transaction Report</span>
+          </Link>
+        </li>
+        <li>
+          <Link to="/">
+            <span className="subMenuLeft">
+              <span class="icon-Icon"></span>
+            </span>
+            <span className="subMenuRight">CBR Opening / Closeing Balance</span>
+          </Link>
+        </li>
+        <li>
+          <Link to="/">
+            <span className="subMenuLeft">
+              <span class="icon-Icon"></span>
+            </span>
+            <span className="subMenuRight">CBR vs EJ Report</span>
+          </Link>
+        </li>
+        <li>
+          <Link to="/">
+            <span className="subMenuLeft">
+              <span class="icon-Icon"></span>
+            </span>
+            <span className="subMenuRight">EJ Transaction Report</span>
+          </Link>
+        </li>
+      </ul>
+    </Popover.Body>
+  </Popover>
+);
+
+const eodReports = (
+  <Popover id="popover-basic" className="sidebarPopover">
+    <Popover.Body>
+      <ul className="subMenu">
+        <li>
+          <Link to="/">
+            <span className="subMenuLeft">
+              <span class="icon-Icon"></span>
+            </span>
+            <span className="subMenuRight">Day Wise ATM Status Report</span>
+          </Link>
+        </li>
+        <li>
+          <Link to="/">
+            <span className="subMenuLeft">
+              <span class="icon-Icon"></span>
+            </span>
+            <span className="subMenuRight">Terminal Wise Status Report</span>
+          </Link>
+        </li>
+      </ul>
+    </Popover.Body>
+  </Popover>
+);
+
+const fraudReports = (
+  <Popover id="popover-basic" className="sidebarPopover">
+    <Popover.Body>
+      <ul className="subMenu">
+        <li>
+          <Link to="/">
+            <span className="subMenuLeft">
+              <span class="icon-Icon"></span>
+            </span>
+            <span className="subMenuRight">
+              Multiple Txn With Same Terminal
+            </span>
+          </Link>
+        </li>
+        <li>
+          <Link to="/">
+            <span className="subMenuLeft">
+              <span class="icon-Icon"></span>
+            </span>
+            <span className="subMenuRight">
+              Multiple Txn with Diff. Terminal
+            </span>
+          </Link>
+        </li>
+        <li>
+          <Link to="/">
+            <span className="subMenuLeft">
+              <span class="icon-Icon"></span>
+            </span>
+            <span className="subMenuRight">Frequent Reversal Report</span>
+          </Link>
+        </li>
+        <li>
+          <Link to="/">
+            <span className="subMenuLeft">
+              <span class="icon-Icon"></span>
+            </span>
+            <span className="subMenuRight">Midnight Transaction Report</span>
+          </Link>
+        </li>
+        <li>
+          <Link to="/">
+            <span className="subMenuLeft">
+              <span class="icon-Icon"></span>
+            </span>
+            <span className="subMenuRight">High Value Transaction Reports</span>
+          </Link>
+        </li>
+      </ul>
+    </Popover.Body>
+  </Popover>
+);
+
+const search = (
+  <Popover id="popover-basic" className="sidebarPopover">
+    <Popover.Body>
+      <ul className="subMenu">
+        <li>
+          <Link to="/">
+            <span className="subMenuLeft">
+              <span class="icon-Icon"></span>
+            </span>
+            <span className="subMenuRight">Search By RRN</span>
+          </Link>
+        </li>
+      </ul>
+    </Popover.Body>
+  </Popover>
+);
+
 const SidebarSmall = (props) => {
   return (
     <div className="sidebarSmall">
@@ -66,7 +512,7 @@ const SidebarSmall = (props) => {
         <OverlayTrigger
           trigger="click"
           placement="right"
-          overlay={popover}
+          overlay={clientManagement}
           rootClose
         >
           <span class="icon-Icon-NameClient-Management sidebarIconSize"></span>
@@ -78,7 +524,7 @@ const SidebarSmall = (props) => {
         <OverlayTrigger
           trigger="click"
           placement="right"
-          overlay={popover}
+          overlay={userManagement}
           rootClose
         >
           <span class="icon-Icon-NameUser-Management sidebarIconSize"></span>
@@ -90,7 +536,7 @@ const SidebarSmall = (props) => {
         <OverlayTrigger
           trigger="click"
           placement="right"
-          overlay={popover}
+          overlay={configuration}
           rootClose
         >
           <span class="icon-Icon-NameConfiguration sidebarIconSize"></span>
@@ -99,26 +545,12 @@ const SidebarSmall = (props) => {
 
       {/* Import Logs */}
       <div className="sidebarSmallImg">
-        <OverlayTrigger
-          trigger="click"
-          placement="right"
-          overlay={popover}
-          rootClose
-        >
-          <span class="icon-Icon-NameImport-Logs sidebarIconSize"></span>
-        </OverlayTrigger>
+        <span class="icon-Icon-NameImport-Logs sidebarIconSize"></span>
       </div>
 
       {/* Run Recon */}
       <div className="sidebarSmallImg">
-        <OverlayTrigger
-          trigger="click"
-          placement="right"
-          overlay={popover}
-          rootClose
-        >
-          <span class="icon-Icon-NameRun-Recon sidebarIconSize"></span>
-        </OverlayTrigger>
+        <span class="icon-Icon-NameRun-Recon sidebarIconSize"></span>
       </div>
 
       {/* Daily Reports */}
@@ -126,7 +558,7 @@ const SidebarSmall = (props) => {
         <OverlayTrigger
           trigger="click"
           placement="right"
-          overlay={popover}
+          overlay={dailyReports}
           rootClose
         >
           <span class="icon-Icon-NameDaily-Reports sidebarIconSize"></span>
@@ -138,7 +570,7 @@ const SidebarSmall = (props) => {
         <OverlayTrigger
           trigger="click"
           placement="right"
-          overlay={popover}
+          overlay={misReports}
           rootClose
         >
           <span class="icon-Icon-NameMIS-Reports sidebarIconSize"></span>
@@ -150,7 +582,7 @@ const SidebarSmall = (props) => {
         <OverlayTrigger
           trigger="click"
           placement="right"
-          overlay={popover}
+          overlay={auditReports}
           rootClose
         >
           <span class="icon-Icon-NameAudit-Reports sidebarIconSize"></span>
@@ -162,7 +594,7 @@ const SidebarSmall = (props) => {
         <OverlayTrigger
           trigger="click"
           placement="right"
-          overlay={popover}
+          overlay={cbr}
           rootClose
         >
           <span class="icon-Icon-NameCBR sidebarIconSize"></span>
@@ -174,7 +606,7 @@ const SidebarSmall = (props) => {
         <OverlayTrigger
           trigger="click"
           placement="right"
-          overlay={popover}
+          overlay={exceptionReports}
           rootClose
         >
           <span class="icon-Icon-NameException-Reports sidebarIconSize"></span>
@@ -186,7 +618,7 @@ const SidebarSmall = (props) => {
         <OverlayTrigger
           trigger="click"
           placement="right"
-          overlay={popover}
+          overlay={eodReports}
           rootClose
         >
           <span class="icon-Icon-NameEOD-Reports sidebarIconSize"></span>
@@ -198,7 +630,7 @@ const SidebarSmall = (props) => {
         <OverlayTrigger
           trigger="click"
           placement="right"
-          overlay={popover}
+          overlay={fraudReports}
           rootClose
         >
           <span class="icon-Icon-NameFraud-Reports sidebarIconSize"></span>
@@ -210,7 +642,7 @@ const SidebarSmall = (props) => {
         <OverlayTrigger
           trigger="click"
           placement="right"
-          overlay={popover}
+          overlay={search}
           rootClose
         >
           <span class="icon-Icon-NameSearch sidebarIconSize"></span>
