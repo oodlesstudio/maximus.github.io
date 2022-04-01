@@ -24,6 +24,7 @@ const TerminalMainWindow = () => {
     setFile(file);
   };
 
+  // Tooltip
   const renderTooltipBranch = (props) => (
     <Tooltip id="button-tooltip" {...props}>
       Download Branch Master Template
@@ -148,6 +149,7 @@ const TerminalMainWindow = () => {
                     name="file"
                     types={fileTypes}
                   />
+                  <p>{file ? `File name: ${file[0].name}` : ""}</p>
                 </div>
               </div>
               <OverlayTrigger
@@ -201,6 +203,7 @@ const TerminalMainWindow = () => {
                     name="file"
                     types={fileTypes}
                   />
+                  <p>{file ? `File name: ${file[0].name}` : ""}</p>
                 </div>
               </div>
               <OverlayTrigger
