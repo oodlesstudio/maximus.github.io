@@ -139,7 +139,7 @@ const SideBar = (props) => {
                   </Link>
                 </li>
                 <li>
-                  <Link to="/branch-registration">
+                  <Link to="/branch-terminal-registration">
                     <span className="subMenuLeft">
                       <span class="icon-Icon"></span>
                     </span>
@@ -237,7 +237,7 @@ const SideBar = (props) => {
                   </Link>
                 </li>
                 <li>
-                  <Link to="/">
+                  <Link to="/field-identification-config">
                     <span className="subMenuLeft">
                       <span class="icon-Icon"></span>
                     </span>
@@ -445,7 +445,7 @@ const SideBar = (props) => {
             <div className="accordion-body">
               <ul className="subMenu">
                 <li>
-                  <Link to="/">
+                  <Link to="/unmatched-txns-report">
                     <span className="subMenuLeft">
                       <span class="icon-Icon"></span>
                     </span>
@@ -721,7 +721,7 @@ const SideBar = (props) => {
             <div className="accordion-body">
               <ul className="subMenu">
                 <li>
-                  <Link to="/">
+                  <Link to="/online-cbr-entry">
                     <span className="subMenuLeft">
                       <span class="icon-Icon"></span>
                     </span>

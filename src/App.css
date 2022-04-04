@@ -212,7 +212,7 @@ h6{
 
 /* Colors */
 .colorPrimaryDefault {
-  color: var(--color-primary-default);
+  color: var(--color-primary-default) !important;
 }
 .colorBlack {
   color: var(--color-black);
