@@ -24,7 +24,6 @@ const UnmatchedMainWindow = () => {
   const [resetFilters, setResetFilters] = useState(false);
   const [saveFilters, setSaveFilters] = useState(false);
 
-  const [showFilters, setShowFilters] = useState(false);
 
   // Select Error
   const [clientName, setClientName] = useState(false);
@@ -39,7 +38,6 @@ const UnmatchedMainWindow = () => {
   const [modType, setModType] = useState(false);
   const changeModType = () => setModType(true);
 
-  const [selectError, setSelectError] = useState(false);
 
   // Tooltip
   const renderTooltip = (props) => (
