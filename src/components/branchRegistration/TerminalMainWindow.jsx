@@ -97,7 +97,7 @@ const TerminalMainWindow = () => {
       </div>
 
       <div className="tableBorderBox terminalWhiteBox d-flex justify-content-center w-100">
-        <div>
+        <div className="terminalSmallBox">
           <div className="clientNameSelect">
             <label htmlFor="clientName">Client Name</label>
             <Select

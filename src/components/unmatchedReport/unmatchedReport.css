@@ -1,28 +1,6 @@
-/* Main View */
-.mainView {
-  width: 100%;
-  height: 100%;
-  background-color: var(--color-background-default);
-  padding-top: 50px;
+.cursorPointer{
+  cursor: pointer;
 }
-.sidebarOpened {
-  width: calc(100% - 216px);
-}
-.sidebarClosed {
-  width: calc(100% - 50px);
-}
-@media (max-width: 767px) {
-  .mainView {
-    padding-top: 88px;
-  }
-}
-@media (max-width: 768px) {
-  .sidebarOpened {
-    width: 100%;
-  }
-}
-
-/* Unmatched CSS */
 .unmatchedContainer {
   padding: 0 12px 12px;
 }
@@ -61,24 +39,26 @@
   margin-top: 8px;
 }
 @media (max-width: 768px) {
-    .unmatchedContainer .accordion-body .configSelectBoxTop .col {
-      width: 33%;
-    }
+  .unmatchedContainer {
+    padding-bottom: 0;
   }
+  .unmatchedContainer .accordion-body .configSelectBoxTop .col {
+    width: 33%;
+  }
+}
 @media (max-width: 425px) {
   .breadcrumbHeading {
     flex-direction: column-reverse;
     align-items: flex-start !important;
     margin: 12px 0;
   }
-  .unmatchedContainer .has-search .form-control{
-      width: 98%;
+  .unmatchedContainer .has-search .form-control {
+    width: 98%;
   }
   .unmatchedContainer .accordion-body .configSelectBoxTop .col {
     width: 100%;
   }
 }
-
 
 /* Calendar */
 .react-datepicker-popper[data-placement^="bottom"] {
@@ -148,6 +128,69 @@
   letter-spacing: 0.02em;
   color: var(--color-black);
 }
-.react-datepicker__day--outside-month{
+.react-datepicker__day--outside-month {
   opacity: 30%;
+}
+
+/* Table Modal */
+.unmatchedTableModal .modal-dialog{
+  max-width: 1060px;
+}
+.unmatchedTableModal .modal-content{
+  width: 100%;
+}
+.unmatchedTableModal .modal-body{
+  padding: 0 12px 16px;
+}
+.unmatchedTableModal .unmatchedModalHeading{
+  margin: 16px 0 8px;
+}
+.unmatchedTableModal .table {
+  --bs-table-striped-bg: var(--border-box-bg);
+  --bs-table-striped-color: var(--color-black);
+  --bs-table-hover-bg: var(--table-hover-color);
+  --bs-table-hover-color: var(--color-black);
+  width: 100%;
+  margin-bottom: 0;
+}
+.unmatchedTableModal .table tbody {
+  --bs-table-bg: var(--border-box-bg);
+  --bs-table-accent-bg: var(--border-box-bg);
+}
+.unmatchedTableModal .table thead tr th {
+  font-weight: var(--font-weight-500);
+  font-size: var(--font-size14);
+  background-color: var(--color-secondary-light-defaut);
+  height: 32px;
+  padding: 0;
+  padding-left: 14px;
+  vertical-align: middle;
+  text-align: center;
+}
+.unmatchedTableModal .table thead tr th:first-child {
+  border-top-left-radius: 4px;
+}
+.unmatchedTableModal .table thead tr th:last-child {
+  border-top-right-radius: 4px;
+}
+.unmatchedTableModal .table tbody tr td:first-child {
+  border-bottom-left-radius: 4px;
+}
+.unmatchedTableModal .table tbody tr td:last-child {
+  border-bottom-right-radius: 4px;
+}
+.unmatchedTableModal .table tbody tr td {
+  font-size: var(--font-size14);
+  height: 34px;
+  padding: 0;
+  padding-left: 14px;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .unmatchedTableModal .modal-dialog{
+    max-width: 95%;
+  }
+  .unmatchedTableModal .table {
+width: 1012px;
+  }
 }

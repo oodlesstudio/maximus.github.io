@@ -521,3 +521,8 @@
   content: "\e91e";
   color: #868686;
 }
+
+.icon-Hide:before {
+  content: "\e900";
+  color: #003087;
+}

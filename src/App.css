@@ -125,6 +125,7 @@ a {
   --table-striped-color: #fafafa;
   --table-hover-color: #ededed;
   --drop-file-color: #5C5C5C;
+  --color-disabled: #F2F2F2;
 }
 [data-theme="dark"] {
   /* Colors Dark Theme */

@@ -21,9 +21,10 @@ const options = [
 const UnmatchedMainWindow = () => {
   const [selectedOption, setSelectedOption] = useState(null);
 
+  // Modals
   const [resetFilters, setResetFilters] = useState(false);
   const [saveFilters, setSaveFilters] = useState(false);
-
+  const [referenceNo, setReferenceNo] = useState(false);
 
   // Select Error
   const [clientName, setClientName] = useState(false);
@@ -37,7 +38,6 @@ const UnmatchedMainWindow = () => {
 
   const [modType, setModType] = useState(false);
   const changeModType = () => setModType(true);
-
 
   // Tooltip
   const renderTooltip = (props) => (
@@ -131,29 +131,7 @@ const UnmatchedMainWindow = () => {
                 aria-expanded="true"
                 aria-controls="unmatchedFiltersCollapse"
               >
-                <svg
-                  width="16"
-                  height="auto"
-                  viewBox="0 0 20 20"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M16.7411 9.34157C17.0863 9.79306 17.0863 10.4026 16.7411 10.8533C15.6539 12.2726 13.0455 15.1949 10.0001 15.1949C6.95475 15.1949 4.34631 12.2726 3.2591 10.8533C3.09116 10.6371 3 10.3712 3 10.0974C3 9.8237 3.09116 9.55775 3.2591 9.34157C4.34631 7.92229 6.95475 5 10.0001 5C13.0455 5 15.6539 7.92229 16.7411 9.34157V9.34157Z"
-                    stroke="#003087"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M10.0001 12.2823C11.2066 12.2823 12.1847 11.3042 12.1847 10.0977C12.1847 8.89117 11.2066 7.91309 10.0001 7.91309C8.79358 7.91309 7.81549 8.89117 7.81549 10.0977C7.81549 11.3042 8.79358 12.2823 10.0001 12.2823Z"
-                    stroke="#003087"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-
+                <span class="icon-Hide"></span>
                 <span className="ms-1 fontSize12-m colorPrimaryDefault">
                   Show / Hide
                 </span>
@@ -489,7 +467,10 @@ const UnmatchedMainWindow = () => {
                   <td>ACQUIRER</td>
                   <td>SVCB0001</td>
                   <td>01/02/2022, 06:35:00 PM</td>
-                  <td className="fontWeight-500 colorPrimaryDefault">
+                  <td
+                    className="fontWeight-500 colorPrimaryDefault cursorPointer"
+                    onClick={() => setReferenceNo(!referenceNo)}
+                  >
                     203218001138
                   </td>
                   <td>459115XXXXXX5716</td>
@@ -507,7 +488,10 @@ const UnmatchedMainWindow = () => {
                   <td>ACQUIRER</td>
                   <td>SVCB0001</td>
                   <td>01/02/2022, 06:35:00 PM</td>
-                  <td className="fontWeight-500 colorPrimaryDefault">
+                  <td
+                    className="fontWeight-500 colorPrimaryDefault cursorPointer"
+                    onClick={() => setReferenceNo(!referenceNo)}
+                  >
                     203218001138
                   </td>
                   <td>459115XXXXXX5716</td>
@@ -525,7 +509,10 @@ const UnmatchedMainWindow = () => {
                   <td>ACQUIRER</td>
                   <td>SVCB0001</td>
                   <td>01/02/2022, 06:35:00 PM</td>
-                  <td className="fontWeight-500 colorPrimaryDefault">
+                  <td
+                    className="fontWeight-500 colorPrimaryDefault cursorPointer"
+                    onClick={() => setReferenceNo(!referenceNo)}
+                  >
                     203218001138
                   </td>
                   <td>459115XXXXXX5716</td>
@@ -543,7 +530,10 @@ const UnmatchedMainWindow = () => {
                   <td>ACQUIRER</td>
                   <td>SVCB0001</td>
                   <td>01/02/2022, 06:35:00 PM</td>
-                  <td className="fontWeight-500 colorPrimaryDefault">
+                  <td
+                    className="fontWeight-500 colorPrimaryDefault cursorPointer"
+                    onClick={() => setReferenceNo(!referenceNo)}
+                  >
                     203218001138
                   </td>
                   <td>459115XXXXXX5716</td>
@@ -561,7 +551,10 @@ const UnmatchedMainWindow = () => {
                   <td>ACQUIRER</td>
                   <td>SVCB0001</td>
                   <td>01/02/2022, 06:35:00 PM</td>
-                  <td className="fontWeight-500 colorPrimaryDefault">
+                  <td
+                    className="fontWeight-500 colorPrimaryDefault cursorPointer"
+                    onClick={() => setReferenceNo(!referenceNo)}
+                  >
                     203218001138
                   </td>
                   <td>459115XXXXXX5716</td>
@@ -579,7 +572,10 @@ const UnmatchedMainWindow = () => {
                   <td>ACQUIRER</td>
                   <td>SVCB0001</td>
                   <td>01/02/2022, 06:35:00 PM</td>
-                  <td className="fontWeight-500 colorPrimaryDefault">
+                  <td
+                    className="fontWeight-500 colorPrimaryDefault cursorPointer"
+                    onClick={() => setReferenceNo(!referenceNo)}
+                  >
                     203218001138
                   </td>
                   <td>459115XXXXXX5716</td>
@@ -597,7 +593,10 @@ const UnmatchedMainWindow = () => {
                   <td>ACQUIRER</td>
                   <td>SVCB0001</td>
                   <td>01/02/2022, 06:35:00 PM</td>
-                  <td className="fontWeight-500 colorPrimaryDefault">
+                  <td
+                    className="fontWeight-500 colorPrimaryDefault cursorPointer"
+                    onClick={() => setReferenceNo(!referenceNo)}
+                  >
                     203218001138
                   </td>
                   <td>459115XXXXXX5716</td>
@@ -615,7 +614,10 @@ const UnmatchedMainWindow = () => {
                   <td>ACQUIRER</td>
                   <td>SVCB0001</td>
                   <td>01/02/2022, 06:35:00 PM</td>
-                  <td className="fontWeight-500 colorPrimaryDefault">
+                  <td
+                    className="fontWeight-500 colorPrimaryDefault cursorPointer"
+                    onClick={() => setReferenceNo(!referenceNo)}
+                  >
                     203218001138
                   </td>
                   <td>459115XXXXXX5716</td>
@@ -633,7 +635,10 @@ const UnmatchedMainWindow = () => {
                   <td>ACQUIRER</td>
                   <td>SVCB0001</td>
                   <td>01/02/2022, 06:35:00 PM</td>
-                  <td className="fontWeight-500 colorPrimaryDefault">
+                  <td
+                    className="fontWeight-500 colorPrimaryDefault cursorPointer"
+                    onClick={() => setReferenceNo(!referenceNo)}
+                  >
                     203218001138
                   </td>
                   <td>459115XXXXXX5716</td>
@@ -651,7 +656,10 @@ const UnmatchedMainWindow = () => {
                   <td>ACQUIRER</td>
                   <td>SVCB0001</td>
                   <td>01/02/2022, 06:35:00 PM</td>
-                  <td className="fontWeight-500 colorPrimaryDefault">
+                  <td
+                    className="fontWeight-500 colorPrimaryDefault cursorPointer"
+                    onClick={() => setReferenceNo(!referenceNo)}
+                  >
                     203218001138
                   </td>
                   <td>459115XXXXXX5716</td>
@@ -732,6 +740,272 @@ const UnmatchedMainWindow = () => {
             </div>
           </div>
         </div>
+
+        {/* Save Filters */}
+        {referenceNo && (
+          <Modal
+            show={referenceNo}
+            onHide={() => setReferenceNo(!referenceNo)}
+            centered
+            className="defaultThemeModal saveFiltersModal unmatchedTableModal"
+          >
+            <Modal.Header closeButton>
+              <Modal.Title className="fontSize16-sm letterSpacing-2">
+                Transaction ID Details
+              </Modal.Title>
+            </Modal.Header>
+            <Modal.Body className="text-center">
+              <div className="w-100 table-responsive">
+                <p className="fontWeight-600 colorBlack unmatchedModalHeading">
+                  EJ Details
+                </p>
+                <table className="table table-striped table-hover table-borderless align-middle">
+                  <thead>
+                    <tr>
+                      <th scope="col">
+                        Terminal ID
+                        <Link to="/">
+                          <span class="icon-Table-Sorting"></span>
+                        </Link>
+                      </th>
+                      <th scope="col">
+                        Txn Date & Time
+                        <Link to="/">
+                          <span class="icon-Table-Sorting"></span>
+                        </Link>
+                      </th>
+                      <th scope="col">
+                        Card No.
+                        <Link to="/">
+                          <span class="icon-Table-Sorting"></span>
+                        </Link>
+                      </th>
+                      <th scope="col">
+                        Reference No.
+                        <Link to="/">
+                          <span class="icon-Table-Sorting"></span>
+                        </Link>
+                      </th>
+                      <th scope="col">
+                        Txn Amount
+                        <Link to="/">
+                          <span class="icon-Table-Sorting"></span>
+                        </Link>
+                      </th>
+                      <th scope="col">
+                        Response Code
+                        <Link to="/">
+                          <span class="icon-Table-Sorting"></span>
+                        </Link>
+                      </th>
+                      <th scope="col">
+                        Reversal Flag
+                        <Link to="/">
+                          <span class="icon-Table-Sorting"></span>
+                        </Link>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td colSpan="7">
+                        <em>No record(s) found...</em>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div className="w-100 table-responsive">
+                <p className="fontWeight-600 colorBlack unmatchedModalHeading">
+                  SW Details
+                </p>
+                <table className="table table-striped table-hover table-borderless align-middle">
+                  <thead>
+                    <tr>
+                      <th scope="col">
+                        Terminal ID
+                        <Link to="/">
+                          <span class="icon-Table-Sorting"></span>
+                        </Link>
+                      </th>
+                      <th scope="col">
+                        Txn Date & Time
+                        <Link to="/">
+                          <span class="icon-Table-Sorting"></span>
+                        </Link>
+                      </th>
+                      <th scope="col">
+                        Card No.
+                        <Link to="/">
+                          <span class="icon-Table-Sorting"></span>
+                        </Link>
+                      </th>
+                      <th scope="col">
+                        Reference No.
+                        <Link to="/">
+                          <span class="icon-Table-Sorting"></span>
+                        </Link>
+                      </th>
+                      <th scope="col">
+                        Txn Amount
+                        <Link to="/">
+                          <span class="icon-Table-Sorting"></span>
+                        </Link>
+                      </th>
+                      <th scope="col">
+                        Response Code
+                        <Link to="/">
+                          <span class="icon-Table-Sorting"></span>
+                        </Link>
+                      </th>
+                      <th scope="col">
+                        Reversal Flag
+                        <Link to="/">
+                          <span class="icon-Table-Sorting"></span>
+                        </Link>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>SVCB0001</td>
+                      <td>01/02/2022, 06:35:00 PM</td>
+                      <td>459115XXXXXX5716</td>
+                      <td>203218001138</td>
+                      <td>6100.00</td>
+                      <td>00</td>
+                      <td>N</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div className="w-100 table-responsive">
+                <p className="fontWeight-600 colorBlack unmatchedModalHeading">
+                  Network Details
+                </p>
+                <table className="table table-striped table-hover table-borderless align-middle">
+                  <thead>
+                    <tr>
+                      <th scope="col">
+                        Terminal ID
+                        <Link to="/">
+                          <span class="icon-Table-Sorting"></span>
+                        </Link>
+                      </th>
+                      <th scope="col">
+                        Txn Date & Time
+                        <Link to="/">
+                          <span class="icon-Table-Sorting"></span>
+                        </Link>
+                      </th>
+                      <th scope="col">
+                        Card No.
+                        <Link to="/">
+                          <span class="icon-Table-Sorting"></span>
+                        </Link>
+                      </th>
+                      <th scope="col">
+                        Reference No.
+                        <Link to="/">
+                          <span class="icon-Table-Sorting"></span>
+                        </Link>
+                      </th>
+                      <th scope="col">
+                        Txn Amount
+                        <Link to="/">
+                          <span class="icon-Table-Sorting"></span>
+                        </Link>
+                      </th>
+                      <th scope="col">
+                        Response Code
+                        <Link to="/">
+                          <span class="icon-Table-Sorting"></span>
+                        </Link>
+                      </th>
+                      <th scope="col">
+                        Reversal Flag
+                        <Link to="/">
+                          <span class="icon-Table-Sorting"></span>
+                        </Link>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>SVCB0001</td>
+                      <td>01/02/2022, 06:35:00 PM</td>
+                      <td>459115XXXXXX5716</td>
+                      <td>203218001138</td>
+                      <td>6100.00</td>
+                      <td>00</td>
+                      <td>N</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div className="w-100 table-responsive">
+                <p className="fontWeight-600 colorBlack unmatchedModalHeading">
+                  GL Details
+                </p>
+                <table className="table table-striped table-hover table-borderless align-middle">
+                  <thead>
+                    <tr>
+                      <th scope="col">
+                        Terminal ID
+                        <Link to="/">
+                          <span class="icon-Table-Sorting"></span>
+                        </Link>
+                      </th>
+                      <th scope="col">
+                        Txn Date & Time
+                        <Link to="/">
+                          <span class="icon-Table-Sorting"></span>
+                        </Link>
+                      </th>
+                      <th scope="col">
+                        Card No.
+                        <Link to="/">
+                          <span class="icon-Table-Sorting"></span>
+                        </Link>
+                      </th>
+                      <th scope="col">
+                        Reference No.
+                        <Link to="/">
+                          <span class="icon-Table-Sorting"></span>
+                        </Link>
+                      </th>
+                      <th scope="col">
+                        Txn Amount
+                        <Link to="/">
+                          <span class="icon-Table-Sorting"></span>
+                        </Link>
+                      </th>
+                      <th scope="col">
+                        Response Code
+                        <Link to="/">
+                          <span class="icon-Table-Sorting"></span>
+                        </Link>
+                      </th>
+                      <th scope="col">
+                        Reversal Flag
+                        <Link to="/">
+                          <span class="icon-Table-Sorting"></span>
+                        </Link>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td colSpan="7">
+                        <em>No record(s) found...</em>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </Modal.Body>
+          </Modal>
+        )}
       </div>
     </div>
   );
