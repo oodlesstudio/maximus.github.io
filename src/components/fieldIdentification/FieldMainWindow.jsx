@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Select from "react-select";
-import { Tooltip } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "react-datepicker/dist/react-datepicker.css";
 
@@ -12,11 +11,6 @@ const options = [
 ];
 
 const FieldMainWindow = () => {
-  const [selectedOption, setSelectedOption] = useState(null);
-
-  const [resetFilters, setResetFilters] = useState(false);
-  const [saveFilters, setSaveFilters] = useState(false);
-
   // Select Error
   const [clientName, setClientName] = useState(false);
   const changeClientName = () => setClientName(true);
@@ -29,22 +23,6 @@ const FieldMainWindow = () => {
 
   const [modType, setModType] = useState(false);
   const changeModType = () => setModType(true);
-
-  // Tooltip
-  const renderTooltip = (props) => (
-    <Tooltip id="button-tooltip" {...props}>
-      Export to pdf
-    </Tooltip>
-  );
-
-  const renderTooltipExcel = (props) => (
-    <Tooltip id="button-tooltip" {...props}>
-      Export to excel
-    </Tooltip>
-  );
-
-  //   Date Calendar
-  const [startDate, setStartDate] = useState(new Date());
 
   return (
     <div className="configLeft identificationContainer">
@@ -161,7 +139,7 @@ const FieldMainWindow = () => {
                 <div className="clientNameSelect col">
                   <label htmlFor="clientName">Client Name</label>
                   <Select
-                    defaultValue={selectedOption}
+                    defaultValue={clientName}
                     onChange={() => {
                       setClientName();
                       changeClientName();
@@ -180,7 +158,7 @@ const FieldMainWindow = () => {
                 <div className="clientNameSelect col">
                   <label htmlFor="channelType">Channel Type</label>
                   <Select
-                    defaultValue={selectedOption}
+                    defaultValue={channelType}
                     onChange={() => {
                       setChannelType();
                       changeChannelType();
@@ -199,7 +177,7 @@ const FieldMainWindow = () => {
                 <div className="clientNameSelect col">
                   <label htmlFor="clientName">Mode Type</label>
                   <Select
-                    defaultValue={selectedOption}
+                    defaultValue={modType}
                     onChange={() => {
                       setModType();
                       changeModType();
@@ -218,7 +196,7 @@ const FieldMainWindow = () => {
                 <div className="clientNameSelect col">
                   <label htmlFor="logType">Txn Type</label>
                   <Select
-                    defaultValue={selectedOption}
+                    defaultValue={logType}
                     onChange={() => {
                       setLogType();
                       changeLogType();
@@ -314,7 +292,7 @@ const FieldMainWindow = () => {
             <div className="clientNameSelect col">
               <label htmlFor="channelType">Reversal Entry</label>
               <Select
-                defaultValue={selectedOption}
+                defaultValue={channelType}
                 onChange={() => {
                   setChannelType();
                   changeChannelType();
@@ -519,7 +497,7 @@ const FieldMainWindow = () => {
             <div className="clientNameSelect col">
               <label htmlFor="txnAmountDecimal">Txn Amount’s Decimal</label>
               <Select
-                defaultValue={selectedOption}
+                defaultValue={modType}
                 onChange={() => {
                   setModType();
                   changeModType();
@@ -533,7 +511,7 @@ const FieldMainWindow = () => {
                 <p className="text-danger font-size9">Enter a correct input</p>
               )}
             </div>
-            
+
             <div className="clientNameSelect col">
               <label htmlFor="officeCode">Offile Code</label>
               <input
@@ -544,7 +522,6 @@ const FieldMainWindow = () => {
                 className="inputTextBox"
               />
             </div>
-
           </div>
 
           <div className="text-center btnsBtm">
