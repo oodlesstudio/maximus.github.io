@@ -99,6 +99,7 @@ a {
   --table-striped-color: #f5f9ff;
   --table-hover-color: #e1ecff;
   --drop-file-color: #5C5C5C;
+  --color-disabled: #F2F2F2;
 }
 [data-theme="light"] {
   /* Colors Light Theme */

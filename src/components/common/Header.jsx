@@ -63,6 +63,12 @@ const Header = () => {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
+  // Change Theme Modals
+  const [siteConfiguration, setSiteConfiguration] = useState(false);
+  const [openDefaultModal, setOpenDefaultModal] = useState(false);
+  const [openLightModal, setOpenLightModal] = useState(false);
+  const [openDarkModal, setOpenDarkModal] = useState(false);
+
   // Settings Popover
   const popover = (
     <Popover id="popover-basic" className="headerSettingsPopover">
@@ -71,11 +77,7 @@ const Header = () => {
           <li>
             <button
               className="fontSize14"
-              // onClick={() => setSiteConfiguration(!siteConfiguration)}
-              onClick={() => {
-                setSiteConfiguration(!siteConfiguration);
-                this.hidePopover();
-              }}
+              onClick={() => {setSiteConfiguration(!siteConfiguration); document.body.click()}}
             >
               Site Configuration
             </button>
@@ -83,7 +85,7 @@ const Header = () => {
           <li>
             <button
               className="fontSize14"
-              onClick={() => setOpenDefaultModal(!openDefaultModal)}
+              onClick={() => {setOpenDefaultModal(!openDefaultModal); document.body.click()}}
             >
               Default Theme
             </button>
@@ -91,7 +93,7 @@ const Header = () => {
           <li>
             <button
               className="fontSize14"
-              onClick={() => setOpenLightModal(!openLightModal)}
+              onClick={() => {setOpenLightModal(!openLightModal); document.body.click()}}
             >
               Light Theme
             </button>
@@ -100,7 +102,7 @@ const Header = () => {
             <button
               className="fontSize14"
               style={{ border: "none" }}
-              onClick={() => setOpenDarkModal(!openDarkModal)}
+              onClick={() => {setOpenDarkModal(!openDarkModal); document.body.click()}}
             >
               Dark Theme
             </button>
@@ -109,12 +111,6 @@ const Header = () => {
       </Popover.Body>
     </Popover>
   );
-
-  // Change Theme Modals
-  const [siteConfiguration, setSiteConfiguration] = useState(false);
-  const [openDefaultModal, setOpenDefaultModal] = useState(false);
-  const [openLightModal, setOpenLightModal] = useState(false);
-  const [openDarkModal, setOpenDarkModal] = useState(false);
 
   // Change Theme
   const dispatch = useDispatch();
