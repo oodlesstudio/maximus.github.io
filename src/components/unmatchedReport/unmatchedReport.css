@@ -1,4 +1,4 @@
-.cursorPointer{
+.cursorPointer {
   cursor: pointer;
 }
 .unmatchedContainer {
@@ -133,16 +133,16 @@
 }
 
 /* Table Modal */
-.unmatchedTableModal .modal-dialog{
+.unmatchedTableModal .modal-dialog {
   max-width: 1060px;
 }
-.unmatchedTableModal .modal-content{
+.unmatchedTableModal .modal-content {
   width: 100%;
 }
-.unmatchedTableModal .modal-body{
+.unmatchedTableModal .modal-body {
   padding: 0 12px 16px;
 }
-.unmatchedTableModal .unmatchedModalHeading{
+.unmatchedTableModal .unmatchedModalHeading {
   margin: 16px 0 8px;
 }
 .unmatchedTableModal .table {
@@ -187,10 +187,10 @@
   text-align: center;
 }
 @media (max-width: 768px) {
-  .unmatchedTableModal .modal-dialog{
+  .unmatchedTableModal .modal-dialog {
     max-width: 95%;
   }
   .unmatchedTableModal .table {
-width: 1012px;
+    width: 1012px;
   }
 }

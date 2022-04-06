@@ -54,7 +54,6 @@
 }
 .headerSideMenu .sideBar {
   border: none;
-  height: 100%;
 }
 .headerSideMenu .offcanvas-body {
   padding: 0;
@@ -261,7 +260,6 @@
 /* Side Bar */
 .sideBar {
   width: 216px;
-  min-height: calc(100vh - 82px);
   background-color: var(--sidebar-color);
   padding: 8px;
   position: relative;
@@ -339,6 +337,10 @@
 .sideBar .accordion-button:not(.collapsed)::after {
   transform: rotate(-90deg);
 }
+.sideBar .hideArrowIcon .accordion-button::after {
+display: none;
+}
+
 
 /* SidebarSmall */
 .sidebarSmall {
@@ -412,6 +414,11 @@
   }
   .headerSideMenu .offcanvas-body .sideBar {
     display: block;
+  }
+}
+@media (min-width: 768px) {
+  .sideBar {
+    min-height: calc(100vh - 82px);
   }
 }
 

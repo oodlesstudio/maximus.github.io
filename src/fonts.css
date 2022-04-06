@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?iw103i');
-  src:  url('fonts/icomoon.eot?iw103i#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?iw103i') format('truetype'),
-    url('fonts/icomoon.woff?iw103i') format('woff'),
-    url('fonts/icomoon.svg?iw103i#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?m6fp3z');
+  src:  url('fonts/icomoon.eot?m6fp3z#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?m6fp3z') format('truetype'),
+    url('fonts/icomoon.woff?m6fp3z') format('woff'),
+    url('fonts/icomoon.svg?m6fp3z#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,6 +25,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-Hide:before {
+  content: "\e900";
+  color: var(--color-primary-default);
+}
 .icon-Dropdown-Arrow:before {
   content: "\e959";
   color: var(--color-primary-default);
@@ -383,7 +387,7 @@
   color: var(--color-primary-default);
 }
 .icon-Icon-NameAudit-Reports:before {
-  content: "\e900";
+  content: "\e903";
   color: var(--color-primary-default);
 }
 .icon-ThemeDefault:before {
@@ -391,7 +395,7 @@
   color: var(--color-primary-default);
 }
 .icon-Icon-NameCBR:before {
-  content: "\e901";
+  content: "\e904";
   color: var(--color-primary-default);
 }
 .icon-ThemeDefault1:before {
@@ -399,7 +403,7 @@
   color: var(--color-primary-default);
 }
 .icon-Icon-NameClient-Management:before {
-  content: "\e902";
+  content: "\e905";
   color: var(--color-primary-default);
 }
 .icon-ThemeDefault2:before {
@@ -407,7 +411,7 @@
   color: var(--color-primary-default);
 }
 .icon-Icon-NameConfiguration:before {
-  content: "\e903";
+  content: "\e906";
   color: var(--color-primary-default);
 }
 .icon-ThemeDefault3:before {
@@ -415,7 +419,7 @@
   color: var(--color-primary-default);
 }
 .icon-Icon-NameDaily-Reports:before {
-  content: "\e904";
+  content: "\e907";
   color: var(--color-primary-default);
 }
 .icon-ThemeDefault4:before {
@@ -423,7 +427,7 @@
   color: var(--color-primary-default);
 }
 .icon-Icon-NameEOD-Reports:before {
-  content: "\e905";
+  content: "\e908";
   color: var(--color-primary-default);
 }
 .icon-ThemeDefault5:before {
@@ -431,7 +435,7 @@
   color: var(--color-primary-default);
 }
 .icon-Icon-NameException-Reports:before {
-  content: "\e906";
+  content: "\e909";
   color: var(--color-primary-default);
 }
 .icon-ThemeDefault6:before {
@@ -439,7 +443,7 @@
   color: var(--color-primary-default);
 }
 .icon-Icon-NameFraud-Reports:before {
-  content: "\e907";
+  content: "\e90a";
   color: var(--color-primary-default);
 }
 .icon-ThemeDefault7:before {
@@ -447,7 +451,7 @@
   color: var(--color-primary-default);
 }
 .icon-Icon-NameHome:before {
-  content: "\e908";
+  content: "\e90b";
   color: var(--color-primary-default);
 }
 .icon-ThemeDefault8:before {
@@ -455,7 +459,7 @@
   color: var(--color-primary-default);
 }
 .icon-Icon-NameImport-Logs:before {
-  content: "\e909";
+  content: "\e90c";
   color: var(--color-primary-default);
 }
 .icon-ThemeDefault9:before {
@@ -463,7 +467,7 @@
   color: var(--color-primary-default);
 }
 .icon-Icon-NameMIS-Reports:before {
-  content: "\e90a";
+  content: "\e90d";
   color: var(--color-primary-default);
 }
 .icon-ThemeDefault10:before {
@@ -471,7 +475,7 @@
   color: var(--color-primary-default);
 }
 .icon-Icon-NameRun-Recon:before {
-  content: "\e90b";
+  content: "\e961";
   color: var(--color-primary-default);
 }
 .icon-ThemeDefault11:before {
@@ -479,7 +483,7 @@
   color: var(--color-primary-default);
 }
 .icon-Icon-NameSearch:before {
-  content: "\e90c";
+  content: "\e962";
   color: var(--color-primary-default);
 }
 .icon-ThemeDefault12:before {
@@ -487,7 +491,7 @@
   color: var(--color-primary-default);
 }
 .icon-Icon-NameUser-Management:before {
-  content: "\e90d";
+  content: "\e963";
   color: var(--color-primary-default);
 }
 .icon-ThemeDefault13:before {
@@ -520,9 +524,4 @@
 .icon-Table-Sorting:before {
   content: "\e91e";
   color: #868686;
-}
-
-.icon-Hide:before {
-  content: "\e900";
-  color: #003087;
 }

@@ -100,6 +100,8 @@ a {
   --table-hover-color: #e1ecff;
   --drop-file-color: #5C5C5C;
   --color-disabled: #F2F2F2;
+  --accordion-bg-light: #f3f7ff;
+  --light-yellow-bg: #FFF9D7;
 }
 [data-theme="light"] {
   /* Colors Light Theme */
@@ -126,6 +128,7 @@ a {
   --table-hover-color: #ededed;
   --drop-file-color: #5C5C5C;
   --color-disabled: #F2F2F2;
+  --accordion-bg-light: #fdfdfd;
 }
 [data-theme="dark"] {
   /* Colors Dark Theme */
@@ -153,6 +156,8 @@ a {
   --table-striped-color: #001336;
   --table-hover-color: #1e2759;
   --drop-file-color: rgba(255, 255, 255, 0.6);
+  --color-disabled: #1c1f2b;
+  --accordion-bg-light: #000d26;
 }
 
 /* Font Sizes */
@@ -186,6 +191,10 @@ a {
   font-size: var(--font-size16);
   color: var(--color-black);
   line-height: 1.21;
+}
+.fontSize16 {
+  font-size: var(--font-size16);
+  color: var(--color-black);
 }
 
 .font-size9{

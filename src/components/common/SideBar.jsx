@@ -7,11 +7,10 @@ const SideBar = (props) => {
   const activeLink = (href) => {
     if (href === path) {
       return {
-        color: "#6CA994",
+        backgroundColor: "var(--color-secondary-light-defaut)"
       };
     } else {
       return {
-        color: "#000000",
       };
     }
   };
@@ -20,86 +19,24 @@ const SideBar = (props) => {
     <div className="sideBar">
       <div className="accordion" id="accordionExample">
         {/* Home */}
-        <div className="accordion-item" style={activeLink("/about-us")}>
-          <h2 className="accordion-header" id="headingHome">
-            <button
-              className="accordion-button collapsed"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#collapseHome"
-              aria-expanded="false"
-              aria-controls="collapseHome"
-            >
+        <div className="accordion-item">
+          <h2 className="accordion-header hideArrowIcon" id="headingHome">
+            <button className="accordion-button collapsed" type="button">
               <span class="icon-Icon-NameHome sidebarIconSize"></span>
               <span className="fontSize14 ms-2">Home</span>
             </button>
           </h2>
-          <div
-            id="collapseHome"
-            className="accordion-collapse collapse"
-            aria-labelledby="headingHome"
-            data-bs-parent="#accordionExample"
-          >
-            <div className="accordion-body">
-              <ul className="subMenu">
-                <li>
-                  <Link to="/">
-                    <span className="subMenuLeft">
-                      <span class="icon-Icon"></span>
-                    </span>
-                    <span className="subMenuRight">File Configuration</span>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/">
-                    <span className="subMenuLeft">
-                      <span class="icon-Icon"></span>
-                    </span>
-                    <span className="subMenuRight">
-                      Field Identification Config
-                    </span>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/">
-                    <span className="subMenuLeft">
-                      <span class="icon-Icon"></span>
-                    </span>
-                    <span className="subMenuRight">Matching Rule Config</span>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/">
-                    <span className="subMenuLeft">
-                      <span class="icon-Icon"></span>
-                    </span>
-                    <span className="subMenuRight">Force Sattlement</span>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/">
-                    <span className="subMenuLeft">
-                      <span class="icon-Icon"></span>
-                    </span>
-                    <span className="subMenuRight">
-                      Force Sattlement Rule Configuration
-                    </span>
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </div>
         </div>
 
         {/* Client Management */}
         <div className="accordion-item">
           <h2 className="accordion-header" id="headingOne">
             <button
-              className="accordion-button"
+              className="accordion-button collapsed"
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#collapseOne"
-              aria-expanded="true"
+              aria-expanded="false"
               aria-controls="collapseOne"
             >
               <span class="icon-Icon-NameClient-Management sidebarIconSize"></span>
@@ -108,7 +45,7 @@ const SideBar = (props) => {
           </h2>
           <div
             id="collapseOne"
-            className="accordion-collapse collapse show"
+            className="accordion-collapse collapse"
             aria-labelledby="headingOne"
             data-bs-parent="#accordionExample"
           >
@@ -139,7 +76,7 @@ const SideBar = (props) => {
                   </Link>
                 </li>
                 <li>
-                  <Link to="/branch-terminal-registration">
+                  <Link to="/branch-terminal-registration" style={activeLink("/branch-terminal-registration")}>
                     <span className="subMenuLeft">
                       <span class="icon-Icon"></span>
                     </span>
@@ -229,7 +166,7 @@ const SideBar = (props) => {
             <div className="accordion-body">
               <ul className="subMenu">
                 <li>
-                  <Link to="/">
+                  <Link to="/" style={activeLink("/")}>
                     <span className="subMenuLeft">
                       <span class="icon-Icon"></span>
                     </span>
@@ -237,7 +174,7 @@ const SideBar = (props) => {
                   </Link>
                 </li>
                 <li>
-                  <Link to="/field-identification-config">
+                  <Link to="/field-identification-config" style={activeLink("/field-identification-config")}>
                     <span className="subMenuLeft">
                       <span class="icon-Icon"></span>
                     </span>
@@ -279,146 +216,22 @@ const SideBar = (props) => {
 
         {/* Import Logs */}
         <div className="accordion-item">
-          <h2 className="accordion-header" id="headingFour">
-            <button
-              className="accordion-button collapsed"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#collapseFour"
-              aria-expanded="false"
-              aria-controls="collapseFour"
-            >
+          <h2 className="accordion-header hideArrowIcon" id="headingFour">
+            <button className="accordion-button collapsed" type="button">
               <span class="icon-Icon-NameImport-Logs sidebarIconSize"></span>
               <span className="fontSize14 ms-2">Import Logs</span>
             </button>
           </h2>
-          <div
-            id="collapseFour"
-            className="accordion-collapse collapse"
-            aria-labelledby="headingFour"
-            data-bs-parent="#accordionExample"
-          >
-            <div className="accordion-body">
-              <ul className="subMenu">
-                <li>
-                  <Link to="/">
-                    <span className="subMenuLeft">
-                      <span class="icon-Icon"></span>
-                    </span>
-                    <span className="subMenuRight">File Configuration</span>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/">
-                    <span className="subMenuLeft">
-                      <span class="icon-Icon"></span>
-                    </span>
-                    <span className="subMenuRight">
-                      Field Identification Config
-                    </span>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/">
-                    <span className="subMenuLeft">
-                      <span class="icon-Icon"></span>
-                    </span>
-                    <span className="subMenuRight">Matching Rule Config</span>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/">
-                    <span className="subMenuLeft">
-                      <span class="icon-Icon"></span>
-                    </span>
-                    <span className="subMenuRight">Force Sattlement</span>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/">
-                    <span className="subMenuLeft">
-                      <span class="icon-Icon"></span>
-                    </span>
-                    <span className="subMenuRight">
-                      Force Sattlement Rule Configuration
-                    </span>
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </div>
         </div>
 
         {/* Run Recon */}
         <div className="accordion-item">
-          <h2 className="accordion-header" id="headingFive">
-            <button
-              className="accordion-button collapsed"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#collapseFive"
-              aria-expanded="false"
-              aria-controls="collapseFive"
-            >
+          <h2 className="accordion-header hideArrowIcon" id="headingFive">
+            <button className="accordion-button collapsed" type="button">
               <span class="icon-Icon-NameRun-Recon sidebarIconSize"></span>
               <span className="fontSize14 ms-2">Run Recon</span>
             </button>
           </h2>
-          <div
-            id="collapseFive"
-            className="accordion-collapse collapse"
-            aria-labelledby="headingFive"
-            data-bs-parent="#accordionExample"
-          >
-            <div className="accordion-body">
-              <ul className="subMenu">
-                <li>
-                  <Link to="/">
-                    <span className="subMenuLeft">
-                      <span class="icon-Icon"></span>
-                    </span>
-                    <span className="subMenuRight">File Configuration</span>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/">
-                    <span className="subMenuLeft">
-                      <span class="icon-Icon"></span>
-                    </span>
-                    <span className="subMenuRight">
-                      Field Identification Config
-                    </span>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/">
-                    <span className="subMenuLeft">
-                      <span class="icon-Icon"></span>
-                    </span>
-                    <span className="subMenuRight">Matching Rule Config</span>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/">
-                    <span className="subMenuLeft">
-                      <span class="icon-Icon"></span>
-                    </span>
-                    <span className="subMenuRight">Force Sattlement</span>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/">
-                    <span className="subMenuLeft">
-                      <span class="icon-Icon"></span>
-                    </span>
-                    <span className="subMenuRight">
-                      Force Sattlement Rule Configuration
-                    </span>
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </div>
         </div>
 
         {/* Daily Reports */}
@@ -445,7 +258,7 @@ const SideBar = (props) => {
             <div className="accordion-body">
               <ul className="subMenu">
                 <li>
-                  <Link to="/unmatched-txns-report">
+                  <Link to="/unmatched-txns-report" style={activeLink("/unmatched-txns-report")}>
                     <span className="subMenuLeft">
                       <span class="icon-Icon"></span>
                     </span>
@@ -721,7 +534,10 @@ const SideBar = (props) => {
             <div className="accordion-body">
               <ul className="subMenu">
                 <li>
-                  <Link to="/online-cbr-entry">
+                  <Link
+                    to="/online-cbr-entry"
+                    style={activeLink("/online-cbr-entry")}
+                  >
                     <span className="subMenuLeft">
                       <span class="icon-Icon"></span>
                     </span>

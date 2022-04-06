@@ -200,9 +200,6 @@
 ::-webkit-scrollbar {
   width: 3px;
 }
-/* ::-webkit-scrollbar:vertical {
-  display: none;
-} */
 ::-webkit-scrollbar:horizontal {
   height: 3px;
 }
@@ -213,6 +210,11 @@
 ::-webkit-scrollbar-track {
   border-radius: 50px;
   background-color: var(--color-background-default);
+}
+@media (max-width: 768px) {
+  ::-webkit-scrollbar:vertical {
+    display: none;
+  }
 }
 
 /* Select Box */

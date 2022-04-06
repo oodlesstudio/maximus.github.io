@@ -99,29 +99,7 @@ const FieldMainWindow = () => {
               aria-expanded="true"
               aria-controls="unmatchedFiltersCollapse"
             >
-              <svg
-                width="16"
-                height="auto"
-                viewBox="0 0 20 20"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M16.7411 9.34157C17.0863 9.79306 17.0863 10.4026 16.7411 10.8533C15.6539 12.2726 13.0455 15.1949 10.0001 15.1949C6.95475 15.1949 4.34631 12.2726 3.2591 10.8533C3.09116 10.6371 3 10.3712 3 10.0974C3 9.8237 3.09116 9.55775 3.2591 9.34157C4.34631 7.92229 6.95475 5 10.0001 5C13.0455 5 15.6539 7.92229 16.7411 9.34157V9.34157Z"
-                  stroke="#003087"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M10.0001 12.2823C11.2066 12.2823 12.1847 11.3042 12.1847 10.0977C12.1847 8.89117 11.2066 7.91309 10.0001 7.91309C8.79358 7.91309 7.81549 8.89117 7.81549 10.0977C7.81549 11.3042 8.79358 12.2823 10.0001 12.2823Z"
-                  stroke="#003087"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-
+              <span class="icon-Hide"></span>
               <span className="ms-1 fontSize12-m colorPrimaryDefault">
                 Show / Hide
               </span>
