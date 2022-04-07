@@ -232,12 +232,19 @@
 .clientNameSelect label span {
   color: var(--color-secondary-default);
 }
-.clientNameSelect .css-b62m3t-container {
+.clientNameSelect .css-b62m3t-container,
+.clientNameSelect .css-3iigni-container {
   height: 32px;
   font-size: var(--font-size14);
 }
 .clientNameSelect .css-1s2u09g-control {
   background-color: var(--border-box-bg);
+  border-color: var(--color-border-default);
+  min-height: inherit;
+  height: 32px;
+}
+.clientNameSelect .css-1insrsq-control{
+  background-color: var(--color-disabled);
   border-color: var(--color-border-default);
   min-height: inherit;
   height: 32px;
@@ -272,7 +279,8 @@
   letter-spacing: 0.02em;
   color: var(--color-black);
 }
-.clientNameSelect .css-1okebmr-indicatorSeparator {
+.clientNameSelect .css-1okebmr-indicatorSeparator,
+.clientNameSelect .css-109onse-indicatorSeparator {
   display: none;
 }
 .clientNameSelect .css-tj5bde-Svg {

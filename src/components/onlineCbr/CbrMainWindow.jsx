@@ -142,6 +142,7 @@ const CbrMainWindow = () => {
                     id="atmLocation"
                     classNamePrefix="reactSelectBox"
                     placeholder="Please select"
+                    isDisabled ={true}
                   />
                   {channelType && (
                     <p className="text-danger font-size9">
