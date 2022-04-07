@@ -127,6 +127,10 @@
   font-size: var(--font-size14);
   letter-spacing: 0.02em;
   color: var(--color-black);
+  position: relative;
+  background-image: url(../../images/common/calendar.svg);
+  background-repeat: no-repeat;
+  background-position: right 12px center;
 }
 .react-datepicker__day--outside-month {
   opacity: 30%;

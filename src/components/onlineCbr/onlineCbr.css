@@ -60,6 +60,13 @@
   font-size: var(--font-size16);
   color: var(--color-black);
 }
+.cbrContainer .cbrAccordionBottom .accordion-button::after {
+  background-image: url(../../images/common/accordionMinus.svg);
+}
+.cbrContainer .cbrAccordionBottom .accordion-button:not(.collapsed)::after {
+  background-image: url(../../images/common/accordionPlus.svg);
+  transform: inherit;
+}
 
 /* Table */
 .atmCountersTable .table {
@@ -96,13 +103,13 @@
   width: 20%;
 }
 /* Physical Cash */
-.cbrContainer .physicalCashBox .configSelectBoxTop .col{
-    flex: 1 0 0%;
-    width: inherit;
+.cbrContainer .physicalCashBox .configSelectBoxTop .col {
+  flex: 1 0 0%;
+  width: inherit;
 }
-.physicalCashHeading{
-    margin-top: 16px;
-    margin-bottom: 4px;
+.physicalCashHeading {
+  margin-top: 16px;
+  margin-bottom: 4px;
 }
 .cbrContainer .btnsBtm {
   margin-top: -4px;

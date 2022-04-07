@@ -338,9 +338,8 @@
   transform: rotate(-90deg);
 }
 .sideBar .hideArrowIcon .accordion-button::after {
-display: none;
+  display: none;
 }
-
 
 /* SidebarSmall */
 .sidebarSmall {
@@ -414,6 +413,7 @@ display: none;
   }
   .headerSideMenu .offcanvas-body .sideBar {
     display: block;
+    min-height: 100vh;
   }
 }
 @media (min-width: 768px) {

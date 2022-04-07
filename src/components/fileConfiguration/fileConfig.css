@@ -251,6 +251,9 @@
   min-height: inherit;
   height: 32px;
 }
+.clientNameSelect .css-26l3qy-menu {
+  margin: 0;
+}
 .clientNameSelect .css-319lph-ValueContainer {
   padding: 0 0 0 12px;
 }
