@@ -82,7 +82,7 @@ const Header = () => {
               Site Configuration
             </button>
           </li>
-          <li>
+          <li className={changeTheme.theme === "default" ? "active" : ""}>
             <button
               className="fontSize14"
               onClick={() => {setOpenDefaultModal(!openDefaultModal); document.body.click()}}
@@ -90,7 +90,7 @@ const Header = () => {
               Default Theme
             </button>
           </li>
-          <li>
+          <li className={changeTheme.theme === "light" ? "active" : ""}>
             <button
               className="fontSize14"
               onClick={() => {setOpenLightModal(!openLightModal); document.body.click()}}
@@ -98,7 +98,7 @@ const Header = () => {
               Light Theme
             </button>
           </li>
-          <li>
+          <li className={changeTheme.theme === "dark" ? "active" : ""}>
             <button
               className="fontSize14"
               style={{ border: "none" }}

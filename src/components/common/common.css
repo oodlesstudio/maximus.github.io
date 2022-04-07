@@ -70,7 +70,7 @@
 /* SettingsPopover */
 .headerSettingsPopover {
   border: none;
-  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.16);
+  box-shadow: var(--popover-box-shadow);
   border-radius: 4px;
   padding: 6px 0;
   width: 188px;
@@ -88,6 +88,7 @@
 .headerSettingsPopover ul li {
   list-style: none;
   padding: 0 12px;
+  cursor: pointer;
 }
 .headerSettingsPopover ul li button {
   border: none;
@@ -105,6 +106,12 @@
 .headerSettingsPopover ul li:hover {
   background-color: var(--color-secondary-light-defaut);
   transition: all 0.3s ease-in-out;
+}
+.headerSettingsPopover ul li.active {
+  background-color: var(--color-secondary-light-defaut);
+}
+.headerSettingsPopover ul li.active button {
+  border-bottom: none;
 }
 .headerSettingsPopover .popover-arrow::before {
   border: none;
@@ -182,7 +189,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: var(--color-light-blue);
+  background-color: var(--modal-body);
   padding: 24px 0 30px;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
@@ -313,6 +320,9 @@
   display: flex;
   align-items: center;
   padding: 6px;
+}
+.sideBar .accordion ul li a.activeTab {
+  background-color: var(--color-secondary-light-defaut);
 }
 .sideBar .accordion ul li a:hover {
   background-color: var(--color-secondary-light-defaut);
