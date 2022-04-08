@@ -20,6 +20,9 @@
   .sidebarOpened {
     width: 100%;
   }
+  .mainView{
+    min-height: 100vh;
+  }
 }
 
 /* Terminal CSS */
