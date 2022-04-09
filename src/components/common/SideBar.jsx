@@ -1,38 +1,41 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 
-const firstaccorLinks = ["/", "otherlink"];
+// const firstAccordionLink = ["/", "/field-identification-config"];
+// const secondAccordionLink = ["/branch-terminal-registration"];
+// const thirdAccordionLink = ["/unmatched-txns-report"];
+// const fourthAccordionLink = ["/online-cbr-entry"];
 
 const SideBar = (props) => {
   const path = useLocation().pathname;
 
-  const activeLink = (href) => {
-    if (href === path) {
+  const activeLink = (arr) => {
+    if (arr === path) {
       return "activeTab";
     } else {
       return "";
     }
   };
 
-  const activeBtnClass = (href) => {
-    if (href === path) {
+  const activeBtnClass = (arr) => {
+    if (arr === path) {
       return "accordion-button";
     } else {
       return "accordion-button collapsed";
     }
   };
-  const activeAriaExpand = (href) => {
-    if (href === path) {
+  const activeAriaExpand = (arr = []) => {
+    if (arr === path) {
       return "true";
     } else {
       return "false";
     }
   };
-  const activeAccordionBodyClass = (href) => {
-    if (href === path) {
+  const activeAccordionBodyClass = (arr) => {
+    if (arr === path) {
       return "accordion-collapse collapse show";
     } else {
-      return "accordion-collapse collapse";
+      return "accordion-collapse collapse ";
     }
   };
 
@@ -53,11 +56,11 @@ const SideBar = (props) => {
         <div className="accordion-item">
           <h2 className="accordion-header" id="headingOne">
             <button
-              className="accordion-button collapsed"
+              className={activeBtnClass("/branch-terminal-registration")}
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#collapseOne"
-              aria-expanded="false"
+              aria-expanded={activeAriaExpand("/branch-terminal-registration")}
               aria-controls="collapseOne"
             >
               <span class="icon-Icon-NameClient-Management sidebarIconSize"></span>
@@ -66,7 +69,9 @@ const SideBar = (props) => {
           </h2>
           <div
             id="collapseOne"
-            className="accordion-collapse collapse"
+            className={activeAccordionBodyClass(
+              "/branch-terminal-registration"
+            )}
             aria-labelledby="headingOne"
             data-bs-parent="#accordionExample"
           >
@@ -118,11 +123,11 @@ const SideBar = (props) => {
         <div className="accordion-item">
           <h2 className="accordion-header" id="headingTwo">
             <button
-              className="accordion-button collapsed"
+              className={activeBtnClass("/dummy-link")}
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#collapseTwo"
-              aria-expanded="false"
+              aria-expanded={activeAriaExpand("/dummy-link")}
               aria-controls="collapseTwo"
             >
               <span class="icon-Icon-NameUser-Management sidebarIconSize"></span>
@@ -131,7 +136,7 @@ const SideBar = (props) => {
           </h2>
           <div
             id="collapseTwo"
-            className="accordion-collapse collapse"
+            className={activeAccordionBodyClass("/dummy-link")}
             aria-labelledby="headingTwo"
             data-bs-parent="#accordionExample"
           >
@@ -170,7 +175,7 @@ const SideBar = (props) => {
         <div className="accordion-item">
           <h2 className="accordion-header" id="headingThree">
             <button
-              className={activeBtnClass(firstaccorLinks)}
+              className={activeBtnClass("/")}
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#collapseThree"
@@ -183,7 +188,7 @@ const SideBar = (props) => {
           </h2>
           <div
             id="collapseThree"
-            className={activeAccordionBodyClass(firstaccorLinks)}
+            className={activeAccordionBodyClass("/")}
             aria-labelledby="headingThree"
             data-bs-parent="#accordionExample"
           >
@@ -265,11 +270,11 @@ const SideBar = (props) => {
         <div className="accordion-item">
           <h2 className="accordion-header" id="headingSix">
             <button
-              className="accordion-button collapsed"
+              className={activeBtnClass("/unmatched-txns-report")}
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#collapseSix"
-              aria-expanded="false"
+              aria-expanded={activeAriaExpand("/unmatched-txns-report")}
               aria-controls="collapseSix"
             >
               <span class="icon-Icon-NameDaily-Reports sidebarIconSize"></span>
@@ -278,7 +283,7 @@ const SideBar = (props) => {
           </h2>
           <div
             id="collapseSix"
-            className="accordion-collapse collapse"
+            className={activeAccordionBodyClass("/unmatched-txns-report")}
             aria-labelledby="headingSix"
             data-bs-parent="#accordionExample"
           >
@@ -330,11 +335,11 @@ const SideBar = (props) => {
         <div className="accordion-item">
           <h2 className="accordion-header" id="headingSeven">
             <button
-              className="accordion-button collapsed"
+              className={activeBtnClass("/dummy-link")}
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#collapseSeven"
-              aria-expanded="false"
+              aria-expanded={activeAriaExpand("/dummy-link")}
               aria-controls="collapseSeven"
             >
               <span class="icon-Icon-NameMIS-Reports sidebarIconSize"></span>
@@ -343,7 +348,7 @@ const SideBar = (props) => {
           </h2>
           <div
             id="collapseSeven"
-            className="accordion-collapse collapse"
+            className={activeAccordionBodyClass("/dummy-link")}
             aria-labelledby="headingSeven"
             data-bs-parent="#accordionExample"
           >
@@ -452,11 +457,11 @@ const SideBar = (props) => {
         <div className="accordion-item">
           <h2 className="accordion-header" id="headingEight">
             <button
-              className="accordion-button collapsed"
+              className={activeBtnClass("/dummy-link")}
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#collapseEight"
-              aria-expanded="false"
+              aria-expanded={activeAriaExpand("/dummy-link")}
               aria-controls="collapseEight"
             >
               <span class="icon-Icon-NameAudit-Reports sidebarIconSize"></span>
@@ -465,7 +470,7 @@ const SideBar = (props) => {
           </h2>
           <div
             id="collapseEight"
-            className="accordion-collapse collapse"
+            className={activeAccordionBodyClass("/dummy-link")}
             aria-labelledby="headingEight"
             data-bs-parent="#accordionExample"
           >
@@ -544,11 +549,11 @@ const SideBar = (props) => {
         <div className="accordion-item">
           <h2 className="accordion-header" id="headingNine">
             <button
-              className="accordion-button collapsed"
+              className={activeBtnClass("/online-cbr-entry")}
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#collapseNine"
-              aria-expanded="false"
+              aria-expanded={activeAriaExpand("/online-cbr-entry")}
               aria-controls="collapseNine"
             >
               <span class="icon-Icon-NameCBR sidebarIconSize"></span>
@@ -557,7 +562,7 @@ const SideBar = (props) => {
           </h2>
           <div
             id="collapseNine"
-            className="accordion-collapse collapse"
+            className={activeAccordionBodyClass("/online-cbr-entry")}
             aria-labelledby="headingNine"
             data-bs-parent="#accordionExample"
           >
@@ -599,11 +604,11 @@ const SideBar = (props) => {
         <div className="accordion-item">
           <h2 className="accordion-header" id="headingTen">
             <button
-              className="accordion-button collapsed"
+              className={activeBtnClass("/dummy-link")}
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#collapseTen"
-              aria-expanded="false"
+              aria-expanded={activeAriaExpand("/dummy-link")}
               aria-controls="collapseTen"
             >
               <span class="icon-Icon-NameException-Reports sidebarIconSize"></span>
@@ -612,7 +617,7 @@ const SideBar = (props) => {
           </h2>
           <div
             id="collapseTen"
-            className="accordion-collapse collapse"
+            className={activeAccordionBodyClass("/dummy-link")}
             aria-labelledby="headingTen"
             data-bs-parent="#accordionExample"
           >
@@ -663,11 +668,11 @@ const SideBar = (props) => {
         <div className="accordion-item">
           <h2 className="accordion-header" id="headingEleven">
             <button
-              className="accordion-button collapsed"
+              className={activeBtnClass("/dummy-link")}
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#collapseEleven"
-              aria-expanded="false"
+              aria-expanded={activeAriaExpand("/dummy-link")}
               aria-controls="collapseEleven"
             >
               <span class="icon-Icon-NameEOD-Reports sidebarIconSize"></span>
@@ -676,7 +681,7 @@ const SideBar = (props) => {
           </h2>
           <div
             id="collapseEleven"
-            className="accordion-collapse collapse"
+            className={activeAccordionBodyClass("/dummy-link")}
             aria-labelledby="headingEleven"
             data-bs-parent="#accordionExample"
           >
@@ -711,11 +716,11 @@ const SideBar = (props) => {
         <div className="accordion-item">
           <h2 className="accordion-header" id="headingTwelve">
             <button
-              className="accordion-button collapsed"
+              className={activeBtnClass("/dummy-link")}
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#collapseTwelve"
-              aria-expanded="false"
+              aria-expanded={activeAriaExpand("/dummy-link")}
               aria-controls="collapseTwelve"
             >
               <span class="icon-Icon-NameFraud-Reports sidebarIconSize"></span>
@@ -724,7 +729,7 @@ const SideBar = (props) => {
           </h2>
           <div
             id="collapseTwelve"
-            className="accordion-collapse collapse"
+            className={activeAccordionBodyClass("/dummy-link")}
             aria-labelledby="headingTwelve"
             data-bs-parent="#accordionExample"
           >
@@ -789,11 +794,11 @@ const SideBar = (props) => {
         <div className="accordion-item">
           <h2 className="accordion-header" id="headingThirteen">
             <button
-              className="accordion-button collapsed"
+              className={activeBtnClass("/dummy-link")}
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#collapseThirteen"
-              aria-expanded="false"
+              aria-expanded={activeAriaExpand("/dummy-link")}
               aria-controls="collapseThirteen"
             >
               <span class="icon-Icon-NameSearch sidebarIconSize"></span>
@@ -802,7 +807,7 @@ const SideBar = (props) => {
           </h2>
           <div
             id="collapseThirteen"
-            className="accordion-collapse collapse"
+            className={activeAccordionBodyClass("/dummy-link")}
             aria-labelledby="headingThirteen"
             data-bs-parent="#accordionExample"
           >
