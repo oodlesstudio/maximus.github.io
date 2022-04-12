@@ -165,6 +165,7 @@
   font-weight: var(--font-weight-500);
   font-size: var(--font-size14);
   background-color: var(--color-secondary-light-defaut);
+  color: var(--color-black);
   height: 32px;
   padding: 0;
   padding-left: 14px;

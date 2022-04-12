@@ -134,6 +134,7 @@ a {
   --color-disabled: #f2f2f2;
   --disabled-text-color: #797979;
   --accordion-bg-light: #fdfdfd;
+  --light-yellow-bg: #fff9d7;
   --popover-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.16);
 }
 [data-theme="dark"] {
@@ -165,7 +166,8 @@ a {
   --drop-file-color: rgba(255, 255, 255, 0.6);
   --color-disabled: #505963;
   --disabled-text-color: #a7acb1;
-  --accordion-bg-light: #000d26;
+  --accordion-bg-light: #242b35;
+  --light-yellow-bg: #666341;
   --popover-box-shadow: 0px 4px 24px rgba(0, 0, 0, 1);
 }
 
