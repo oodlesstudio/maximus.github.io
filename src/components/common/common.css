@@ -337,7 +337,7 @@
 
 .sideBar .accordion-button::after {
   transform: rotate(0deg);
-  background-image: url(../../images/sidebar/chevron.svg);
+  background-image: url(../../images/common/chevron.svg);
 }
 .sideBar .accordion-button::after {
   background-size: 18px;
@@ -372,6 +372,9 @@
   justify-content: center;
   margin-bottom: 8px;
 }
+.sidebarSmall .sidebarSmallImg .sidebarIconSize{
+  padding: 11px;
+}
 .sidebarSmall .sidebarSmallImg:hover {
   background-color: var(--sidebar-accordion-bg);
   transition: all 0.3s ease-in-out;
@@ -388,6 +391,7 @@
 }
 .sidebarPopover .popover-body {
   padding: 0;
+  width: 190px;
 }
 .sidebarPopover ul {
   padding: 0;
