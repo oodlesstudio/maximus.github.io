@@ -243,6 +243,9 @@
   min-height: inherit;
   height: 32px;
 }
+.clientNameSelect .css-1s2u09g-control:hover {
+  border-color: var(--color-border-default);
+}
 .clientNameSelect .css-1insrsq-control{
   background-color: var(--color-disabled);
   border-color: var(--color-border-default);
@@ -257,12 +260,17 @@
 .clientNameSelect .css-1pahdxg-control {
   min-height: inherit;
   height: 32px;
+  box-shadow: none;
+  border-color: var(--color-border-default);
 }
 .clientNameSelect .css-26l3qy-menu {
   margin: 0;
 }
+.css-1pahdxg-control:hover {
+  border-color: var(--color-border-default) !important;
+}
 .clientNameSelect .css-319lph-ValueContainer {
-  padding: 0 0 0 12px;
+  padding: 0 0 0 10px;
 }
 .clientNameSelect .css-14el2xx-placeholder {
   margin: 0;
@@ -272,11 +280,15 @@
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  margin-left: 2px;
 }
 .clientNameSelect .css-6j8wv5-Input {
   margin: 0;
   padding: 0;
   letter-spacing: 0.02em;
+  color: var(--color-black);
+}
+.clientNameSelect .css-qc6sy-singleValue {
   color: var(--color-black);
 }
 .clientNameSelect .css-1okebmr-indicatorSeparator,
@@ -294,6 +306,9 @@
 }
 .reactSelectBox__option:hover {
   background-color: var(--selectbox-hover);
+}
+.reactSelectBox__option--is-focused {
+  background-color: var(--selectbox-hover) !important;
 }
 .configFormatEntities {
   width: 115px;

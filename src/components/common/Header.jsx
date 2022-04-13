@@ -27,27 +27,6 @@ const options = [
 ];
 
 const Header = () => {
-  // Change Logo
-  const changeTheme = useSelector((state) => {
-    return state.themeChangeReducer;
-  });
-
-  const [logoLeft, setLogoLeft] = useState(Logo);
-  const [logoRight, setLogoRight] = useState(LogoRight);
-
-  useEffect(() => {
-    if (changeTheme.theme === "default") {
-      setLogoLeft(Logo);
-      setLogoRight(LogoRight);
-    } else if (changeTheme.theme === "light") {
-      setLogoLeft(Logo);
-      setLogoRight(LogoRight);
-    } else if (changeTheme.theme === "dark") {
-      setLogoLeft(LogoDark);
-      setLogoRight(LogoDarkRight);
-    }
-  }, [changeTheme]);
-
   // Select Menu
   const [selectedOption, setSelectedOption] = useState(null);
 
@@ -69,48 +48,26 @@ const Header = () => {
   const [openLightModal, setOpenLightModal] = useState(false);
   const [openDarkModal, setOpenDarkModal] = useState(false);
 
-  // Settings Popover
-  const popover = (
-    <Popover id="popover-basic" className="headerSettingsPopover">
-      <Popover.Body>
-        <ul>
-          <li>
-            <button
-              className="fontSize14"
-              onClick={() => {setSiteConfiguration(!siteConfiguration); document.body.click()}}
-            >
-              Site Configuration
-            </button>
-          </li>
-          <li className={changeTheme.theme === "default" ? "active" : ""}>
-            <button
-              className="fontSize14"
-              onClick={() => {setOpenDefaultModal(!openDefaultModal); document.body.click()}}
-            >
-              Default Theme
-            </button>
-          </li>
-          <li className={changeTheme.theme === "light" ? "active" : ""}>
-            <button
-              className="fontSize14"
-              onClick={() => {setOpenLightModal(!openLightModal); document.body.click()}}
-            >
-              Light Theme
-            </button>
-          </li>
-          <li className={changeTheme.theme === "dark" ? "active" : ""}>
-            <button
-              className="fontSize14"
-              style={{ border: "none" }}
-              onClick={() => {setOpenDarkModal(!openDarkModal); document.body.click()}}
-            >
-              Dark Theme
-            </button>
-          </li>
-        </ul>
-      </Popover.Body>
-    </Popover>
-  );
+  // Change Logo
+  const changeTheme = useSelector((state) => {
+    return state.themeChangeReducer;
+  });
+
+  const [logoLeft, setLogoLeft] = useState(Logo);
+  const [logoRight, setLogoRight] = useState(LogoRight);
+
+  useEffect(() => {
+    if (changeTheme.theme === "default") {
+      setLogoLeft(Logo);
+      setLogoRight(LogoRight);
+    } else if (changeTheme.theme === "light") {
+      setLogoLeft(Logo);
+      setLogoRight(LogoRight);
+    } else if (changeTheme.theme === "dark") {
+      setLogoLeft(LogoDark);
+      setLogoRight(LogoDarkRight);
+    }
+  }, [changeTheme]);
 
   // Change Theme
   const dispatch = useDispatch();
@@ -123,6 +80,61 @@ const Header = () => {
   const changeThemeDark = () => {
     dispatch(changeThemes("dark"));
   };
+
+    // Settings Popover
+    const popover = (
+      <Popover id="popover-basic" className="headerSettingsPopover">
+        <Popover.Body>
+          <ul>
+            <li>
+              <button
+                className="fontSize14"
+                onClick={() => {
+                  setSiteConfiguration(!siteConfiguration);
+                  document.body.click();
+                }}
+              >
+                Site Configuration
+              </button>
+            </li>
+            <li className={changeTheme.theme === "default" ? "active" : ""}>
+              <button
+                className="fontSize14"
+                onClick={() => {
+                  setOpenDefaultModal(!openDefaultModal);
+                  document.body.click();
+                }}
+              >
+                Default Theme
+              </button>
+            </li>
+            <li className={changeTheme.theme === "light" ? "active" : ""}>
+              <button
+                className="fontSize14"
+                onClick={() => {
+                  setOpenLightModal(!openLightModal);
+                  document.body.click();
+                }}
+              >
+                Light Theme
+              </button>
+            </li>
+            <li className={changeTheme.theme === "dark" ? "active" : ""}>
+              <button
+                className="fontSize14"
+                style={{ border: "none" }}
+                onClick={() => {
+                  setOpenDarkModal(!openDarkModal);
+                  document.body.click();
+                }}
+              >
+                Dark Theme
+              </button>
+            </li>
+          </ul>
+        </Popover.Body>
+      </Popover>
+    );
 
   return (
     <div className="headerBox w-100 d-flex align-items-center">

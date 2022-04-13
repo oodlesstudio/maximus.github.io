@@ -2,6 +2,15 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Popover, OverlayTrigger } from "react-bootstrap";
 
+
+const activeLink = (arr) => {
+  // if (arr === path) {
+  //   return "activeTab";
+  // } else {
+  //   return "";
+  // }
+};
+
 const clientManagement = (
   <Popover id="popover-basic" className="sidebarPopover">
     <Popover.Body>
@@ -31,7 +40,10 @@ const clientManagement = (
           </Link>
         </li>
         <li>
-          <Link to="/branch-terminal-registration">
+          <Link
+            to="/branch-terminal-registration"
+            className={activeLink("/branch-terminal-registration")}
+          >
             <span className="subMenuLeft">
               <span class="icon-Icon"></span>
             </span>
@@ -81,7 +93,7 @@ const configuration = (
     <Popover.Body>
       <ul className="subMenu">
         <li>
-          <Link to="/">
+          <Link to="/" className={activeLink("/")}>
             <span className="subMenuLeft">
               <span class="icon-Icon"></span>
             </span>
@@ -89,7 +101,10 @@ const configuration = (
           </Link>
         </li>
         <li>
-          <Link to="/field-identification-config">
+          <Link
+            to="/field-identification-config"
+            className={activeLink("/field-identification-config")}
+          >
             <span className="subMenuLeft">
               <span class="icon-Icon"></span>
             </span>
@@ -132,7 +147,10 @@ const dailyReports = (
     <Popover.Body>
       <ul className="subMenu">
         <li>
-          <Link to="/unmatched-txns-report">
+          <Link
+            to="/unmatched-txns-report"
+            className={activeLink("/unmatched-txns-report")}
+          >
             <span className="subMenuLeft">
               <span class="icon-Icon"></span>
             </span>
@@ -335,7 +353,10 @@ const cbr = (
     <Popover.Body>
       <ul className="subMenu">
         <li>
-          <Link to="/online-cbr-entry">
+          <Link
+            to="/online-cbr-entry"
+            className={activeLink("/online-cbr-entry")}
+          >
             <span className="subMenuLeft">
               <span class="icon-Icon"></span>
             </span>

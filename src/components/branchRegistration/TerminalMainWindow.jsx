@@ -99,12 +99,12 @@ const TerminalMainWindow = () => {
       <div className="tableBorderBox terminalWhiteBox d-flex justify-content-center w-100">
         <div className="terminalSmallBox">
           <div className="clientNameSelect">
-            <label htmlFor="clientName">Client Name</label>
+            <label htmlFor="clientNameRegistration">Client Name</label>
             <Select
               defaultValue={selectedOption}
               onChange={setSelectedOption}
               options={options}
-              id="clientName"
+              id="clientNameRegistration"
               classNamePrefix="reactSelectBox"
               placeholder="Sri Vasavamba Cooperative Urban Bank Ltd"
             />

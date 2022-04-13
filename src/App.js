@@ -1,9 +1,9 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import "./App.css";
 import "./fonts.css";
 import Router from "./constants/Router";
-import useLocalStorage from "use-local-storage";
+// import useLocalStorage from "use-local-storage";
 
 function App() {
   const changeTheme = useSelector((state) => {
@@ -11,10 +11,14 @@ function App() {
   });
 
   const defaultDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-  const [theme, setTheme] = useLocalStorage(
+  const [theme, setTheme] = useState(
     "theme",
     defaultDark ? "dark" : "default"
   );
+  // const [theme, setTheme] = useLocalStorage(
+  //   "theme",
+  //   defaultDark ? "dark" : "default"
+  // );
 
   useEffect(() => {
     setTheme(changeTheme.theme);

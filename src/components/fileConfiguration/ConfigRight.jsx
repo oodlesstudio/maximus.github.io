@@ -132,7 +132,7 @@ const ConfigRight = () => {
 
       <div className="configBottomHeadingBoxRight configBottomHeadingBox"></div>
 
-      {/* Config Left Bottom */}
+      {/*  Bottom Content */}
       <div className="configLeftBottom configRightBottom">
         <div className="tableBorderBox">
           <div className="d-flex justify-content-between align-items-center mt-3 mb-2">

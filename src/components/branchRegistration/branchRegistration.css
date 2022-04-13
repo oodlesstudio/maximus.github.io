@@ -65,6 +65,9 @@
 .terminalWhiteBox .kTMxfv {
   display: none;
 }
+.clientNameSelect .css-tj5bde-Svg{
+  display: inherit;
+}
 .terminalWhiteBox .browseFileText {
   top: 50%;
   left: 50%;

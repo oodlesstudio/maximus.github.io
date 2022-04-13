@@ -61,10 +61,10 @@
   color: var(--color-black);
 }
 .cbrContainer .cbrAccordionBottom .accordion-button::after {
-  background-image: url(../../images/common/accordionMinus.svg);
+  background-image: url(../../images/common/accordionPlus.svg);
 }
 .cbrContainer .cbrAccordionBottom .accordion-button:not(.collapsed)::after {
-  background-image: url(../../images/common/accordionPlus.svg);
+  background-image: url(../../images/common/accordionMinus.svg);
   transform: inherit;
 }
 

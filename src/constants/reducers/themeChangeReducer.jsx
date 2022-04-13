@@ -1,10 +1,10 @@
-const initialState = [{
-    "themeChangeReducer": {
-        "theme": "default"
-    }
-}];
+const initialState = [
+  {
+    theme: "default",
+  },
+];
 
-const themeChangeReducer= (state = initialState, action) => {
+const themeChangeReducer = (state = initialState, action) => {
   switch (action.type) {
     case "themeChange":
       return {
