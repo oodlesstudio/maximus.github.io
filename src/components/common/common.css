@@ -509,6 +509,10 @@
     display: block;
     min-height: 100vh;
   }
+
+            .sidebarOpened {
+              width: 100% !important;
+            }
 }
 
 @media (min-width: 768px) {
@@ -544,4 +548,10 @@
 .footerBox {
   height: 32px;
   background-color: var(--footer-bg);
+}
+
+/* modal Center */
+.centeredModal .modal-dialog-centered {
+  margin: 0 auto;
+  justify-content: center;
 }

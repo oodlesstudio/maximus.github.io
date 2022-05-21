@@ -81,60 +81,60 @@ const Header = () => {
     dispatch(changeThemes("dark"));
   };
 
-    // Settings Popover
-    const popover = (
-      <Popover id="popover-basic" className="headerSettingsPopover">
-        <Popover.Body>
-          <ul>
-            <li>
-              <button
-                className="fontSize14"
-                onClick={() => {
-                  setSiteConfiguration(!siteConfiguration);
-                  document.body.click();
-                }}
-              >
-                Site Configuration
-              </button>
-            </li>
-            <li className={changeTheme.theme === "default" ? "active" : ""}>
-              <button
-                className="fontSize14"
-                onClick={() => {
-                  setOpenDefaultModal(!openDefaultModal);
-                  document.body.click();
-                }}
-              >
-                Default Theme
-              </button>
-            </li>
-            <li className={changeTheme.theme === "light" ? "active" : ""}>
-              <button
-                className="fontSize14"
-                onClick={() => {
-                  setOpenLightModal(!openLightModal);
-                  document.body.click();
-                }}
-              >
-                Light Theme
-              </button>
-            </li>
-            <li className={changeTheme.theme === "dark" ? "active" : ""}>
-              <button
-                className="fontSize14"
-                style={{ border: "none" }}
-                onClick={() => {
-                  setOpenDarkModal(!openDarkModal);
-                  document.body.click();
-                }}
-              >
-                Dark Theme
-              </button>
-            </li>
-          </ul>
-        </Popover.Body>
-      </Popover>
-    );
+  // Settings Popover
+  const popover = (
+    <Popover id="popover-basic" className="headerSettingsPopover">
+      <Popover.Body>
+        <ul>
+          <li>
+            <button
+              className="fontSize14"
+              onClick={() => {
+                setSiteConfiguration(!siteConfiguration);
+                document.body.click();
+              }}
+            >
+              Site Configuration
+            </button>
+          </li>
+          <li className={changeTheme.theme === "default" ? "active" : ""}>
+            <button
+              className="fontSize14"
+              onClick={() => {
+                setOpenDefaultModal(!openDefaultModal);
+                document.body.click();
+              }}
+            >
+              Default Theme
+            </button>
+          </li>
+          <li className={changeTheme.theme === "light" ? "active" : ""}>
+            <button
+              className="fontSize14"
+              onClick={() => {
+                setOpenLightModal(!openLightModal);
+                document.body.click();
+              }}
+            >
+              Light Theme
+            </button>
+          </li>
+          <li className={changeTheme.theme === "dark" ? "active" : ""}>
+            <button
+              className="fontSize14"
+              style={{ border: "none" }}
+              onClick={() => {
+                setOpenDarkModal(!openDarkModal);
+                document.body.click();
+              }}
+            >
+              Dark Theme
+            </button>
+          </li>
+        </ul>
+      </Popover.Body>
+    </Popover>
+  );
 
   return (
     <div className="headerBox w-100 d-flex align-items-center">
@@ -209,7 +209,7 @@ const Header = () => {
             show={siteConfiguration}
             onHide={() => setSiteConfiguration(!siteConfiguration)}
             centered
-            className="defaultThemeModal siteConfigurationModal"
+            className="defaultThemeModal centeredModal siteConfigurationModal"
           >
             <Modal.Header closeButton>
               <Modal.Title className="fontSize16-sm letterSpacing-2">
@@ -239,7 +239,7 @@ const Header = () => {
             show={openDefaultModal}
             onHide={() => setOpenDefaultModal(!openDefaultModal)}
             centered
-            className="defaultThemeModal"
+            className="defaultThemeModal centeredModal"
           >
             <Modal.Header closeButton>
               <Modal.Title className="fontSize16-sm letterSpacing-2">
@@ -272,7 +272,7 @@ const Header = () => {
             show={openLightModal}
             onHide={() => setOpenLightModal(!openLightModal)}
             centered
-            className="defaultThemeModal"
+            className="defaultThemeModal centeredModal"
           >
             <Modal.Header closeButton>
               <Modal.Title className="fontSize16-sm letterSpacing-2">
@@ -309,7 +309,7 @@ const Header = () => {
           <Modal
             show={openDarkModal}
             onHide={() => setOpenDarkModal(!openDarkModal)}
-            className="defaultThemeModal"
+            className="defaultThemeModal centeredModal"
             centered
           >
             <Modal.Header closeButton>
