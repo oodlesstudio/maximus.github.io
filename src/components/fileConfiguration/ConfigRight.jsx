@@ -51,9 +51,9 @@ const ConfigRight = () => {
                 <path
                   d="M3 4L7 8L3 12"
                   stroke="black"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                   className="breadcrumbIcon"
                 />
               </svg>
@@ -73,9 +73,9 @@ const ConfigRight = () => {
                 <path
                   d="M3 4L7 8L3 12"
                   stroke="black"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                   className="breadcrumbIcon"
                 />
               </svg>
@@ -198,7 +198,7 @@ const ConfigRight = () => {
                     />
                     <div
                       id="validationServerUsernameFeedback"
-                      class="invalid-feedback text-start mt-0 font-size9"
+                      className="invalid-feedback text-start mt-0 font-size9"
                     >
                       Enter a correct input
                     </div>
@@ -367,7 +367,7 @@ const ConfigRight = () => {
                       aria-label="Previous"
                     >
                       <span
-                        class="icon-Dropdown-Arrow"
+                        className="icon-Dropdown-Arrow"
                         style={{ fontSize: "12px" }}
                       ></span>
                       <span>First</span>
@@ -406,7 +406,7 @@ const ConfigRight = () => {
                     >
                       <span>Last</span>
                       <span
-                        class="icon-Dropdown-Arrow-1"
+                        className="icon-Dropdown-Arrow-1"
                         style={{ fontSize: "12px" }}
                       ></span>
                     </a>

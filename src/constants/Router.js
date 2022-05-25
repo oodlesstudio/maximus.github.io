@@ -12,13 +12,14 @@ const router = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<FileConfiguration />} />
-        <Route path="/branch-terminal-registration" element={<BranchTerminalRegistration />} />
-        <Route path="/unmatched-txns-report" element={<UnmatchedTxnsReport />} />
+        <Route path="/client-management/branch-terminal-registration" element={<BranchTerminalRegistration />} />
+        <Route path="/daily-report/unmatched-txns-report" element={<UnmatchedTxnsReport />} />
         <Route
-          path="/field-identification-config"
+          path="/configuration/field-identification-config"
           element={<FieldIdentificationConfig />}
         />
-        <Route path="/online-cbr-entry" element={<OnlineCbrEntry />} />
+        <Route path="/configuration/file-configuration" element={<FileConfiguration />} />
+        <Route path="/cbr/online-cbr-entry" element={<OnlineCbrEntry />} />
       </Routes>
     </BrowserRouter>
   );

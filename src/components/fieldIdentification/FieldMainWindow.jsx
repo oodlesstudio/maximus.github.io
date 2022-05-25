@@ -48,9 +48,9 @@ const FieldMainWindow = () => {
               <path
                 d="M3 4L7 8L3 12"
                 stroke="black"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
                 className="breadcrumbIcon"
               />
             </svg>
@@ -70,9 +70,9 @@ const FieldMainWindow = () => {
               <path
                 d="M3 4L7 8L3 12"
                 stroke="black"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
                 className="breadcrumbIcon"
               />
             </svg>
@@ -84,8 +84,8 @@ const FieldMainWindow = () => {
       </div>
 
       {/* Top Content */}
-      <div class="accordion" id="unmatchedFilters">
-        <div class="accordion-item">
+      <div className="accordion" id="unmatchedFilters">
+        <div className="accordion-item">
           <div
             className="d-flex justify-content-between align-items-center configLeftFilters accordion-header"
             id="unmatchedFiltersHeading"
@@ -99,7 +99,7 @@ const FieldMainWindow = () => {
               aria-expanded="true"
               aria-controls="unmatchedFiltersCollapse"
             >
-              <span class="icon-Hide"></span>
+              <span className="icon-Hide"></span>
               <span className="ms-1 fontSize12-m colorPrimaryDefault">
                 Show / Hide
               </span>
@@ -107,11 +107,11 @@ const FieldMainWindow = () => {
           </div>
           <div
             id="unmatchedFiltersCollapse"
-            class="accordion-collapse collapse show"
+            className="accordion-collapse collapse show"
             aria-labelledby="unmatchedFiltersHeading"
             data-bs-parent="#unmatchedFilters"
           >
-            <div class="accordion-body">
+            <div className="accordion-body">
               <div className="hrGreyLine"></div>
               <div className="configSelectBoxTop row">
                 <div className="clientNameSelect col">

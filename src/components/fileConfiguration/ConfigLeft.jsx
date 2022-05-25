@@ -91,9 +91,9 @@ const ConfigLeft = () => {
                 <path
                   d="M3 4L7 8L3 12"
                   stroke="black"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                   className="breadcrumbIcon"
                 />
               </svg>
@@ -113,9 +113,9 @@ const ConfigLeft = () => {
                 <path
                   d="M3 4L7 8L3 12"
                   stroke="black"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                   className="breadcrumbIcon"
                 />
               </svg>
@@ -135,7 +135,7 @@ const ConfigLeft = () => {
                 className="allFiltersBtn btn p-0 d-flex justify-content-center align-items-center"
                 onClick={() => setShowFilters(true)}
               >
-                <span class="icon-Filter-Icon"></span>
+                <span className="icon-Filter-Icon"></span>
                 <span className="ms-1 fontSize12-m colorPrimaryDefault">
                   All Filters
                 </span>
@@ -259,14 +259,14 @@ const ConfigLeft = () => {
                       <path
                         d="M6 6L18 18"
                         stroke="#004BBD"
-                        stroke-width="1.8"
-                        stroke-linecap="round"
+                        strokeWidth="1.8"
+                        strokeLinecap="round"
                       />
                       <path
                         d="M18 6L6 18"
                         stroke="#004BBD"
-                        stroke-width="1.8"
-                        stroke-linecap="round"
+                        strokeWidth="1.8"
+                        strokeLinecap="round"
                       />
                     </svg>
                   </span>
@@ -491,7 +491,7 @@ const ConfigLeft = () => {
             </div>
             <div className="d-flex">
               <div className="form-group has-search">
-                <span class="icon-Search form-control-feedback"></span>
+                <span className="icon-Search form-control-feedback"></span>
                 <input
                   type="text"
                   className="form-control"
@@ -528,43 +528,43 @@ const ConfigLeft = () => {
                   <th scope="col" style={{ width: "22%" }}>
                     Client Name
                     <Link to="/">
-                      <span class="icon-Table-Sorting"></span>
+                      <span className="icon-Table-Sorting"></span>
                     </Link>
                   </th>
                   <th scope="col">
                     Log Type
                     <Link to="/">
-                      <span class="icon-Table-Sorting"></span>
+                      <span className="icon-Table-Sorting"></span>
                     </Link>
                   </th>
                   <th scope="col">
                     Channel
                     <Link to="/">
-                      <span class="icon-Table-Sorting"></span>
+                      <span className="icon-Table-Sorting"></span>
                     </Link>
                   </th>
                   <th scope="col">
                     File Prefix
                     <Link to="/">
-                      <span class="icon-Table-Sorting"></span>
+                      <span className="icon-Table-Sorting"></span>
                     </Link>
                   </th>
                   <th scope="col">
                     Mode
                     <Link to="/">
-                      <span class="icon-Table-Sorting"></span>
+                      <span className="icon-Table-Sorting"></span>
                     </Link>
                   </th>
                   <th scope="col">
                     Vendor Name
                     <Link to="/">
-                      <span class="icon-Table-Sorting"></span>
+                      <span className="icon-Table-Sorting"></span>
                     </Link>
                   </th>
                   <th scope="col">
                     File Extention
                     <Link to="/">
-                      <span class="icon-Table-Sorting"></span>
+                      <span className="icon-Table-Sorting"></span>
                     </Link>
                   </th>
                 </tr>
@@ -715,7 +715,7 @@ const ConfigLeft = () => {
                       aria-label="Previous"
                     >
                       <span
-                        class="icon-Dropdown-Arrow"
+                        className="icon-Dropdown-Arrow"
                         style={{ fontSize: "12px" }}
                       ></span>
                       <span>First</span>
@@ -754,7 +754,7 @@ const ConfigLeft = () => {
                     >
                       <span>Last</span>
                       <span
-                        class="icon-Dropdown-Arrow-1"
+                        className="icon-Dropdown-Arrow-1"
                         style={{ fontSize: "12px" }}
                       ></span>
                     </Link>

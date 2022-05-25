@@ -1,13 +1,29 @@
 import React from "react";
-import { Link, useLocation } from "react-router-dom";
-
-// const firstAccordionLink = ["/", "/field-identification-config"];
-// const secondAccordionLink = ["/branch-terminal-registration"];
-// const thirdAccordionLink = ["/unmatched-txns-report"];
-// const fourthAccordionLink = ["/online-cbr-entry"];
+import { Link, useLocation, matchPath } from "react-router-dom";
 
 const SideBar = (props) => {
   const path = useLocation().pathname;
+
+  // client-management Path
+  let clientManagementPath = matchPath("/client-management/*", path);
+  if (clientManagementPath) {
+    clientManagementPath = clientManagementPath.pathnameBase;
+  }
+  // dailyReport Path
+  let dailyReportPath = matchPath("/daily-report/*", path);
+  if (dailyReportPath) {
+    dailyReportPath = dailyReportPath.pathnameBase;
+  }
+  // /configuration Path
+  let configurationPath = matchPath("/configuration/*", path);
+  if (configurationPath) {
+    configurationPath = configurationPath.pathnameBase;
+  }
+  // cbr Path
+  let cbrPath = matchPath("/cbr/*", path);
+  if (cbrPath) {
+    cbrPath = cbrPath.pathnameBase;
+  }
 
   const activeLink = (arr) => {
     if (arr === path) {
@@ -20,6 +36,18 @@ const SideBar = (props) => {
   const activeBtnClass = (arr) => {
     if (arr === path) {
       return "accordion-button";
+    }
+    if (arr === clientManagementPath) {
+      return "accordion-button";
+    }
+    if (arr === dailyReportPath) {
+      return "accordion-button";
+    }
+    if (arr === configurationPath) {
+      return "accordion-button";
+    }
+    if (arr === cbrPath) {
+      return "accordion-button";
     } else {
       return "accordion-button collapsed";
     }
@@ -27,12 +55,36 @@ const SideBar = (props) => {
   const activeAriaExpand = (arr = []) => {
     if (arr === path) {
       return "true";
+    }
+    if (arr === clientManagementPath) {
+      return "true";
+    }
+    if (arr === dailyReportPath) {
+      return "true";
+    }
+    if (arr === configurationPath) {
+      return "true";
+    }
+    if (arr === cbrPath) {
+      return "true";
     } else {
       return "false";
     }
   };
   const activeAccordionBodyClass = (arr) => {
     if (arr === path) {
+      return "accordion-collapse collapse show";
+    }
+    if (arr === clientManagementPath) {
+      return "accordion-collapse collapse show";
+    }
+    if (arr === dailyReportPath) {
+      return "accordion-collapse collapse show";
+    }
+    if (arr === configurationPath) {
+      return "accordion-collapse collapse show";
+    }
+    if (arr === cbrPath) {
       return "accordion-collapse collapse show";
     } else {
       return "accordion-collapse collapse ";
@@ -46,7 +98,7 @@ const SideBar = (props) => {
         <div className="accordion-item">
           <h2 className="accordion-header hideArrowIcon" id="headingHome">
             <button className="accordion-button collapsed" type="button">
-              <span class="icon-Icon-NameHome sidebarIconSize"></span>
+              <span className="icon-Icon-NameHome sidebarIconSize"></span>
               <span className="fontSize14 ms-2">Home</span>
             </button>
           </h2>
@@ -56,22 +108,20 @@ const SideBar = (props) => {
         <div className="accordion-item">
           <h2 className="accordion-header" id="headingOne">
             <button
-              className={activeBtnClass("/branch-terminal-registration")}
+              className={activeBtnClass("/client-management")}
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#collapseOne"
-              aria-expanded={activeAriaExpand("/branch-terminal-registration")}
+              aria-expanded={activeAriaExpand("/client-management")}
               aria-controls="collapseOne"
             >
-              <span class="icon-Icon-NameClient-Management sidebarIconSize"></span>
+              <span className="icon-Icon-NameClient-Management sidebarIconSize"></span>
               <span className="fontSize14 ms-2">Client Management</span>
             </button>
           </h2>
           <div
             id="collapseOne"
-            className={activeAccordionBodyClass(
-              "/branch-terminal-registration"
-            )}
+            className={activeAccordionBodyClass("/client-management")}
             aria-labelledby="headingOne"
             data-bs-parent="#accordionExample"
           >
@@ -80,7 +130,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-                      <span class="icon-Icon"></span>
+                      <span className="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">Currency Registration</span>
                   </Link>
@@ -88,7 +138,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-                      <span class="icon-Icon"></span>
+                      <span className="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">Vendor Registration</span>
                   </Link>
@@ -96,18 +146,20 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-                      <span class="icon-Icon"></span>
+                      <span className="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">Client Registration</span>
                   </Link>
                 </li>
                 <li>
                   <Link
-                    to="/branch-terminal-registration"
-                    className={activeLink("/branch-terminal-registration")}
+                    to="/client-management/branch-terminal-registration"
+                    className={activeLink(
+                      "/client-management/branch-terminal-registration"
+                    )}
                   >
                     <span className="subMenuLeft">
-                      <span class="icon-Icon"></span>
+                      <span className="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">
                       Branch/Terminal Registration
@@ -130,7 +182,7 @@ const SideBar = (props) => {
               aria-expanded={activeAriaExpand("/dummy-link")}
               aria-controls="collapseTwo"
             >
-              <span class="icon-Icon-NameUser-Management sidebarIconSize"></span>
+              <span className="icon-Icon-NameUser-Management sidebarIconSize"></span>
               <span className="fontSize14 ms-2">User Management</span>
             </button>
           </h2>
@@ -145,7 +197,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-                      <span class="icon-Icon"></span>
+                      <span className="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">Role Creation</span>
                   </Link>
@@ -153,7 +205,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-                      <span class="icon-Icon"></span>
+                      <span className="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">User Details</span>
                   </Link>
@@ -161,7 +213,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-                      <span class="icon-Icon"></span>
+                      <span className="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">Change Password</span>
                   </Link>
@@ -175,40 +227,45 @@ const SideBar = (props) => {
         <div className="accordion-item">
           <h2 className="accordion-header" id="headingThree">
             <button
-              className={activeBtnClass("/")}
+              className={activeBtnClass("/configuration")}
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#collapseThree"
-              aria-expanded={activeAriaExpand("/")}
+              aria-expanded={activeAriaExpand("/configuration")}
               aria-controls="collapseThree"
             >
-              <span class="icon-Icon-NameConfiguration sidebarIconSize"></span>
+              <span className="icon-Icon-NameConfiguration sidebarIconSize"></span>
               <span className="fontSize14 ms-2">Configuration</span>
             </button>
           </h2>
           <div
             id="collapseThree"
-            className={activeAccordionBodyClass("/")}
+            className={activeAccordionBodyClass("/configuration")}
             aria-labelledby="headingThree"
             data-bs-parent="#accordionExample"
           >
             <div className="accordion-body">
               <ul className="subMenu">
                 <li>
-                  <Link to="/" className={activeLink("/")}>
+                  <Link
+                    to="/configuration/file-configuration"
+                    className={activeLink("/configuration/file-configuration")}
+                  >
                     <span className="subMenuLeft">
-                      <span class="icon-Icon"></span>
+                      <span className="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">File Configuration</span>
                   </Link>
                 </li>
                 <li>
                   <Link
-                    to="/field-identification-config"
-                    className={activeLink("/field-identification-config")}
+                    to="/configuration/field-identification-config"
+                    className={activeLink(
+                      "/configuration/field-identification-config"
+                    )}
                   >
                     <span className="subMenuLeft">
-                      <span class="icon-Icon"></span>
+                      <span className="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">
                       Field Identification Config
@@ -218,7 +275,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-                      <span class="icon-Icon"></span>
+                      <span className="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">Matching Rule Config</span>
                   </Link>
@@ -226,7 +283,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-                      <span class="icon-Icon"></span>
+                      <span className="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">Force Sattlement</span>
                   </Link>
@@ -234,7 +291,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-                      <span class="icon-Icon"></span>
+                      <span className="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">
                       Force Sattlement Rule Configuration
@@ -250,7 +307,7 @@ const SideBar = (props) => {
         <div className="accordion-item">
           <h2 className="accordion-header hideArrowIcon" id="headingFour">
             <button className="accordion-button collapsed" type="button">
-              <span class="icon-Icon-NameImport-Logs sidebarIconSize"></span>
+              <span className="icon-Icon-NameImport-Logs sidebarIconSize"></span>
               <span className="fontSize14 ms-2">Import Logs</span>
             </button>
           </h2>
@@ -260,7 +317,7 @@ const SideBar = (props) => {
         <div className="accordion-item">
           <h2 className="accordion-header hideArrowIcon" id="headingFive">
             <button className="accordion-button collapsed" type="button">
-              <span class="icon-Icon-NameRun-Recon sidebarIconSize"></span>
+              <span className="icon-Icon-NameRun-Recon sidebarIconSize"></span>
               <span className="fontSize14 ms-2">Run Recon</span>
             </button>
           </h2>
@@ -270,20 +327,20 @@ const SideBar = (props) => {
         <div className="accordion-item">
           <h2 className="accordion-header" id="headingSix">
             <button
-              className={activeBtnClass("/unmatched-txns-report")}
+              className={activeBtnClass("/daily-report")}
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#collapseSix"
-              aria-expanded={activeAriaExpand("/unmatched-txns-report")}
+              aria-expanded={activeAriaExpand("/daily-report")}
               aria-controls="collapseSix"
             >
-              <span class="icon-Icon-NameDaily-Reports sidebarIconSize"></span>
+              <span className="icon-Icon-NameDaily-Reports sidebarIconSize"></span>
               <span className="fontSize14 ms-2">Daily Reports</span>
             </button>
           </h2>
           <div
             id="collapseSix"
-            className={activeAccordionBodyClass("/unmatched-txns-report")}
+            className={activeAccordionBodyClass("/daily-report")}
             aria-labelledby="headingSix"
             data-bs-parent="#accordionExample"
           >
@@ -291,11 +348,13 @@ const SideBar = (props) => {
               <ul className="subMenu">
                 <li>
                   <Link
-                    to="/unmatched-txns-report"
-                    className={activeLink("/unmatched-txns-report")}
+                    to="/daily-report/unmatched-txns-report"
+                    className={activeLink(
+                      "/daily-report/unmatched-txns-report"
+                    )}
                   >
                     <span className="subMenuLeft">
-                      <span class="icon-Icon"></span>
+                      <span className="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">Unmatched Txns Report</span>
                   </Link>
@@ -303,7 +362,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-                      <span class="icon-Icon"></span>
+                      <span className="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">Matched Txns Report</span>
                   </Link>
@@ -311,7 +370,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-                      <span class="icon-Icon"></span>
+                      <span className="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">Reversal Txns Report</span>
                   </Link>
@@ -319,7 +378,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-                      <span class="icon-Icon"></span>
+                      <span className="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">
                       Successful Amount Count Report
@@ -342,7 +401,7 @@ const SideBar = (props) => {
               aria-expanded={activeAriaExpand("/dummy-link")}
               aria-controls="collapseSeven"
             >
-              <span class="icon-Icon-NameMIS-Reports sidebarIconSize"></span>
+              <span className="icon-Icon-NameMIS-Reports sidebarIconSize"></span>
               <span className="fontSize14 ms-2">MIS Reports</span>
             </button>
           </h2>
@@ -357,7 +416,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-                      <span class="icon-Icon"></span>
+                      <span className="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">
                       Dispence Summary Report
@@ -367,7 +426,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-                      <span class="icon-Icon"></span>
+                      <span className="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">
                       Txns Count Summary Report
@@ -377,7 +436,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-                      <span class="icon-Icon"></span>
+                      <span className="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">
                       Reason Wise Summary Report
@@ -387,7 +446,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-                      <span class="icon-Icon"></span>
+                      <span className="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">TTUM Report</span>
                   </Link>
@@ -395,7 +454,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-                      <span class="icon-Icon"></span>
+                      <span className="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">POS TTUM Report</span>
                   </Link>
@@ -403,7 +462,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-                      <span class="icon-Icon"></span>
+                      <span className="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">
                       Pending Acquirer Entry Report
@@ -413,7 +472,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-                      <span class="icon-Icon"></span>
+                      <span className="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">
                       Tips & Surcharge Report
@@ -423,7 +482,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-                      <span class="icon-Icon"></span>
+                      <span className="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">
                       Issuer Transaction TTUM Report
@@ -433,7 +492,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-                      <span class="icon-Icon"></span>
+                      <span className="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">
                       Refund & Cashback TTUM Report
@@ -443,7 +502,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-                      <span class="icon-Icon"></span>
+                      <span className="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">IMPS TTUM Report</span>
                   </Link>
@@ -464,7 +523,7 @@ const SideBar = (props) => {
               aria-expanded={activeAriaExpand("/dummy-link")}
               aria-controls="collapseEight"
             >
-              <span class="icon-Icon-NameAudit-Reports sidebarIconSize"></span>
+              <span className="icon-Icon-NameAudit-Reports sidebarIconSize"></span>
               <span className="fontSize14 ms-2">Audit Reports</span>
             </button>
           </h2>
@@ -479,7 +538,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-                      <span class="icon-Icon"></span>
+                      <span className="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">Sattled Txns Report</span>
                   </Link>
@@ -487,7 +546,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-                      <span class="icon-Icon"></span>
+                      <span className="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">ATM Charges Report</span>
                   </Link>
@@ -495,7 +554,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-                      <span class="icon-Icon"></span>
+                      <span className="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">Bank Sattlement Report</span>
                   </Link>
@@ -503,7 +562,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-                      <span class="icon-Icon"></span>
+                      <span className="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">POS Sattlement Report</span>
                   </Link>
@@ -511,7 +570,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-                      <span class="icon-Icon"></span>
+                      <span className="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">Refund Txns Report</span>
                   </Link>
@@ -519,7 +578,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-                      <span class="icon-Icon"></span>
+                      <span className="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">IMPS Sattlement Report</span>
                   </Link>
@@ -527,7 +586,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-                      <span class="icon-Icon"></span>
+                      <span className="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">UPI Sattlement Report</span>
                   </Link>
@@ -535,7 +594,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-                      <span class="icon-Icon"></span>
+                      <span className="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">NPCI Bulk Upload</span>
                   </Link>
@@ -549,20 +608,20 @@ const SideBar = (props) => {
         <div className="accordion-item">
           <h2 className="accordion-header" id="headingNine">
             <button
-              className={activeBtnClass("/online-cbr-entry")}
+              className={activeBtnClass("/cbr")}
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#collapseNine"
-              aria-expanded={activeAriaExpand("/online-cbr-entry")}
+              aria-expanded={activeAriaExpand("/cbr")}
               aria-controls="collapseNine"
             >
-              <span class="icon-Icon-NameCBR sidebarIconSize"></span>
+              <span className="icon-Icon-NameCBR sidebarIconSize"></span>
               <span className="fontSize14 ms-2">CBR</span>
             </button>
           </h2>
           <div
             id="collapseNine"
-            className={activeAccordionBodyClass("/online-cbr-entry")}
+            className={activeAccordionBodyClass("/cbr")}
             aria-labelledby="headingNine"
             data-bs-parent="#accordionExample"
           >
@@ -570,11 +629,11 @@ const SideBar = (props) => {
               <ul className="subMenu">
                 <li>
                   <Link
-                    to="/online-cbr-entry"
-                    className={activeLink("/online-cbr-entry")}
+                    to="/cbr/online-cbr-entry"
+                    className={activeLink("/cbr/online-cbr-entry")}
                   >
                     <span className="subMenuLeft">
-                      <span class="icon-Icon"></span>
+                      <span className="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">Online CBR Entry</span>
                   </Link>
@@ -582,7 +641,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-                      <span class="icon-Icon"></span>
+                      <span className="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">CBR Report</span>
                   </Link>
@@ -590,7 +649,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-                      <span class="icon-Icon"></span>
+                      <span className="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">C3R Report</span>
                   </Link>
@@ -611,7 +670,7 @@ const SideBar = (props) => {
               aria-expanded={activeAriaExpand("/dummy-link")}
               aria-controls="collapseTen"
             >
-              <span class="icon-Icon-NameException-Reports sidebarIconSize"></span>
+              <span className="icon-Icon-NameException-Reports sidebarIconSize"></span>
               <span className="fontSize14 ms-2">Exception Reports</span>
             </button>
           </h2>
@@ -626,7 +685,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-                      <span class="icon-Icon"></span>
+                      <span className="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">
                       Duplicate Transaction Report
@@ -636,7 +695,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-                      <span class="icon-Icon"></span>
+                      <span className="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">
                       CBR Opening / Closeing Balance
@@ -646,7 +705,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-                      <span class="icon-Icon"></span>
+                      <span className="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">CBR vs EJ Report</span>
                   </Link>
@@ -654,7 +713,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-                      <span class="icon-Icon"></span>
+                      <span className="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">EJ Transaction Report</span>
                   </Link>
@@ -675,7 +734,7 @@ const SideBar = (props) => {
               aria-expanded={activeAriaExpand("/dummy-link")}
               aria-controls="collapseEleven"
             >
-              <span class="icon-Icon-NameEOD-Reports sidebarIconSize"></span>
+              <span className="icon-Icon-NameEOD-Reports sidebarIconSize"></span>
               <span className="fontSize14 ms-2">EOD Reports</span>
             </button>
           </h2>
@@ -690,7 +749,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-                      <span class="icon-Icon"></span>
+                      <span className="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">
                       Day Wise ATM Status Report
@@ -700,7 +759,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-                      <span class="icon-Icon"></span>
+                      <span className="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">
                       Terminal Wise Status Report
@@ -723,7 +782,7 @@ const SideBar = (props) => {
               aria-expanded={activeAriaExpand("/dummy-link")}
               aria-controls="collapseTwelve"
             >
-              <span class="icon-Icon-NameFraud-Reports sidebarIconSize"></span>
+              <span className="icon-Icon-NameFraud-Reports sidebarIconSize"></span>
               <span className="fontSize14 ms-2">Fraud Reports</span>
             </button>
           </h2>
@@ -738,7 +797,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-                      <span class="icon-Icon"></span>
+                      <span className="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">
                       Multiple Txn With Same Terminal
@@ -748,7 +807,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-                      <span class="icon-Icon"></span>
+                      <span className="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">
                       Multiple Txn with Diff. Terminal
@@ -758,7 +817,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-                      <span class="icon-Icon"></span>
+                      <span className="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">
                       Frequent Reversal Report
@@ -768,7 +827,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-                      <span class="icon-Icon"></span>
+                      <span className="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">
                       Midnight Transaction Report
@@ -778,7 +837,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-                      <span class="icon-Icon"></span>
+                      <span className="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">
                       High Value Transaction Reports
@@ -801,7 +860,7 @@ const SideBar = (props) => {
               aria-expanded={activeAriaExpand("/dummy-link")}
               aria-controls="collapseThirteen"
             >
-              <span class="icon-Icon-NameSearch sidebarIconSize"></span>
+              <span className="icon-Icon-NameSearch sidebarIconSize"></span>
               <span className="fontSize14 ms-2">Search</span>
             </button>
           </h2>
@@ -816,7 +875,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-                      <span class="icon-Icon"></span>
+                      <span className="icon-Icon"></span>
                     </span>
                     <span className="subMenuRight">Search By RRN</span>
                   </Link>

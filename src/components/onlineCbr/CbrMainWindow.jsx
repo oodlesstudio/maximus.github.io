@@ -45,9 +45,9 @@ const CbrMainWindow = () => {
               <path
                 d="M3 4L7 8L3 12"
                 stroke="black"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
                 className="breadcrumbIcon"
               />
             </svg>
@@ -67,9 +67,9 @@ const CbrMainWindow = () => {
               <path
                 d="M3 4L7 8L3 12"
                 stroke="black"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
                 className="breadcrumbIcon"
               />
             </svg>
@@ -96,7 +96,7 @@ const CbrMainWindow = () => {
               aria-expanded="true"
               aria-controls="cbrCollapseOne"
             >
-              <span class="icon-Hide"></span>
+              <span className="icon-Hide"></span>
               <span className="ms-1 fontSize12-m colorPrimaryDefault">
                 Show / Hide
               </span>
@@ -142,7 +142,7 @@ const CbrMainWindow = () => {
                     id="atmLocation"
                     classNamePrefix="reactSelectBox"
                     placeholder="Please select"
-                    isDisabled ={true}
+                    isDisabled={true}
                   />
                   {channelType && (
                     <p className="text-danger font-size9">
@@ -524,7 +524,7 @@ const CbrMainWindow = () => {
                       <th scope="row" className="ps-0">
                         Total Dump Counter
                       </th>
-                      <td colspan="5" className="pe-0">
+                      <td colSpan="5" className="pe-0">
                         <input
                           type="number"
                           name=""
@@ -1019,7 +1019,7 @@ const CbrMainWindow = () => {
                       <th scope="row" className="ps-0">
                         GL Balance
                       </th>
-                      <td colspan="4" className="pe-0">
+                      <td colSpan="4" className="pe-0">
                         <input
                           type="number"
                           name=""
@@ -1034,7 +1034,7 @@ const CbrMainWindow = () => {
                       <th scope="row" className="ps-0">
                         CD Balance
                       </th>
-                      <td colspan="4" className="pe-0">
+                      <td colSpan="4" className="pe-0">
                         <input
                           type="number"
                           name=""

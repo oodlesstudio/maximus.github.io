@@ -79,9 +79,9 @@ const UnmatchedMainWindow = () => {
               <path
                 d="M3 4L7 8L3 12"
                 stroke="black"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
                 className="breadcrumbIcon"
               />
             </svg>
@@ -101,9 +101,9 @@ const UnmatchedMainWindow = () => {
               <path
                 d="M3 4L7 8L3 12"
                 stroke="black"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
                 className="breadcrumbIcon"
               />
             </svg>
@@ -116,8 +116,8 @@ const UnmatchedMainWindow = () => {
 
       {/* Config Left Top */}
       <div className="configLeftTop">
-        <div class="accordion" id="unmatchedFilters">
-          <div class="accordion-item">
+        <div className="accordion" id="unmatchedFilters">
+          <div className="accordion-item">
             <div
               className="d-flex justify-content-between align-items-center configLeftFilters accordion-header"
               id="unmatchedFiltersHeading"
@@ -131,7 +131,7 @@ const UnmatchedMainWindow = () => {
                 aria-expanded="true"
                 aria-controls="unmatchedFiltersCollapse"
               >
-                <span class="icon-Hide"></span>
+                <span className="icon-Hide"></span>
                 <span className="ms-1 fontSize12-m colorPrimaryDefault">
                   Show / Hide
                 </span>
@@ -139,11 +139,11 @@ const UnmatchedMainWindow = () => {
             </div>
             <div
               id="unmatchedFiltersCollapse"
-              class="accordion-collapse collapse show"
+              className="accordion-collapse collapse show"
               aria-labelledby="unmatchedFiltersHeading"
               data-bs-parent="#unmatchedFilters"
             >
-              <div class="accordion-body">
+              <div className="accordion-body">
                 <div className="hrGreyLine"></div>
                 <div className="configSelectBoxTop row">
                   <div className="clientNameSelect col">
@@ -341,7 +341,7 @@ const UnmatchedMainWindow = () => {
             </div>
             <div className="d-flex">
               <div className="form-group has-search">
-                <span class="icon-Search form-control-feedback"></span>
+                <span className="icon-Search form-control-feedback"></span>
                 <input
                   type="text"
                   className="form-control"
@@ -378,85 +378,85 @@ const UnmatchedMainWindow = () => {
                   <th scope="col">
                     Channel
                     <Link to="/">
-                      <span class="icon-Table-Sorting"></span>
+                      <span className="icon-Table-Sorting"></span>
                     </Link>
                   </th>
                   <th scope="col">
                     Mode
                     <Link to="/">
-                      <span class="icon-Table-Sorting"></span>
+                      <span className="icon-Table-Sorting"></span>
                     </Link>
                   </th>
                   <th scope="col">
                     Terminal ID
                     <Link to="/">
-                      <span class="icon-Table-Sorting"></span>
+                      <span className="icon-Table-Sorting"></span>
                     </Link>
                   </th>
                   <th scope="col">
                     Date & Time
                     <Link to="/">
-                      <span class="icon-Table-Sorting"></span>
+                      <span className="icon-Table-Sorting"></span>
                     </Link>
                   </th>
                   <th scope="col">
                     Reference No.
                     <Link to="/">
-                      <span class="icon-Table-Sorting"></span>
+                      <span className="icon-Table-Sorting"></span>
                     </Link>
                   </th>
                   <th scope="col">
                     Card No.
                     <Link to="/">
-                      <span class="icon-Table-Sorting"></span>
+                      <span className="icon-Table-Sorting"></span>
                     </Link>
                   </th>
                   <th scope="col">
                     Account No.
                     <Link to="/">
-                      <span class="icon-Table-Sorting"></span>
+                      <span className="icon-Table-Sorting"></span>
                     </Link>
                   </th>
                   <th scope="col">
                     Txn Amount
                     <Link to="/">
-                      <span class="icon-Table-Sorting"></span>
+                      <span className="icon-Table-Sorting"></span>
                     </Link>
                   </th>
                   <th scope="col">
                     EJ Status
                     <Link to="/">
-                      <span class="icon-Table-Sorting"></span>
+                      <span className="icon-Table-Sorting"></span>
                     </Link>
                   </th>
                   <th scope="col">
                     Switch Status
                     <Link to="/">
-                      <span class="icon-Table-Sorting"></span>
+                      <span className="icon-Table-Sorting"></span>
                     </Link>
                   </th>
                   <th scope="col">
                     Network Status
                     <Link to="/">
-                      <span class="icon-Table-Sorting"></span>
+                      <span className="icon-Table-Sorting"></span>
                     </Link>
                   </th>
                   <th scope="col">
                     GL Status
                     <Link to="/">
-                      <span class="icon-Table-Sorting"></span>
+                      <span className="icon-Table-Sorting"></span>
                     </Link>
                   </th>
                   <th scope="col">
                     Txns Type
                     <Link to="/">
-                      <span class="icon-Table-Sorting"></span>
+                      <span className="icon-Table-Sorting"></span>
                     </Link>
                   </th>
                   <th scope="col">
                     Remark
                     <Link to="/">
-                      <span class="icon-Table-Sorting"></span>
+                      <span className="icon-Table-Sorting"></span>
                     </Link>
                   </th>
                 </tr>
@@ -691,7 +691,7 @@ const UnmatchedMainWindow = () => {
                       aria-label="Previous"
                     >
                       <span
-                        class="icon-Dropdown-Arrow"
+                        className="icon-Dropdown-Arrow"
                         style={{ fontSize: "12px" }}
                       ></span>
                       <span>First</span>
@@ -730,7 +730,7 @@ const UnmatchedMainWindow = () => {
                     >
                       <span>Last</span>
                       <span
-                        class="icon-Dropdown-Arrow-1"
+                        className="icon-Dropdown-Arrow-1"
                         style={{ fontSize: "12px" }}
                       ></span>
                     </Link>
@@ -765,43 +765,43 @@ const UnmatchedMainWindow = () => {
                       <th scope="col">
                         Terminal ID
                         <Link to="/">
-                          <span class="icon-Table-Sorting"></span>
+                          <span className="icon-Table-Sorting"></span>
                         </Link>
                       </th>
                       <th scope="col">
                         Txn Date & Time
                         <Link to="/">
-                          <span class="icon-Table-Sorting"></span>
+                          <span className="icon-Table-Sorting"></span>
                         </Link>
                       </th>
                       <th scope="col">
                         Card No.
                         <Link to="/">
-                          <span class="icon-Table-Sorting"></span>
+                          <span className="icon-Table-Sorting"></span>
                         </Link>
                       </th>
                       <th scope="col">
                         Reference No.
                         <Link to="/">
-                          <span class="icon-Table-Sorting"></span>
+                          <span className="icon-Table-Sorting"></span>
                         </Link>
                       </th>
                       <th scope="col">
                         Txn Amount
                         <Link to="/">
-                          <span class="icon-Table-Sorting"></span>
+                          <span className="icon-Table-Sorting"></span>
                         </Link>
                       </th>
                       <th scope="col">
                         Response Code
                         <Link to="/">
-                          <span class="icon-Table-Sorting"></span>
+                          <span className="icon-Table-Sorting"></span>
                         </Link>
                       </th>
                       <th scope="col">
                         Reversal Flag
                         <Link to="/">
-                          <span class="icon-Table-Sorting"></span>
+                          <span className="icon-Table-Sorting"></span>
                         </Link>
                       </th>
                     </tr>
@@ -825,43 +825,43 @@ const UnmatchedMainWindow = () => {
                       <th scope="col">
                         Terminal ID
                         <Link to="/">
-                          <span class="icon-Table-Sorting"></span>
+                          <span className="icon-Table-Sorting"></span>
                         </Link>
                       </th>
                       <th scope="col">
                         Txn Date & Time
                         <Link to="/">
-                          <span class="icon-Table-Sorting"></span>
+                          <span className="icon-Table-Sorting"></span>
                         </Link>
                       </th>
                       <th scope="col">
                         Card No.
                         <Link to="/">
-                          <span class="icon-Table-Sorting"></span>
+                          <span className="icon-Table-Sorting"></span>
                         </Link>
                       </th>
                       <th scope="col">
                         Reference No.
                         <Link to="/">
-                          <span class="icon-Table-Sorting"></span>
+                          <span className="icon-Table-Sorting"></span>
                         </Link>
                       </th>
                       <th scope="col">
                         Txn Amount
                         <Link to="/">
-                          <span class="icon-Table-Sorting"></span>
+                          <span className="icon-Table-Sorting"></span>
                         </Link>
                       </th>
                       <th scope="col">
                         Response Code
                         <Link to="/">
-                          <span class="icon-Table-Sorting"></span>
+                          <span className="icon-Table-Sorting"></span>
                         </Link>
                       </th>
                       <th scope="col">
                         Reversal Flag
                         <Link to="/">
-                          <span class="icon-Table-Sorting"></span>
+                          <span className="icon-Table-Sorting"></span>
                         </Link>
                       </th>
                     </tr>
@@ -889,43 +889,43 @@ const UnmatchedMainWindow = () => {
                       <th scope="col">
                         Terminal ID
                         <Link to="/">
-                          <span class="icon-Table-Sorting"></span>
+                          <span className="icon-Table-Sorting"></span>
                         </Link>
                       </th>
                       <th scope="col">
                         Txn Date & Time
                         <Link to="/">
-                          <span class="icon-Table-Sorting"></span>
+                          <span className="icon-Table-Sorting"></span>
                         </Link>
                       </th>
                       <th scope="col">
                         Card No.
                         <Link to="/">
-                          <span class="icon-Table-Sorting"></span>
+                          <span className="icon-Table-Sorting"></span>
                         </Link>
                       </th>
                       <th scope="col">
                         Reference No.
                         <Link to="/">
-                          <span class="icon-Table-Sorting"></span>
+                          <span className="icon-Table-Sorting"></span>
                         </Link>
                       </th>
                       <th scope="col">
                         Txn Amount
                         <Link to="/">
-                          <span class="icon-Table-Sorting"></span>
+                          <span className="icon-Table-Sorting"></span>
                         </Link>
                       </th>
                       <th scope="col">
                         Response Code
                         <Link to="/">
-                          <span class="icon-Table-Sorting"></span>
+                          <span className="icon-Table-Sorting"></span>
                         </Link>
                       </th>
                       <th scope="col">
                         Reversal Flag
                         <Link to="/">
-                          <span class="icon-Table-Sorting"></span>
+                          <span className="icon-Table-Sorting"></span>
                         </Link>
                       </th>
                     </tr>
@@ -953,43 +953,43 @@ const UnmatchedMainWindow = () => {
                       <th scope="col">
                         Terminal ID
                         <Link to="/">
-                          <span class="icon-Table-Sorting"></span>
+                          <span className="icon-Table-Sorting"></span>
                         </Link>
                       </th>
                       <th scope="col">
                         Txn Date & Time
                         <Link to="/">
-                          <span class="icon-Table-Sorting"></span>
+                          <span className="icon-Table-Sorting"></span>
                         </Link>
                       </th>
                       <th scope="col">
                         Card No.
                         <Link to="/">
-                          <span class="icon-Table-Sorting"></span>
+                          <span className="icon-Table-Sorting"></span>
                         </Link>
                       </th>
                       <th scope="col">
                         Reference No.
                         <Link to="/">
-                          <span class="icon-Table-Sorting"></span>
+                          <span className="icon-Table-Sorting"></span>
                         </Link>
                       </th>
                       <th scope="col">
                         Txn Amount
                         <Link to="/">
-                          <span class="icon-Table-Sorting"></span>
+                          <span className="icon-Table-Sorting"></span>
                         </Link>
                       </th>
                       <th scope="col">
                         Response Code
                         <Link to="/">
-                          <span class="icon-Table-Sorting"></span>
+                          <span className="icon-Table-Sorting"></span>
                         </Link>
                       </th>
                       <th scope="col">
                         Reversal Flag
                         <Link to="/">
-                          <span class="icon-Table-Sorting"></span>
+                          <span className="icon-Table-Sorting"></span>
                         </Link>
                       </th>
                     </tr>
