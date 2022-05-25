@@ -1,8 +1,9 @@
 import React from "react";
-import { Link, useLocation, matchPath } from "react-router-dom";
+import { Link, useLocation, matchPath, useNavigate } from "react-router-dom";
 
 const SideBar = (props) => {
-  const path = useLocation().pathname;
+  let path = useLocation().pathname;
+  let navigate = useNavigate();
 
   // client-management Path
   let clientManagementPath = matchPath("/client-management/*", path);
@@ -23,6 +24,11 @@ const SideBar = (props) => {
   let cbrPath = matchPath("/cbr/*", path);
   if (cbrPath) {
     cbrPath = cbrPath.pathnameBase;
+  }
+
+  // path redirects
+  if (path === "/") {
+    navigate("/configuration/file-configuration");
   }
 
   const activeLink = (arr) => {
