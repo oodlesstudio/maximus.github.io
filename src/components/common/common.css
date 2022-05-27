@@ -573,3 +573,25 @@
   background-color: var(--sidebar-accordion-bg);
   border-radius: 4px;
 }
+
+
+/* Mobile Default Modal */
+
+
+
+
+@media (max-width: 425px) {
+
+  .defaultThemeModal.mobile-defaultThemeModal .modal-content {
+      width: 350px;
+    }
+
+.siteConfigurationModal.siteConfigurationMobileModal .modal-body {
+    padding: 24px 12px 16px;
+
+  }
+.siteConfigurationModal.siteConfigurationMobileModal .modal-footer{
+    padding: 0 12px;
+
+  }
+}

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link, useLocation, matchPath, useNavigate } from "react-router-dom";
 
 const SideBar = (props) => {
@@ -27,9 +27,11 @@ const SideBar = (props) => {
   }
 
   // path redirects
-  if (path === "/") {
-    navigate("/configuration/file-configuration");
-  }
+  useEffect(() => {
+    if (path === "/") {
+      navigate("/configuration/file-configuration");
+    }
+  });
 
   const activeLink = (arr) => {
     if (arr === path) {
