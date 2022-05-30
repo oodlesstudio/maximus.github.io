@@ -88,3 +88,11 @@
     width: calc(100% - 35px);
   }
 }
+
+
+
+
+.terminalWhiteBox.terminalWhiteBox2 .kiHXWb,
+.terminalWhiteBox.terminalWhiteBox2 .dGSgsW {
+ min-width: unset !important;
+}

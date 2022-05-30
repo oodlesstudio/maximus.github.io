@@ -52,7 +52,7 @@ const TerminalMainWindow = () => {
           <span>
             <svg
               width="8"
-              height="auto"
+              height="100%"
               viewBox="0 0 10 16"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -74,7 +74,7 @@ const TerminalMainWindow = () => {
           <span>
             <svg
               width="8"
-              height="auto"
+              height="100%"
               viewBox="0 0 10 16"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -96,7 +96,7 @@ const TerminalMainWindow = () => {
         </div>
       </div>
 
-      <div className="tableBorderBox terminalWhiteBox d-flex justify-content-center w-100">
+      <div className="tableBorderBox terminalWhiteBox terminalWhiteBox2  d-flex justify-content-center w-100">
         <div className="terminalSmallBox">
           <div className="clientNameSelect">
             <label htmlFor="clientNameRegistration">Client Name</label>
@@ -121,7 +121,7 @@ const TerminalMainWindow = () => {
                   <span>
                     <svg
                       width="20"
-                      height="auto"
+                      height="100%"
                       viewBox="0 0 28 28"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
@@ -175,7 +175,7 @@ const TerminalMainWindow = () => {
                   <span>
                     <svg
                       width="20"
-                      height="auto"
+                      height="100%"
                       viewBox="0 0 28 28"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
